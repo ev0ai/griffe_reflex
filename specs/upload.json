@@ -1,0 +1,106 @@
+{
+  "name": "upload",
+  "module_path": "components.core.upload",
+  "module_name": "upload",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/core/upload.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/upload.md",
+  "docstring": "A file upload component.",
+  "bases": [
+    "MemoizationLeaf"
+  ],
+  "properties": [
+    {
+      "name": "accept",
+      "type": "dict[str, Sequence] | None",
+      "docstring": "supported MIME types: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types"
+    },
+    {
+      "name": "disabled",
+      "type": "bool",
+      "docstring": "Whether the dropzone is disabled."
+    },
+    {
+      "name": "max_files",
+      "type": "int",
+      "docstring": "The maximum number of files that can be uploaded."
+    },
+    {
+      "name": "max_size",
+      "type": "int",
+      "docstring": "The maximum file size (bytes) that can be uploaded."
+    },
+    {
+      "name": "min_size",
+      "type": "int",
+      "docstring": "The minimum file size (bytes) that can be uploaded."
+    },
+    {
+      "name": "multiple",
+      "type": "bool",
+      "docstring": "Whether to allow multiple files to be uploaded."
+    },
+    {
+      "name": "no_click",
+      "type": "bool",
+      "docstring": "Whether to disable click to upload."
+    },
+    {
+      "name": "no_drag",
+      "type": "bool",
+      "docstring": "Whether to disable drag and drop."
+    },
+    {
+      "name": "no_keyboard",
+      "type": "bool",
+      "docstring": "Whether to disable using the space/enter keys to upload."
+    },
+    {
+      "name": "is_used",
+      "type": "ClassVar[bool",
+      "docstring": "Marked True when any Upload component is created."
+    },
+    {
+      "name": "Args",
+      "type": "*children: The children of the component.",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The upload component.",
+      "docstring": ""
+    },
+    {
+      "name": "key",
+      "type": "value for key, value in props.items() if key in supported_props",
+      "docstring": ""
+    },
+    {
+      "name": "else",
+      "type": "on_drop",
+      "docstring": ""
+    },
+    {
+      "name": "callback_str",
+      "type": "None,",
+      "docstring": ""
+    },
+    {
+      "name": "Args",
+      "type": "arg_value: The arg tuple to update (if necessary).",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The updated arg_value tuple when arg is \"files\", otherwise the original arg_value.",
+      "docstring": ""
+    }
+  ],
+  "events": [
+    {
+      "name": "on_drop",
+      "type": "EventHandler[_on_drop_spec",
+      "docstring": "Fired when files are dropped."
+    }
+  ],
+  "styling_props": []
+}

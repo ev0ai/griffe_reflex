@@ -1,0 +1,30 @@
+{
+  "name": "scroll_area",
+  "module_path": "components.radix.themes.components.scroll_area",
+  "module_name": "scroll_area",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/scroll_area.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/scroll_area.md",
+  "docstring": "Custom styled, cross-browser scrollable area using native functionality.",
+  "bases": [
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "scrollbars",
+      "type": "Literal[\"vertical\", \"horizontal\", \"both\"]",
+      "docstring": "The alignment of the scroll area"
+    },
+    {
+      "name": "type",
+      "type": "Literal[\"auto\", \"always\", \"scroll\", \"hover\"]",
+      "docstring": "Describes the nature of scrollbar visibility, similar to how the scrollbar preferences in MacOS control visibility of native scrollbars. \"auto\" | \"always\" | \"scroll\" | \"hover\""
+    },
+    {
+      "name": "scroll_hide_delay",
+      "type": "int",
+      "docstring": "If type is set to either \"scroll\" or \"hover\", this prop determines the length of time, in milliseconds, before the scrollbars are hidden after the user stops interacting with scrollbars."
+    }
+  ],
+  "events": [],
+  "styling_props": []
+}

@@ -1,0 +1,46 @@
+{
+  "name": "list",
+  "module_path": "components.radix.themes.layout.list",
+  "module_name": "list_ns",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/list.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/list.md",
+  "docstring": "Base class for ordered and unordered lists.",
+  "bases": [
+    "Component",
+    "MarkdownComponentMap"
+  ],
+  "properties": [
+    {
+      "name": "list_style_type",
+      "type": "Var[",
+      "docstring": "The style of the list. Default to \"none\"."
+    },
+    {
+      "name": "items",
+      "type": "Iterable",
+      "docstring": "A list of items to add to the list."
+    },
+    {
+      "name": "Args",
+      "type": "*children: The children of the component.",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The list component.",
+      "docstring": ""
+    },
+    {
+      "name": "else",
+      "type": "children",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The style of the component.",
+      "docstring": ""
+    }
+  ],
+  "events": [],
+  "styling_props": []
+}

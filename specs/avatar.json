@@ -1,0 +1,51 @@
+{
+  "name": "avatar",
+  "module_path": "components.radix.themes.components.avatar",
+  "module_name": "avatar",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/avatar.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/avatar.md",
+  "docstring": "An image element with a fallback for representing the user.",
+  "bases": [
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "high_contrast",
+      "type": "bool",
+      "docstring": "Whether to render the avatar with higher contrast color against background"
+    },
+    {
+      "name": "src",
+      "type": "str",
+      "docstring": "The src of the avatar image"
+    },
+    {
+      "name": "fallback",
+      "type": "str",
+      "docstring": "The rendered fallback text"
+    }
+  ],
+  "events": [],
+  "styling_props": [
+    {
+      "name": "variant",
+      "type": "Literal[\"solid\", \"soft\"]",
+      "docstring": "The variant of the avatar"
+    },
+    {
+      "name": "size",
+      "type": "Responsive[LiteralSize]",
+      "docstring": "The size of the avatar: \"1\" - \"9\""
+    },
+    {
+      "name": "color_scheme",
+      "type": "LiteralAccentColor",
+      "docstring": "Color theme of the avatar"
+    },
+    {
+      "name": "radius",
+      "type": "LiteralRadius",
+      "docstring": "Override theme radius for avatar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+    }
+  ]
+}

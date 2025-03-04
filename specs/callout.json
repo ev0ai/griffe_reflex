@@ -1,0 +1,35 @@
+{
+  "name": "callout",
+  "module_path": "components.radix.themes.components.callout",
+  "module_name": "callout",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/callout.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/callout.md",
+  "docstring": "A short message to attract user's attention.",
+  "bases": [
+    "CalloutRoot"
+  ],
+  "properties": [
+    {
+      "name": "text",
+      "type": "str",
+      "docstring": "The text of the callout."
+    },
+    {
+      "name": "icon",
+      "type": "str",
+      "docstring": "The icon of the callout."
+    },
+    {
+      "name": "Args",
+      "type": "text: The text of the callout.",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The callout component.",
+      "docstring": ""
+    }
+  ],
+  "events": [],
+  "styling_props": []
+}

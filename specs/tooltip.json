@@ -1,0 +1,121 @@
+{
+  "name": "tooltip",
+  "module_path": "components.radix.themes.components.tooltip",
+  "module_name": "tooltip",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/tooltip.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/tooltip.md",
+  "docstring": "Floating element that provides a control with contextual information via pointer or focus.",
+  "bases": [
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "content",
+      "type": "str",
+      "docstring": "The content of the tooltip."
+    },
+    {
+      "name": "default_open",
+      "type": "bool",
+      "docstring": "The open state of the tooltip when it is initially rendered. Use when you do not need to control its open state."
+    },
+    {
+      "name": "open",
+      "type": "bool",
+      "docstring": "The controlled open state of the tooltip. Must be used in conjunction with `on_open_change`."
+    },
+    {
+      "name": "side",
+      "type": "LiteralSideType",
+      "docstring": "The preferred side of the trigger to render against when open. Will be reversed when collisions occur and `avoid_collisions` is enabled.The position of the tooltip. Defaults to \"top\"."
+    },
+    {
+      "name": "side_offset",
+      "type": "float | int",
+      "docstring": "The distance in pixels from the trigger. Defaults to 0."
+    },
+    {
+      "name": "align",
+      "type": "LiteralAlignType",
+      "docstring": "The preferred alignment against the trigger. May change when collisions occur. Defaults to \"center\"."
+    },
+    {
+      "name": "align_offset",
+      "type": "float | int",
+      "docstring": "An offset in pixels from the \"start\" or \"end\" alignment options."
+    },
+    {
+      "name": "avoid_collisions",
+      "type": "bool",
+      "docstring": "When true, overrides the side and align preferences to prevent collisions with boundary edges. Defaults to True."
+    },
+    {
+      "name": "collision_padding",
+      "type": "Union[float, int, dict[str, float | int]]",
+      "docstring": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for all sides), or a partial padding object, for example: { \"top\": 20, \"left\": 20 }. Defaults to 0."
+    },
+    {
+      "name": "arrow_padding",
+      "type": "float | int",
+      "docstring": "The padding between the arrow and the edges of the content. If your content has border-radius, this will prevent it from overflowing the corners. Defaults to 0."
+    },
+    {
+      "name": "sticky",
+      "type": "LiteralStickyType",
+      "docstring": "The sticky behavior on the align axis. \"partial\" will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst \"always\" will keep the content in the boundary regardless. Defaults to \"partial\"."
+    },
+    {
+      "name": "hide_when_detached",
+      "type": "bool",
+      "docstring": "Whether to hide the content when the trigger becomes fully occluded. Defaults to False."
+    },
+    {
+      "name": "delay_duration",
+      "type": "float | int",
+      "docstring": "Override the duration in milliseconds to customize the open delay for a specific tooltip. Default is 700."
+    },
+    {
+      "name": "disable_hoverable_content",
+      "type": "bool",
+      "docstring": "Prevents Tooltip content from remaining open when hovering."
+    },
+    {
+      "name": "force_mount",
+      "type": "bool",
+      "docstring": "Used to force mounting when more control is needed. Useful when controlling animation with React animation libraries."
+    },
+    {
+      "name": "aria_label",
+      "type": "str",
+      "docstring": "By default, screenreaders will announce the content inside the component. If this is not descriptive enough, or you have content that cannot be announced, use aria-label as a more descriptive label."
+    },
+    {
+      "name": "Args",
+      "type": "*children: The positional arguments",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The created component.",
+      "docstring": ""
+    }
+  ],
+  "events": [
+    {
+      "name": "on_open_change",
+      "type": "EventHandler[passthrough_event_spec(bool)",
+      "docstring": "Fired when the open state changes."
+    },
+    {
+      "name": "on_escape_key_down",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the escape key is pressed."
+    },
+    {
+      "name": "on_pointer_down_outside",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the pointer is down outside the tooltip."
+    }
+  ],
+  "styling_props": []
+}

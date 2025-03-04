@@ -1,0 +1,35 @@
+{
+  "name": "stack",
+  "module_path": "components.radix.themes.layout.stack",
+  "module_name": "stack",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/stack.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/layout/stack.md",
+  "docstring": "A stack component.",
+  "bases": [
+    "Flex"
+  ],
+  "properties": [
+    {
+      "name": "spacing",
+      "type": "LiteralSpacing",
+      "docstring": "The spacing between each stack item."
+    },
+    {
+      "name": "align",
+      "type": "LiteralAlign",
+      "docstring": "The alignment of the stack items."
+    },
+    {
+      "name": "Args",
+      "type": "*children: The children of the stack.",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The stack component.",
+      "docstring": ""
+    }
+  ],
+  "events": [],
+  "styling_props": []
+}

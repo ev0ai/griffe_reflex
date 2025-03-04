@@ -1,0 +1,42 @@
+{
+  "name": "badge",
+  "module_path": "components.radix.themes.components.badge",
+  "module_name": "badge",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/badge.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/badge.md",
+  "docstring": "A stylized badge element.",
+  "bases": [
+    "elements.Span",
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "high_contrast",
+      "type": "bool",
+      "docstring": "Whether to render the badge with higher contrast color against background"
+    }
+  ],
+  "events": [],
+  "styling_props": [
+    {
+      "name": "variant",
+      "type": "Literal[\"solid\", \"soft\", \"surface\", \"outline\"]",
+      "docstring": "The variant of the badge"
+    },
+    {
+      "name": "size",
+      "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
+      "docstring": "The size of the badge"
+    },
+    {
+      "name": "color_scheme",
+      "type": "LiteralAccentColor",
+      "docstring": "Color theme of the badge"
+    },
+    {
+      "name": "radius",
+      "type": "LiteralRadius",
+      "docstring": "Override theme radius for badge: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+    }
+  ]
+}

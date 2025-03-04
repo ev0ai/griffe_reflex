@@ -1,0 +1,61 @@
+{
+  "name": "inset",
+  "module_path": "components.radix.themes.components.inset",
+  "module_name": "inset",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/inset.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/layout/inset.md",
+  "docstring": "Applies a negative margin to allow content to bleed into the surrounding container.",
+  "bases": [
+    "elements.Div",
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "side",
+      "type": "Responsive[Literal[\"x\", \"y\", \"top\", \"bottom\", \"right\", \"left\"]]",
+      "docstring": "The side"
+    },
+    {
+      "name": "clip",
+      "type": "Responsive[Literal[\"border-box\", \"padding-box\"]]",
+      "docstring": "How to clip the element's content: \"border-box\" | \"padding-box\""
+    },
+    {
+      "name": "p",
+      "type": "Responsive[int | str]",
+      "docstring": "Padding"
+    },
+    {
+      "name": "px",
+      "type": "Responsive[int | str]",
+      "docstring": "Padding on the x axis"
+    },
+    {
+      "name": "py",
+      "type": "Responsive[int | str]",
+      "docstring": "Padding on the y axis"
+    },
+    {
+      "name": "pt",
+      "type": "Responsive[int | str]",
+      "docstring": "Padding on the top"
+    },
+    {
+      "name": "pr",
+      "type": "Responsive[int | str]",
+      "docstring": "Padding on the right"
+    },
+    {
+      "name": "pb",
+      "type": "Responsive[int | str]",
+      "docstring": "Padding on the bottom"
+    },
+    {
+      "name": "pl",
+      "type": "Responsive[int | str]",
+      "docstring": "Padding on the left"
+    }
+  ],
+  "events": [],
+  "styling_props": []
+}

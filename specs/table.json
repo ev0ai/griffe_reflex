@@ -1,0 +1,116 @@
+{
+  "name": "table",
+  "module_path": "components.radix.themes.components.table",
+  "module_name": "table",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/table.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/tables-and-data-grids/table.md",
+  "docstring": "Table components namespace.",
+  "bases": [
+    "ComponentNamespace"
+  ],
+  "properties": [
+    {
+      "name": "TableHeader._invalid_children",
+      "type": "list[str",
+      "docstring": ""
+    },
+    {
+      "name": "TableHeader._valid_parents",
+      "type": "list[str",
+      "docstring": ""
+    },
+    {
+      "name": "TableBody._invalid_children",
+      "type": "list[str",
+      "docstring": ""
+    },
+    {
+      "name": "TableBody._valid_parents",
+      "type": "list[str",
+      "docstring": ""
+    },
+    {
+      "name": "TableRow.align",
+      "type": "Literal[\"start\", \"center\", \"end\", \"baseline\"]",
+      "docstring": "The alignment of the row"
+    },
+    {
+      "name": "TableRow._invalid_children",
+      "type": "list[str",
+      "docstring": ""
+    },
+    {
+      "name": "TableCell.justify",
+      "type": "Literal[\"start\", \"center\", \"end\"]",
+      "docstring": "The justification of the column"
+    },
+    {
+      "name": "TableCell.min_width",
+      "type": "Responsive[str]",
+      "docstring": "The minimum width of the cell"
+    },
+    {
+      "name": "TableCell.max_width",
+      "type": "Responsive[str]",
+      "docstring": "The maximum width of the cell"
+    },
+    {
+      "name": "TableCell._invalid_children",
+      "type": "list[str",
+      "docstring": ""
+    },
+    {
+      "name": "TableColumnHeaderCell.justify",
+      "type": "Literal[\"start\", \"center\", \"end\"]",
+      "docstring": "The justification of the column"
+    },
+    {
+      "name": "TableColumnHeaderCell.min_width",
+      "type": "Responsive[str]",
+      "docstring": "The minimum width of the cell"
+    },
+    {
+      "name": "TableColumnHeaderCell.max_width",
+      "type": "Responsive[str]",
+      "docstring": "The maximum width of the cell"
+    },
+    {
+      "name": "TableColumnHeaderCell._invalid_children",
+      "type": "list[str",
+      "docstring": ""
+    },
+    {
+      "name": "TableRowHeaderCell.justify",
+      "type": "Literal[\"start\", \"center\", \"end\"]",
+      "docstring": "The justification of the column"
+    },
+    {
+      "name": "TableRowHeaderCell.min_width",
+      "type": "Responsive[str]",
+      "docstring": "The minimum width of the cell"
+    },
+    {
+      "name": "TableRowHeaderCell.max_width",
+      "type": "Responsive[str]",
+      "docstring": "The maximum width of the cell"
+    },
+    {
+      "name": "TableRowHeaderCell._invalid_children",
+      "type": "list[str",
+      "docstring": ""
+    }
+  ],
+  "events": [],
+  "styling_props": [
+    {
+      "name": "TableRoot.size",
+      "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
+      "docstring": "The size of the table: \"1\" | \"2\" | \"3\""
+    },
+    {
+      "name": "TableRoot.variant",
+      "type": "Literal[\"surface\", \"ghost\"]",
+      "docstring": "The variant of the table"
+    }
+  ]
+}

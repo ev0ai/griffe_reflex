@@ -1,0 +1,77 @@
+{
+  "name": "checkbox",
+  "module_path": "components.radix.themes.components.checkbox",
+  "module_name": "checkbox",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/checkbox.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/checkbox.md",
+  "docstring": "Selects a single value, typically for submission in a form.",
+  "bases": [
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "as_child",
+      "type": "bool",
+      "docstring": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+    },
+    {
+      "name": "high_contrast",
+      "type": "bool",
+      "docstring": "Whether to render the checkbox with higher contrast color against background"
+    },
+    {
+      "name": "default_checked",
+      "type": "bool",
+      "docstring": "Whether the checkbox is checked by default"
+    },
+    {
+      "name": "checked",
+      "type": "bool",
+      "docstring": "Whether the checkbox is checked"
+    },
+    {
+      "name": "disabled",
+      "type": "bool",
+      "docstring": "Whether the checkbox is disabled"
+    },
+    {
+      "name": "required",
+      "type": "bool",
+      "docstring": "Whether the checkbox is required"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "docstring": "The name of the checkbox control when submitting the form."
+    },
+    {
+      "name": "value",
+      "type": "str",
+      "docstring": "The value of the checkbox control when submitting the form."
+    }
+  ],
+  "events": [
+    {
+      "name": "on_change",
+      "type": "EventHandler[passthrough_event_spec(bool)",
+      "docstring": "Fired when the checkbox is checked or unchecked."
+    }
+  ],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Responsive[LiteralCheckboxSize]",
+      "docstring": "Checkbox size \"1\" - \"3\""
+    },
+    {
+      "name": "variant",
+      "type": "LiteralCheckboxVariant",
+      "docstring": "Variant of checkbox: \"classic\" | \"surface\" | \"soft\""
+    },
+    {
+      "name": "color_scheme",
+      "type": "LiteralAccentColor",
+      "docstring": "Override theme color for checkbox"
+    }
+  ]
+}

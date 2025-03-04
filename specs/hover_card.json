@@ -1,0 +1,87 @@
+{
+  "name": "hover_card",
+  "module_path": "components.radix.themes.components.hover_card",
+  "module_name": "hover_card",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/hover_card.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/hover_card.md",
+  "docstring": "For sighted users to preview content available behind a link.",
+  "bases": [
+    "ComponentNamespace"
+  ],
+  "properties": [
+    {
+      "name": "HoverCardRoot.default_open",
+      "type": "bool",
+      "docstring": "The open state of the hover card when it is initially rendered. Use when you do not need to control its open state."
+    },
+    {
+      "name": "HoverCardRoot.open",
+      "type": "bool",
+      "docstring": "The controlled open state of the hover card. Must be used in conjunction with onOpenChange."
+    },
+    {
+      "name": "HoverCardRoot.open_delay",
+      "type": "int",
+      "docstring": "The duration from when the mouse enters the trigger until the hover card opens."
+    },
+    {
+      "name": "HoverCardRoot.close_delay",
+      "type": "int",
+      "docstring": "The duration from when the mouse leaves the trigger until the hover card closes."
+    },
+    {
+      "name": "HoverCardContent.side",
+      "type": "Responsive[Literal[\"top\", \"right\", \"bottom\", \"left\"]]",
+      "docstring": "The preferred side of the trigger to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled."
+    },
+    {
+      "name": "HoverCardContent.side_offset",
+      "type": "int",
+      "docstring": "The distance in pixels from the trigger."
+    },
+    {
+      "name": "HoverCardContent.align",
+      "type": "Literal[\"start\", \"center\", \"end\"]",
+      "docstring": "The preferred alignment against the trigger. May change when collisions occur."
+    },
+    {
+      "name": "HoverCardContent.align_offset",
+      "type": "int",
+      "docstring": "An offset in pixels from the \"start\" or \"end\" alignment options."
+    },
+    {
+      "name": "HoverCardContent.avoid_collisions",
+      "type": "bool",
+      "docstring": "Whether or not the hover card should avoid collisions with its trigger."
+    },
+    {
+      "name": "HoverCardContent.collision_padding",
+      "type": "float | int | dict[str, float | int]",
+      "docstring": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for all sides), or a partial padding object, for example: { top: 20, left: 20 }."
+    },
+    {
+      "name": "HoverCardContent.sticky",
+      "type": "Literal[\"partial\", \"always\"]",
+      "docstring": "The sticky behavior on the align axis. \"partial\" will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst \"always\" will keep the content in the boundary regardless"
+    },
+    {
+      "name": "HoverCardContent.hide_when_detached",
+      "type": "bool",
+      "docstring": "Whether to hide the content when the trigger becomes fully occluded."
+    }
+  ],
+  "events": [
+    {
+      "name": "HoverCardRoot.on_open_change",
+      "type": "EventHandler[passthrough_event_spec(bool)",
+      "docstring": "Fired when the open state changes."
+    }
+  ],
+  "styling_props": [
+    {
+      "name": "HoverCardContent.size",
+      "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
+      "docstring": "Hovercard size \"1\" - \"3\""
+    }
+  ]
+}

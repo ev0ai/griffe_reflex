@@ -1,0 +1,137 @@
+{
+  "name": "text_area",
+  "module_path": "components.radix.themes.components.text_area",
+  "module_name": "text_area",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/text_area.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/text_area.md",
+  "docstring": "The input part of a TextArea, may be used by itself.",
+  "bases": [
+    "RadixThemesComponent",
+    "elements.Textarea"
+  ],
+  "properties": [
+    {
+      "name": "resize",
+      "type": "Responsive[LiteralTextAreaResize]",
+      "docstring": "The resize behavior of the text area: \"none\" | \"vertical\" | \"horizontal\" | \"both\""
+    },
+    {
+      "name": "auto_complete",
+      "type": "bool",
+      "docstring": "Whether the form control should have autocomplete enabled"
+    },
+    {
+      "name": "auto_focus",
+      "type": "bool",
+      "docstring": "Automatically focuses the textarea when the page loads"
+    },
+    {
+      "name": "default_value",
+      "type": "str",
+      "docstring": "The default value of the textarea when initially rendered"
+    },
+    {
+      "name": "dirname",
+      "type": "str",
+      "docstring": "Name part of the textarea to submit in 'dir' and 'name' pair when form is submitted"
+    },
+    {
+      "name": "disabled",
+      "type": "bool",
+      "docstring": "Disables the textarea"
+    },
+    {
+      "name": "form",
+      "type": "str",
+      "docstring": "Associates the textarea with a form (by id)"
+    },
+    {
+      "name": "max_length",
+      "type": "int",
+      "docstring": "Maximum number of characters allowed in the textarea"
+    },
+    {
+      "name": "min_length",
+      "type": "int",
+      "docstring": "Minimum number of characters required in the textarea"
+    },
+    {
+      "name": "name",
+      "type": "str",
+      "docstring": "Name of the textarea, used when submitting the form"
+    },
+    {
+      "name": "placeholder",
+      "type": "str",
+      "docstring": "Placeholder text in the textarea"
+    },
+    {
+      "name": "read_only",
+      "type": "bool",
+      "docstring": "Indicates whether the textarea is read-only"
+    },
+    {
+      "name": "required",
+      "type": "bool",
+      "docstring": "Indicates that the textarea is required"
+    },
+    {
+      "name": "rows",
+      "type": "str",
+      "docstring": "Visible number of lines in the text control"
+    },
+    {
+      "name": "value",
+      "type": "str",
+      "docstring": "The controlled value of the textarea, read only unless used with on_change"
+    },
+    {
+      "name": "wrap",
+      "type": "str",
+      "docstring": "How the text in the textarea is to be wrapped when submitting the form"
+    },
+    {
+      "name": "Args",
+      "type": "*children: The children of the component.",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The component.",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The style of the component.",
+      "docstring": ""
+    },
+    {
+      "name": "added_style",
+      "type": "dict[str, dict",
+      "docstring": ""
+    }
+  ],
+  "events": [],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Responsive[LiteralTextAreaSize]",
+      "docstring": "The size of the text area: \"1\" | \"2\" | \"3\""
+    },
+    {
+      "name": "variant",
+      "type": "Literal[\"classic\", \"surface\", \"soft\"]",
+      "docstring": "The variant of the text area"
+    },
+    {
+      "name": "color_scheme",
+      "type": "LiteralAccentColor",
+      "docstring": "The color of the text area"
+    },
+    {
+      "name": "radius",
+      "type": "LiteralRadius",
+      "docstring": "The radius of the text area: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+    }
+  ]
+}

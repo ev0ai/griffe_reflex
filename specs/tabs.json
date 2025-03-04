@@ -1,0 +1,132 @@
+{
+  "name": "tabs",
+  "module_path": "components.radix.themes.components.tabs",
+  "module_name": "tabs",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/tabs.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/disclosure/tabs.md",
+  "docstring": "Set of content sections to be displayed one at a time.",
+  "bases": [
+    "ComponentNamespace"
+  ],
+  "properties": [
+    {
+      "name": "TabsRoot.default_value",
+      "type": "str",
+      "docstring": "The value of the tab that should be active when initially rendered. Use when you do not need to control the state of the tabs."
+    },
+    {
+      "name": "TabsRoot.value",
+      "type": "str",
+      "docstring": "The controlled value of the tab that should be active. Use when you need to control the state of the tabs."
+    },
+    {
+      "name": "TabsRoot.orientation",
+      "type": "Literal[\"horizontal\", \"vertical\"]",
+      "docstring": "The orientation of the tabs."
+    },
+    {
+      "name": "TabsRoot.dir",
+      "type": "Literal[\"ltr\", \"rtl\"]",
+      "docstring": "Reading direction of the tabs."
+    },
+    {
+      "name": "TabsRoot.activation_mode",
+      "type": "Literal[\"automatic\", \"manual\"]",
+      "docstring": "The mode of activation for the tabs. \"automatic\" will activate the tab when focused. \"manual\" will activate the tab when clicked."
+    },
+    {
+      "name": "TabsRoot.Returns",
+      "type": "The style to add.",
+      "docstring": ""
+    },
+    {
+      "name": "TabsRoot.vertical_orientation_css",
+      "type": "{",
+      "docstring": ""
+    },
+    {
+      "name": "TabsList.loop",
+      "type": "bool",
+      "docstring": "When true, the tabs will loop when reaching the end."
+    },
+    {
+      "name": "TabsList.Returns",
+      "type": "The style to add.",
+      "docstring": ""
+    },
+    {
+      "name": "TabsList.vertical_orientation_css",
+      "type": "{",
+      "docstring": ""
+    },
+    {
+      "name": "TabsTrigger.value",
+      "type": "str",
+      "docstring": "The value of the tab. Must be unique for each tab."
+    },
+    {
+      "name": "TabsTrigger.disabled",
+      "type": "bool",
+      "docstring": "Whether the tab is disabled"
+    },
+    {
+      "name": "TabsTrigger._valid_parents",
+      "type": "list[str",
+      "docstring": ""
+    },
+    {
+      "name": "TabsTrigger.Args",
+      "type": "*children: The children of the component.",
+      "docstring": ""
+    },
+    {
+      "name": "TabsTrigger.Returns",
+      "type": "The TabsTrigger Component.",
+      "docstring": ""
+    },
+    {
+      "name": "TabsTrigger.Returns",
+      "type": "The style to add.",
+      "docstring": ""
+    },
+    {
+      "name": "TabsContent.value",
+      "type": "str",
+      "docstring": "The value of the tab. Must be unique for each tab."
+    },
+    {
+      "name": "TabsContent.force_mount",
+      "type": "bool",
+      "docstring": "Used to force mounting when more control is needed. Useful when controlling animation with React animation libraries."
+    },
+    {
+      "name": "TabsContent.Returns",
+      "type": "The style to add.",
+      "docstring": ""
+    },
+    {
+      "name": "TabsContent.vertical_orientation_css",
+      "type": "{\"width\": \"100%\", \"margin\": None},",
+      "docstring": ""
+    }
+  ],
+  "events": [
+    {
+      "name": "TabsRoot.on_change",
+      "type": "EventHandler[passthrough_event_spec(str)",
+      "docstring": "Fired when the value of the tabs changes."
+    }
+  ],
+  "styling_props": [
+    {
+      "name": "TabsList.size",
+      "type": "Responsive[Literal[\"1\", \"2\"]]",
+      "docstring": "Tabs size \"1\" - \"2\""
+    },
+    {
+      "name": "TabsTrigger.color_scheme",
+      "type": "LiteralAccentColor",
+      "docstring": "The color of the line under the tab when active."
+    }
+  ]
+}

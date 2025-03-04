@@ -1,0 +1,32 @@
+{
+  "name": "card",
+  "module_path": "components.radix.themes.components.card",
+  "module_name": "card",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/card.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/layout/card.md",
+  "docstring": "Container that groups related content and actions.",
+  "bases": [
+    "elements.Div",
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "as_child",
+      "type": "bool",
+      "docstring": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+    }
+  ],
+  "events": [],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\", \"5\"],]",
+      "docstring": "Card size: \"1\" - \"5\""
+    },
+    {
+      "name": "variant",
+      "type": "Literal[\"surface\", \"classic\", \"ghost\"]",
+      "docstring": "Variant of Card: \"surface\" | \"classic\" | \"ghost\""
+    }
+  ]
+}

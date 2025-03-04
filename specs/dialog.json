@@ -1,0 +1,62 @@
+{
+  "name": "dialog",
+  "module_path": "components.radix.themes.components.dialog",
+  "module_name": "dialog",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/dialog.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/dialog.md",
+  "docstring": "Dialog components namespace.",
+  "bases": [
+    "ComponentNamespace"
+  ],
+  "properties": [
+    {
+      "name": "DialogRoot.open",
+      "type": "bool",
+      "docstring": "The controlled open state of the dialog."
+    },
+    {
+      "name": "DialogRoot.default_open",
+      "type": "bool",
+      "docstring": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state."
+    }
+  ],
+  "events": [
+    {
+      "name": "DialogRoot.on_open_change",
+      "type": "EventHandler[passthrough_event_spec(bool)",
+      "docstring": "Fired when the open state changes."
+    },
+    {
+      "name": "DialogContent.on_open_auto_focus",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the dialog is opened."
+    },
+    {
+      "name": "DialogContent.on_close_auto_focus",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the dialog is closed."
+    },
+    {
+      "name": "DialogContent.on_escape_key_down",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the escape key is pressed."
+    },
+    {
+      "name": "DialogContent.on_pointer_down_outside",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the pointer is down outside the dialog."
+    },
+    {
+      "name": "DialogContent.on_interact_outside",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the pointer interacts outside the dialog."
+    }
+  ],
+  "styling_props": [
+    {
+      "name": "DialogContent.size",
+      "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]",
+      "docstring": "DialogContent size \"1\" - \"4\""
+    }
+  ]
+}

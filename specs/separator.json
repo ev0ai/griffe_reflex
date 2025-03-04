@@ -1,0 +1,36 @@
+{
+  "name": "separator",
+  "module_path": "components.radix.themes.components.separator",
+  "module_name": "separator",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/separator.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/layout/separator.md",
+  "docstring": "Visually or semantically separates content.",
+  "bases": [
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "orientation",
+      "type": "Responsive[Literal[\"horizontal\", \"vertical\"]]",
+      "docstring": "The orientation of the separator."
+    },
+    {
+      "name": "decorative",
+      "type": "bool",
+      "docstring": "When true, signifies that it is purely visual, carries no semantic meaning, and ensures it is not present in the accessibility tree."
+    }
+  ],
+  "events": [],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Responsive[LiteralSeperatorSize]",
+      "docstring": "The size of the select: \"1\" | \"2\" | \"3\" | \"4\""
+    },
+    {
+      "name": "color_scheme",
+      "type": "LiteralAccentColor",
+      "docstring": "The color of the select"
+    }
+  ]
+}

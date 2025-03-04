@@ -1,0 +1,156 @@
+{
+  "name": "drawer",
+  "module_path": "components.radix.primitives.drawer",
+  "module_name": "drawer",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/primitives/drawer.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/drawer.md",
+  "docstring": "A namespace for Drawer components.",
+  "bases": [
+    "ComponentNamespace"
+  ],
+  "properties": [
+    {
+      "name": "DrawerRoot.default_open",
+      "type": "bool",
+      "docstring": "The open state of the drawer when it is initially rendered. Use when you do not need to control its open state."
+    },
+    {
+      "name": "DrawerRoot.open",
+      "type": "bool",
+      "docstring": "Whether the drawer is open or not."
+    },
+    {
+      "name": "DrawerRoot.modal",
+      "type": "bool",
+      "docstring": "When `False`, it allows interaction with elements outside of the drawer without closing it. Defaults to `True`."
+    },
+    {
+      "name": "DrawerRoot.direction",
+      "type": "LiteralDirectionType",
+      "docstring": "Direction of the drawer. This adjusts the animations and the drag direction. Defaults to `\"bottom\"`"
+    },
+    {
+      "name": "DrawerRoot.dismissible",
+      "type": "bool",
+      "docstring": "When `False`, dragging, clicking outside, pressing esc, etc. will not close the drawer. Use this in combination with the open prop, otherwise you won't be able to open/close the drawer."
+    },
+    {
+      "name": "DrawerRoot.handle_only",
+      "type": "bool",
+      "docstring": "When `True`, dragging will only be possible by the handle."
+    },
+    {
+      "name": "DrawerRoot.snap_points",
+      "type": "Sequence[str | float] | None",
+      "docstring": "Array of numbers from 0 to 100 that corresponds to % of the screen a given snap point should take up. Should go from least visible. Also Accept px values, which doesn't take screen height into account."
+    },
+    {
+      "name": "DrawerRoot.fade_from_index",
+      "type": "int",
+      "docstring": "Index of a snapPoint from which the overlay fade should be applied. Defaults to the last snap point."
+    },
+    {
+      "name": "DrawerRoot.scroll_lock_timeout",
+      "type": "int",
+      "docstring": "Duration for which the drawer is not draggable after scrolling content inside of the drawer. Defaults to 500ms"
+    },
+    {
+      "name": "DrawerRoot.prevent_scroll_restoration",
+      "type": "bool",
+      "docstring": "When `True`, it prevents scroll restoration. Defaults to `True`."
+    },
+    {
+      "name": "DrawerRoot.should_scale_background",
+      "type": "bool",
+      "docstring": "Enable background scaling, it requires container element with `vaul-drawer-wrapper` attribute to scale its background."
+    },
+    {
+      "name": "DrawerRoot.close_threshold",
+      "type": "float",
+      "docstring": "Number between 0 and 1 that determines when the drawer should be closed."
+    },
+    {
+      "name": "DrawerTrigger.as_child",
+      "type": "bool",
+      "docstring": "Defaults to true, if the first child acts as the trigger."
+    },
+    {
+      "name": "DrawerTrigger.Args",
+      "type": "*children: The children of the element.",
+      "docstring": ""
+    },
+    {
+      "name": "DrawerTrigger.Returns",
+      "type": "The new DrawerTrigger instance.",
+      "docstring": ""
+    },
+    {
+      "name": "DrawerContent.Returns",
+      "type": "The dictionary of the component style as value and the style notation as key.",
+      "docstring": ""
+    },
+    {
+      "name": "DrawerContent.Args",
+      "type": "*children: The list of children to use.",
+      "docstring": ""
+    },
+    {
+      "name": "DrawerContent.Returns",
+      "type": "The drawer content.",
+      "docstring": ""
+    },
+    {
+      "name": "DrawerOverlay.Returns",
+      "type": "The dictionary of the component style as value and the style notation as key.",
+      "docstring": ""
+    },
+    {
+      "name": "DrawerTitle.Returns",
+      "type": "The dictionary of the component style as value and the style notation as key.",
+      "docstring": ""
+    },
+    {
+      "name": "DrawerDescription.Returns",
+      "type": "The dictionary of the component style as value and the style notation as key.",
+      "docstring": ""
+    }
+  ],
+  "events": [
+    {
+      "name": "DrawerRoot.on_open_change",
+      "type": "EventHandler[passthrough_event_spec(bool)",
+      "docstring": "Fires when the drawer is opened or closed."
+    },
+    {
+      "name": "DrawerRoot.on_animation_end",
+      "type": "EventHandler[passthrough_event_spec(bool)",
+      "docstring": "Gets triggered after the open or close animation ends, it receives an open argument with the open state of the drawer by the time the function was triggered."
+    },
+    {
+      "name": "DrawerContent.on_open_auto_focus",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the drawer content is opened."
+    },
+    {
+      "name": "DrawerContent.on_close_auto_focus",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the drawer content is closed."
+    },
+    {
+      "name": "DrawerContent.on_escape_key_down",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the escape key is pressed."
+    },
+    {
+      "name": "DrawerContent.on_pointer_down_outside",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when the pointer is down outside the drawer content."
+    },
+    {
+      "name": "DrawerContent.on_interact_outside",
+      "type": "EventHandler[no_args_event_spec",
+      "docstring": "Fired when interacting outside the drawer content."
+    }
+  ],
+  "styling_props": []
+}

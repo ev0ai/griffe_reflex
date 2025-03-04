@@ -1,0 +1,81 @@
+{
+  "name": "progress",
+  "module_path": "components.radix.themes.components.progress",
+  "module_name": "progress",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/progress.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/progress.md",
+  "docstring": "A progress bar component.",
+  "bases": [
+    "RadixThemesComponent"
+  ],
+  "properties": [
+    {
+      "name": "value",
+      "type": "int",
+      "docstring": "The value of the progress bar: 0 to max (default 100)"
+    },
+    {
+      "name": "max",
+      "type": "int",
+      "docstring": "The maximum progress value."
+    },
+    {
+      "name": "high_contrast",
+      "type": "bool",
+      "docstring": "Whether to render the progress bar with higher contrast color against background"
+    },
+    {
+      "name": "duration",
+      "type": "str",
+      "docstring": "The duration of the progress bar animation. Once the duration times out, the progress bar will start an indeterminate animation."
+    },
+    {
+      "name": "fill_color",
+      "type": "str",
+      "docstring": "The color of the progress bar fill animation."
+    },
+    {
+      "name": "Args",
+      "type": "color: Color of the fill part.",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "Style: Style object with the correct css selector and color.",
+      "docstring": ""
+    },
+    {
+      "name": "Args",
+      "type": "*children: The children of the component.",
+      "docstring": ""
+    },
+    {
+      "name": "Returns",
+      "type": "The Progress Component.",
+      "docstring": ""
+    }
+  ],
+  "events": [],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
+      "docstring": "The size of the progress bar: \"1\" | \"2\" | \"3\""
+    },
+    {
+      "name": "variant",
+      "type": "Literal[\"classic\", \"surface\", \"soft\"]",
+      "docstring": "The variant of the progress bar: \"classic\" | \"surface\" | \"soft\""
+    },
+    {
+      "name": "color_scheme",
+      "type": "LiteralAccentColor",
+      "docstring": "The color theme of the progress bar"
+    },
+    {
+      "name": "radius",
+      "type": "Literal[\"none\", \"small\", \"medium\", \"large\", \"full\"]",
+      "docstring": "Override theme radius for progress bar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+    }
+  ]
+}
