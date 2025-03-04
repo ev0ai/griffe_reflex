@@ -1,15 +1,83 @@
 {
   "name": "axis",
-  "module_path": "components.dynamic",
-  "module_name": "dynamic",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/dynamic.py",
+  "module_path": "components.recharts.cartesian",
+  "module_name": "cartesian",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/cartesian.py",
   "doc_path": null,
-  "docstring": "",
-  "bases": [],
+  "docstring": "A base class for cartesian charts in Recharts.",
+  "bases": [
+    "Recharts"
+  ],
   "supports_common_props": false,
-  "properties": [],
-  "event_names": [],
+  "properties": [
+    {
+      "name": "layout",
+      "type": "Var[LiteralLayout]",
+      "description": "The layout of bar in the chart, usually inherited from parent. 'horizontal' | 'vertical'"
+    },
+    {
+      "name": "data_key",
+      "type": "Var[str | int]",
+      "description": "The key of a group of data which should be unique in an area chart."
+    },
+    {
+      "name": "x_axis_id",
+      "type": "Var[str | int]",
+      "description": "The id of x-axis which is corresponding to the data. Default: 0"
+    },
+    {
+      "name": "y_axis_id",
+      "type": "Var[str | int]",
+      "description": "The id of y-axis which is corresponding to the data. Default: 0"
+    },
+    {
+      "name": "legend_type",
+      "type": "Var[LiteralLegendType]",
+      "description": "The type of icon in legend. If set to 'none', no legend item will be rendered. 'line' | 'plainline' | 'square' | 'rect'| 'circle' | 'cross' | 'diamond' | 'star' | 'triangle' | 'wye' | 'none' optional"
+    },
+    {
+      "name": "is_animation_active",
+      "type": "Var[bool]",
+      "description": "If set false, animation of bar will be disabled. Default: True"
+    },
+    {
+      "name": "animation_begin",
+      "type": "Var[int]",
+      "description": "Specifies when the animation should begin, the unit of this option is ms. Default: 0"
+    },
+    {
+      "name": "animation_duration",
+      "type": "Var[int]",
+      "description": "Specifies the duration of animation, the unit of this option is ms. Default: 1500"
+    },
+    {
+      "name": "animation_easing",
+      "type": "Var[LiteralAnimationEasing]",
+      "description": "The type of easing function. Default: \"ease\""
+    },
+    {
+      "name": "unit",
+      "type": "Var[str | int]",
+      "description": "The unit of data. This option will be used in tooltip."
+    },
+    {
+      "name": "name",
+      "type": "Var[str | int]",
+      "description": "The name of data. This option will be used in tooltip and legend to represent the component. If no value was set to this option, the value of dataKey will be used alternatively."
+    }
+  ],
+  "event_names": [
+    "on_animation_start",
+    "on_animation_end",
+    "on_click",
+    "on_mouse_down",
+    "on_mouse_up",
+    "on_mouse_move",
+    "on_mouse_over",
+    "on_mouse_out",
+    "on_mouse_enter",
+    "on_mouse_leave"
+  ],
   "styling_props": [],
-  "subcomponents": {},
-  "error": "No suitable class found"
+  "subcomponents": {}
 }

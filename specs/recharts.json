@@ -1,9 +1,9 @@
 {
-  "name": "quote",
-  "module_path": "components.dynamic",
-  "module_name": "dynamic",
+  "name": "recharts",
+  "module_path": "components.dynamicrecharts",
+  "module_name": "dynamicrecharts",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/dynamic.py",
-  "doc_path": null,
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/graphing/charts/linechart.md",
   "docstring": "",
   "bases": [],
   "supports_common_props": false,

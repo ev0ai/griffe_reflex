@@ -1,8 +1,8 @@
 {
   "name": "legend",
-  "module_path": "components.dynamic",
-  "module_name": "dynamic",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/dynamic.py",
+  "module_path": "components.recharts.general",
+  "module_name": "general",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/general.py",
   "doc_path": null,
   "docstring": "",
   "bases": [],

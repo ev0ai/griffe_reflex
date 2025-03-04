@@ -1,7 +1,7 @@
 {
   "name": "html_embed",
-  "module_path": "components.dynamic",
-  "module_name": "dynamic",
+  "module_path": "components.dynamichtml_embed",
+  "module_name": "dynamichtml_embed",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/dynamic.py",
   "doc_path": null,
   "docstring": "",

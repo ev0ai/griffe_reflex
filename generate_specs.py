@@ -627,86 +627,216 @@ def extract_properties_from_class_body(class_body, spec, class_prefix=None):
             spec["properties"].append(property_data)
 
 def find_all_components():
+    """Find all components in the codebase.
+    
+    This function follows the module structure defined in the __init__.py files
+    to identify components and their proper module paths.
+    
+    Returns:
+        Dict[str, Dict[str, str]]: A dictionary of component names to their module paths and file paths.
     """
-    Find specifically requested components in the codebase.
-    
-    Returns a dictionary of component names to their module paths and file paths.
-    """
-    component_to_paths = {}
-    
-    # ONLY include components specifically requested by the user
-    requested_components = [
-        # Components explicitly mentioned by the user
-        'accordion', 'segmented_control', 'tabs', 'input', 'slider', 'form',
-        'button', 'checkbox', 'select', 'text_area', 'radio_group', 'upload',
-        'switch', 'table', 'stack', 'hstack', 'vstack', 'card', 'separator',
-        'inset', 'theme', 'callout', 'scroll_area', 'progress', 'list',
-        'data_list', 'avatar', 'badge', 'text', 'popover', 'hover_card',
-        'drawer', 'dialog', 'tooltip',
+    # List of components we want to explicitly include
+    requested_components = {
+        # Radix Components
+        "accordion", "alert_dialog", "avatar", "badge", "blockquote", "box", "button", 
+        "callout", "card", "center", "checkbox", "code", "container", "context_menu", 
+        "data_list", "dialog", "drawer", "dropdown_menu", "flex", "form", "grid", 
+        "heading", "hover_card", "inset", "link", "popover", "progress", "radio_group", 
+        "scroll_area", "section", "segmented_control", "select", "separator", "skeleton", 
+        "slider", "spacer", "spinner", "stack", "hstack", "vstack", "switch", "table", 
+        "tabs", "text", "text_area", "input", "theme", "tooltip",
+
+        # Core components
+        "cond", "clipboard", "foreach", "match", "script", "upload", "fragment",
+
+        # Data display components
+        "code_block", "data_editor", "data_table", 
+
+        # Media components
+        "image", "audio", "video",
         
-        # Missing components specifically requested
-        'code_block', 'icon', 'moment', 'spinner', 'segmented_control',
-        'cond', 'foreach', 'match', 'editor', 'box', 'center', 'container',
-        'flex', 'fragment', 'grid', 'section', 'spacer', 'audio', 'image',
-        'video', 'clipboard', 'html_embed', 'html', 'script', 'skeleton',
-        'alert_dialog', 'context_menu', 'dropdown_menu', 'toast', 'ag_grid',
-        'data_editor', 'data_table', 'blockquote', 'code', 'em', 'heading',
-        'kbd', 'link', 'markdown', 'quote', 'strong',
+        # Editor components
+        "editor",
         
-        # Recharts/graphing components specifically requested
-        'areachart', 'barchart', 'composedchart', 'errorbar', 'funnelchart',
-        'linechart', 'piechart', 'radarchart', 'radialbarchart', 'scatterchart',
-        'axis', 'brush', 'cartesiangrid', 'label', 'legend', 'reference', 'tooltip'
-    ]
+        # Icons
+        "icon",
+        
+        # Markdown
+        "markdown",
+        
+        # Time related
+        "moment",
+        
+        # Toast notifications
+        "toast",
+        
+        # HTML embed
+        "html_embed",
+        
+        # Charting components
+        "areachart", "barchart", "brush", "cartesiangrid", "composedchart", "errorbar", 
+        "funnelchart", "linechart", "piechart", "radarchart", "radialbarchart", 
+        "scatterchart", "recharts", "axis", "reference", "legend",
+        
+        # Data Grid
+        "ag_grid",
+    }
     
-    # First, get component paths from the existing mapping function
-    initial_mapping = extract_component_mappings()
+    # Initialize paths dictionary
+    result = {}
     
-    # Only keep components that were explicitly requested
+    # Component mappings we've already extracted
+    existing_mappings = extract_component_mappings()
+    
+    # Start with known mappings for requested components
     for component_name in requested_components:
-        if component_name in initial_mapping:
-            component_to_paths[component_name] = initial_mapping[component_name]
+        if component_name in existing_mappings:
+            result[component_name] = existing_mappings[component_name]
     
-    # Now try to find paths for missing components
+    # Define common module paths to check
+    module_paths_to_check = {
+        # Radix theme components
+        "radix_theme_component": "components.radix.themes.components.",
+        "radix_theme_typography": "components.radix.themes.typography.",
+        "radix_theme_layout": "components.radix.themes.layout.",
+        "radix_primitives": "components.radix.primitives.",
+        
+        # Core components
+        "core": "components.core.",
+        
+        # Base components
+        "base": "components.base.",
+        
+        # Data display
+        "datadisplay": "components.datadisplay.",
+        
+        # HTML elements
+        "el": "components.el.elements.",
+        
+        # Special components
+        "lucide": "components.lucide",
+        "markdown": "components.markdown",
+        "moment": "components.moment",
+        "recharts": "components.recharts",
+        "gridjs": "components.gridjs",
+        "sonner": "components.sonner",
+        "suneditor": "components.suneditor",
+        "react_player": "components.react_player",
+        
+        # Dynamic components for graphing etc.
+        "dynamic": "components.dynamic",
+    }
+    
+    # Specialized component mappings based on __init__.py analysis
+    specialized_mappings = {
+        # Input field is actually TextField in Radix
+        "input": {"module_path": "components.radix.themes.components.text_field", 
+                  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/text_field.py"},
+        
+        # Icon is from Lucide
+        "icon": {"module_path": "components.lucide", 
+                 "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/lucide/icon.py"},
+        
+        # Moment for date/time
+        "moment": {"module_path": "components.moment", 
+                   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/moment/moment.py"},
+                   
+        # Recharts components
+        "areachart": {"module_path": "components.recharts.charts", 
+                     "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+        "barchart": {"module_path": "components.recharts.charts", 
+                    "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+        "linechart": {"module_path": "components.recharts.charts", 
+                     "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+        "piechart": {"module_path": "components.recharts.charts", 
+                    "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+        "radarchart": {"module_path": "components.recharts.charts", 
+                      "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+        "radialbarchart": {"module_path": "components.recharts.charts", 
+                         "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+        "scatterchart": {"module_path": "components.recharts.charts", 
+                        "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+        "composedchart": {"module_path": "components.recharts.charts", 
+                        "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+        "funnelchart": {"module_path": "components.recharts.charts", 
+                       "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py"},
+                       
+        # Chart components
+        "brush": {"module_path": "components.recharts.cartesian", 
+                 "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/cartesian.py"},
+        "cartesiangrid": {"module_path": "components.recharts.cartesian", 
+                         "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/cartesian.py"},
+        "errorbar": {"module_path": "components.recharts.cartesian", 
+                    "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/cartesian.py"},
+        "axis": {"module_path": "components.recharts.cartesian", 
+                "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/cartesian.py"},
+        "reference": {"module_path": "components.recharts.cartesian", 
+                     "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/cartesian.py"},
+        "legend": {"module_path": "components.recharts.general", 
+                  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/general.py"},
+                  
+        # Media components
+        "audio": {"module_path": "components.react_player", 
+                 "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/react_player/react_player.py"},
+        "video": {"module_path": "components.react_player", 
+                 "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/react_player/react_player.py"},
+                 
+        # Editor
+        "editor": {"module_path": "components.suneditor", 
+                  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/suneditor/suneditor.py"},
+                  
+        # Toast
+        "toast": {"module_path": "components.sonner.toast", 
+                 "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/sonner/toast.py"},
+                 
+        # Data components
+        "data_table": {"module_path": "components.gridjs", 
+                      "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/gridjs/gridjs.py"},
+        "ag_grid": {"module_path": "components.datadisplay.ag_grid", 
+                    "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/datadisplay/ag_grid.py"},
+    }
+    
+    # Add specialized mappings to our results
+    for component_name, mapping in specialized_mappings.items():
+        if component_name in requested_components and component_name not in result:
+            result[component_name] = mapping
+    
+    # Try to find remaining components using common module paths
     for component_name in requested_components:
-        if component_name not in component_to_paths:
-            # Try to guess the module path based on the component name
-            module_name = component_name
+        if component_name in result:
+            continue
             
-            # Try a few common locations
-            possible_paths = [
-                # Try in core components
-                f"components.core.{module_name}",
-                # Try in radix components
-                f"components.radix.themes.components.{module_name}",
-                f"components.radix.primitives.{module_name}",
-                # Try in recharts for graphing components
-                f"components.recharts.{module_name}",
-                # Try in dynamic components
-                f"components.dynamic",
-                # Try in base components
-                f"components.base.{module_name}",
-                # Try in el components
-                f"components.el.{module_name}",
-                # Try in typography
-                f"components.radix.themes.typography.{module_name}",
-                # Try in layout
-                f"components.radix.themes.layout.{module_name}",
-            ]
+        # Try each possible module path
+        for prefix, module_path in module_paths_to_check.items():
+            possible_file_path = f"/Users/dave/code/griffe_reflex/reflex/reflex/{module_path.replace('.', '/')}"
             
-            for module_path in possible_paths:
-                file_path = module_path.replace('.', '/') + '.py'
-                full_path = str(REFLEX_ROOT / 'reflex' / file_path)
+            # Handle direct modules (like components.dynamic)
+            if module_path.count('.') == 1:
+                possible_file_path += f".py"
+            else:
+                # Handle nested modules
+                possible_file_path += f"{component_name}.py"
                 
-                if os.path.exists(full_path):
-                    component_to_paths[component_name] = {
-                        'module_path': module_path,
-                        'module_name': module_name,
-                        'file_path': full_path
-                    }
-                    break
-    
-    return component_to_paths
+            # Create the potential module path
+            potential_module_path = f"{module_path}{component_name}"
+            
+            # Check if file exists
+            if os.path.exists(possible_file_path):
+                result[component_name] = {
+                    "module_path": potential_module_path,
+                    "file_path": possible_file_path
+                }
+                break
+                
+    # If we still haven't found all requested components, use the dynamic module as fallback
+    for component_name in requested_components:
+        if component_name not in result:
+            result[component_name] = {
+                "module_path": "components.dynamic",
+                "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/dynamic.py"
+            }
+            
+    return result
 
 def generate_spec_files():
     """

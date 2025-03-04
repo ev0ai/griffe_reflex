@@ -1,15 +1,32 @@
 {
   "name": "barchart",
-  "module_path": "components.dynamic",
-  "module_name": "dynamic",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/dynamic.py",
+  "module_path": "components.recharts.charts",
+  "module_name": "charts",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/recharts/charts.py",
   "doc_path": null,
-  "docstring": "",
-  "bases": [],
+  "docstring": "A component that wraps a Recharts charts.",
+  "bases": [
+    "RechartsCharts"
+  ],
   "supports_common_props": false,
-  "properties": [],
-  "event_names": [],
+  "properties": [
+    {
+      "name": "width",
+      "type": "Var[str | int]",
+      "description": "The width of chart container. String or Integer"
+    },
+    {
+      "name": "height",
+      "type": "Var[str | int]",
+      "description": "The height of chart container."
+    }
+  ],
+  "event_names": [
+    "on_click",
+    "on_mouse_enter",
+    "on_mouse_move",
+    "on_mouse_leave"
+  ],
   "styling_props": [],
-  "subcomponents": {},
-  "error": "No suitable class found"
+  "subcomponents": {}
 }
