@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.alert_dialog",
   "module_name": "alert_dialog",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/alert_dialog.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/alert_dialog.md",
+  "doc_path": null,
   "docstring": "AlertDialog components namespace.",
   "bases": [
     "ComponentNamespace"

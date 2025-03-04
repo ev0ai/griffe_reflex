@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.base",
   "module_name": "base",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/base.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/other/theme.md",
+  "doc_path": null,
   "docstring": "Many radix-themes elements accept shorthand margin props.",
   "bases": [
     "Component"

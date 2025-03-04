@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.slider",
   "module_name": "slider",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/slider.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/slider.md",
+  "doc_path": null,
   "docstring": "Provides user selection from a range of values.",
   "bases": [
     "RadixThemesComponent"

@@ -1,15 +1,109 @@
 {
   "name": "audio",
-  "module_path": "components.react_player",
+  "module_path": "components.react_player.react_player",
   "module_name": "react_player",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/react_player.py",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/react_player/react_player.py",
   "doc_path": null,
-  "docstring": "",
-  "bases": [],
-  "supports_common_props": false,
-  "properties": [],
-  "event_names": [],
+  "docstring": "Using react-player and not implement all props and callback yet.\n    reference: https://github.com/cookpete/react-player.",
+  "bases": [
+    "NoSSRComponent"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "reference",
+      "type": "https://github.com/cookpete/react-player.",
+      "description": ""
+    },
+    {
+      "name": "url",
+      "type": "Var[str]",
+      "description": "The url of a video or song to play"
+    },
+    {
+      "name": "playing",
+      "type": "Var[bool]",
+      "description": "Set to true or false to pause or play the media"
+    },
+    {
+      "name": "loop",
+      "type": "Var[bool]",
+      "description": "Set to true or false to loop the media"
+    },
+    {
+      "name": "controls",
+      "type": "Var[bool]",
+      "description": "Set to true or false to display native player controls."
+    },
+    {
+      "name": "light",
+      "type": "Var[bool]",
+      "description": "Set to true to show just the video thumbnail, which loads the full player on click"
+    },
+    {
+      "name": "volume",
+      "type": "Var[float]",
+      "description": "Set the volume of the player, between 0 and 1"
+    },
+    {
+      "name": "muted",
+      "type": "Var[bool]",
+      "description": "Mutes the player"
+    },
+    {
+      "name": "width",
+      "type": "Var[str]",
+      "description": "Set the width of the player: ex:640px"
+    },
+    {
+      "name": "height",
+      "type": "Var[str]",
+      "description": "Set the height of the player: ex:640px"
+    },
+    {
+      "name": "library",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "is_default",
+      "type": "bool",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount",
+    "on_ready",
+    "on_start",
+    "on_play",
+    "on_progress",
+    "on_duration",
+    "on_pause",
+    "on_buffer",
+    "on_buffer_end",
+    "on_seek",
+    "on_playback_rate_change",
+    "on_playback_quality_change",
+    "on_ended",
+    "on_error",
+    "on_click_preview",
+    "on_enable_pip",
+    "on_disable_pip"
+  ],
   "styling_props": [],
-  "subcomponents": {},
-  "error": "File not found: /Users/dave/code/griffe_reflex/reflex/reflex/components/react_player.py"
+  "subcomponents": {}
 }

@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.typography.text",
   "module_name": "text",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/typography/text.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/typography/text.md",
+  "doc_path": null,
   "docstring": "A foundational text primitive based on the <span> element.",
   "bases": [
     "elements.Span",

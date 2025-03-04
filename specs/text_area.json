@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.text_area",
   "module_name": "text_area",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/text_area.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/text_area.md",
+  "doc_path": null,
   "docstring": "The input part of a TextArea, may be used by itself.",
   "bases": [
     "RadixThemesComponent",

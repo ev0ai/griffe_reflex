@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.data_list",
   "module_name": "data_list",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/data_list.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/data_list.md",
+  "doc_path": null,
   "docstring": "DataList components namespace.",
   "bases": [
     "SimpleNamespace"

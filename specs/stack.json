@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.layout.stack",
   "module_name": "stack",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/stack.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/layout/stack.md",
+  "doc_path": null,
   "docstring": "A stack component.",
   "bases": [
     "Flex"

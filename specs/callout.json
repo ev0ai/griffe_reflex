@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.callout",
   "module_name": "callout",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/callout.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/callout.md",
+  "doc_path": null,
   "docstring": "A short message to attract user's attention.",
   "bases": [
     "CalloutRoot"

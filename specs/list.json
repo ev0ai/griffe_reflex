@@ -1,0 +1,12 @@
+{
+  "name": "list",
+  "module_path": "components.el.elements.list",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/el/elements/list.py",
+  "docstring": "",
+  "bases": [],
+  "properties": [],
+  "event_names": [],
+  "enum_values": {},
+  "styling_properties": {},
+  "subcomponents": {}
+}

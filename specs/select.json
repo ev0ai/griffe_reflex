@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.select",
   "module_name": "select",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/select.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/select-ll.md",
+  "doc_path": null,
   "docstring": "Select components namespace.",
   "bases": [
     "ComponentNamespace"

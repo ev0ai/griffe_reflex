@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.table",
   "module_name": "table",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/table.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/tables-and-data-grids/table.md",
+  "doc_path": null,
   "docstring": "Table components namespace.",
   "bases": [
     "ComponentNamespace"

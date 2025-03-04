@@ -3,7 +3,7 @@
   "module_path": "components.radix.primitives.drawer",
   "module_name": "drawer",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/primitives/drawer.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/drawer.md",
+  "doc_path": null,
   "docstring": "A namespace for Drawer components.",
   "bases": [
     "ComponentNamespace"

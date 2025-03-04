@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.scroll_area",
   "module_name": "scroll_area",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/scroll_area.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/scroll_area.md",
+  "doc_path": null,
   "docstring": "Custom styled, cross-browser scrollable area using native functionality.",
   "bases": [
     "RadixThemesComponent"

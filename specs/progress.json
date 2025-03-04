@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.progress",
   "module_name": "progress",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/progress.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/progress.md",
+  "doc_path": null,
   "docstring": "A progress bar component.",
   "bases": [
     "RadixThemesComponent"

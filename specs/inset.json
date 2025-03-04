@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.inset",
   "module_name": "inset",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/inset.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/layout/inset.md",
+  "doc_path": null,
   "docstring": "Applies a negative margin to allow content to bleed into the surrounding container.",
   "bases": [
     "elements.Div",

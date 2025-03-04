@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.tabs",
   "module_name": "tabs",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/tabs.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/disclosure/tabs.md",
+  "doc_path": null,
   "docstring": "Set of content sections to be displayed one at a time.",
   "bases": [
     "ComponentNamespace"

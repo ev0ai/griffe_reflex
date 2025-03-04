@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.button",
   "module_name": "button",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/button.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/button.md",
+  "doc_path": null,
   "docstring": "Trigger an action or event, such as submitting a form or displaying a dialog.",
   "bases": [
     "elements.Button",

@@ -1,15 +1,12 @@
 {
   "name": "editor",
-  "module_path": "components.suneditor",
-  "module_name": "suneditor",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/suneditor.py",
-  "doc_path": null,
+  "module_path": "components.suneditor.suneditor",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/suneditor/suneditor.py",
   "docstring": "",
   "bases": [],
-  "supports_common_props": false,
   "properties": [],
   "event_names": [],
-  "styling_props": [],
-  "subcomponents": {},
-  "error": "File not found: /Users/dave/code/griffe_reflex/reflex/reflex/components/suneditor.py"
+  "enum_values": {},
+  "styling_properties": {},
+  "subcomponents": {}
 }

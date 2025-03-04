@@ -1,15 +1,38 @@
 {
   "name": "icon",
-  "module_path": "components.lucide",
-  "module_name": "lucide",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/lucide.py",
+  "module_path": "components.lucide.icon",
+  "module_name": "icon",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/lucide/icon.py",
   "doc_path": null,
-  "docstring": "",
-  "bases": [],
-  "supports_common_props": false,
+  "docstring": "An Icon component.",
+  "bases": [
+    "LucideIconComponent"
+  ],
+  "supports_common_props": true,
   "properties": [],
-  "event_names": [],
-  "styling_props": [],
-  "subcomponents": {},
-  "error": "File not found: /Users/dave/code/griffe_reflex/reflex/reflex/components/lucide.py"
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Var[int]",
+      "description": "The size of the icon in pixels."
+    }
+  ],
+  "subcomponents": {}
 }

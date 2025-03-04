@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.dropdown_menu",
   "module_name": "dropdown_menu",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/dropdown_menu.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/dropdown_menu.md",
+  "doc_path": null,
   "docstring": "DropdownMenu components namespace.",
   "bases": [
     "ComponentNamespace"

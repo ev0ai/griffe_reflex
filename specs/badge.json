@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.badge",
   "module_name": "badge",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/badge.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/badge.md",
+  "doc_path": null,
   "docstring": "A stylized badge element.",
   "bases": [
     "elements.Span",

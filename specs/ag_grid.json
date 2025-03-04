@@ -1,15 +1,12 @@
 {
   "name": "ag_grid",
   "module_path": "components.datadisplay.ag_grid",
-  "module_name": "ag_grid",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/datadisplay/ag_grid.py",
-  "doc_path": null,
   "docstring": "",
   "bases": [],
-  "supports_common_props": false,
   "properties": [],
   "event_names": [],
-  "styling_props": [],
-  "subcomponents": {},
-  "error": "File not found: /Users/dave/code/griffe_reflex/reflex/reflex/components/datadisplay/ag_grid.py"
+  "enum_values": {},
+  "styling_properties": {},
+  "subcomponents": {}
 }

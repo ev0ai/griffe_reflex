@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.radio_group",
   "module_name": "radio_group",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/radio_group.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/radio_group.md",
+  "doc_path": null,
   "docstring": "RadioGroup components namespace.",
   "bases": [
     "ComponentNamespace"

@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.dialog",
   "module_name": "dialog",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/dialog.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/dialog.md",
+  "doc_path": null,
   "docstring": "Dialog components namespace.",
   "bases": [
     "ComponentNamespace"

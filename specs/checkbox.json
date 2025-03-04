@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.checkbox",
   "module_name": "checkbox",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/checkbox.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/checkbox.md",
+  "doc_path": null,
   "docstring": "Selects a single value, typically for submission in a form.",
   "bases": [
     "RadixThemesComponent"

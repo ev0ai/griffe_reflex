@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.card",
   "module_name": "card",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/card.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/layout/card.md",
+  "doc_path": null,
   "docstring": "Container that groups related content and actions.",
   "bases": [
     "elements.Div",

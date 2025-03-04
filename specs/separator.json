@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.separator",
   "module_name": "separator",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/separator.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/layout/separator.md",
+  "doc_path": null,
   "docstring": "Visually or semantically separates content.",
   "bases": [
     "RadixThemesComponent"

@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.context_menu",
   "module_name": "context_menu",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/context_menu.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/context_menu.md",
+  "doc_path": null,
   "docstring": "Menu representing a set of actions, displayed at the origin of a pointer right-click or long-press.",
   "bases": [
     "ComponentNamespace"

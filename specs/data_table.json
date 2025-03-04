@@ -1,15 +1,12 @@
 {
   "name": "data_table",
-  "module_path": "components.gridjs",
-  "module_name": "gridjs",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/gridjs.py",
-  "doc_path": null,
+  "module_path": "components.gridjs.gridjs",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/gridjs/gridjs.py",
   "docstring": "",
   "bases": [],
-  "supports_common_props": false,
   "properties": [],
   "event_names": [],
-  "styling_props": [],
-  "subcomponents": {},
-  "error": "File not found: /Users/dave/code/griffe_reflex/reflex/reflex/components/gridjs.py"
+  "enum_values": {},
+  "styling_properties": {},
+  "subcomponents": {}
 }

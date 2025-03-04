@@ -3,7 +3,7 @@
   "module_path": "components.core.upload",
   "module_name": "upload",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/core/upload.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/upload.md",
+  "doc_path": null,
   "docstring": "A file upload component.",
   "bases": [
     "MemoizationLeaf"

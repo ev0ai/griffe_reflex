@@ -1,15 +1,149 @@
 {
   "name": "moment",
-  "module_path": "components.moment",
+  "module_path": "components.moment.moment",
   "module_name": "moment",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/moment.py",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/moment/moment.py",
   "doc_path": null,
-  "docstring": "",
-  "bases": [],
-  "supports_common_props": false,
-  "properties": [],
-  "event_names": [],
+  "docstring": "The Moment component.",
+  "bases": [
+    "NoSSRComponent"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "library",
+      "type": "str | None",
+      "description": ""
+    },
+    {
+      "name": "interval",
+      "type": "Var[int]",
+      "description": "How often the date update (how often time update / 0 to disable)."
+    },
+    {
+      "name": "format",
+      "type": "Var[str]",
+      "description": "Formats the date according to the given format string."
+    },
+    {
+      "name": "trim",
+      "type": "Var[bool]",
+      "description": "When formatting duration time, the largest-magnitude tokens are automatically trimmed when they have no value."
+    },
+    {
+      "name": "parse",
+      "type": "Var[str]",
+      "description": "Use the parse attribute to tell moment how to parse the given date when non-standard."
+    },
+    {
+      "name": "add",
+      "type": "Var[MomentDelta]",
+      "description": "Add a delta to the base date (keys are \"years\", \"quarters\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\")"
+    },
+    {
+      "name": "subtract",
+      "type": "Var[MomentDelta]",
+      "description": "Subtract a delta to the base date (keys are \"years\", \"quarters\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\")"
+    },
+    {
+      "name": "from_now",
+      "type": "Var[bool]",
+      "description": "Displays the date as the time from now, e.g. \"5 minutes ago\"."
+    },
+    {
+      "name": "from_now_during",
+      "type": "Var[int]",
+      "description": "Setting fromNowDuring will display the relative time as with fromNow but just during its value in milliseconds, after that format will be used instead."
+    },
+    {
+      "name": "to_now",
+      "type": "Var[bool]",
+      "description": "Similar to fromNow, but gives the opposite interval."
+    },
+    {
+      "name": "with_title",
+      "type": "Var[bool]",
+      "description": "Adds a title attribute to the element with the complete date."
+    },
+    {
+      "name": "title_format",
+      "type": "Var[str]",
+      "description": "How the title date is formatted when using the withTitle attribute."
+    },
+    {
+      "name": "diff",
+      "type": "Var[str]",
+      "description": "Show the different between this date and the rendered child."
+    },
+    {
+      "name": "decimal",
+      "type": "Var[bool]",
+      "description": "Display the diff as decimal."
+    },
+    {
+      "name": "unit",
+      "type": "Var[str]",
+      "description": "Display the diff in given unit."
+    },
+    {
+      "name": "duration",
+      "type": "Var[str]",
+      "description": "Shows the duration (elapsed time) between two dates. duration property should be behind date property time-wise."
+    },
+    {
+      "name": "date",
+      "type": "Var[str | datetime | date | time | timedelta]",
+      "description": "The date to display (also work if passed as children)."
+    },
+    {
+      "name": "duration_from_now",
+      "type": "Var[bool]",
+      "description": "Shows the duration (elapsed time) between now and the provided datetime."
+    },
+    {
+      "name": "unix",
+      "type": "Var[bool]",
+      "description": "Add the imports for the Moment component.\n\n        Returns:\n            The import dict for the component."
+    },
+    {
+      "name": "local",
+      "type": "Var[bool]",
+      "description": "Add the imports for the Moment component.\n\n        Returns:\n            The import dict for the component."
+    },
+    {
+      "name": "tz",
+      "type": "Var[str]",
+      "description": "Add the imports for the Moment component.\n\n        Returns:\n            The import dict for the component."
+    },
+    {
+      "name": "locale",
+      "type": "Var[str]",
+      "description": "Add the imports for the Moment component.\n\n        Returns:\n            The import dict for the component."
+    },
+    {
+      "name": "is_default",
+      "type": "bool",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount",
+    "on_change"
+  ],
   "styling_props": [],
-  "subcomponents": {},
-  "error": "File not found: /Users/dave/code/griffe_reflex/reflex/reflex/components/moment.py"
+  "subcomponents": {}
 }

@@ -1,15 +1,53 @@
 {
   "name": "markdown",
-  "module_path": "components.markdown",
+  "module_path": "components.markdown.markdown",
   "module_name": "markdown",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/markdown.py",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/markdown/markdown.py",
   "doc_path": null,
-  "docstring": "",
-  "bases": [],
-  "supports_common_props": false,
-  "properties": [],
-  "event_names": [],
+  "docstring": "A markdown component.",
+  "bases": [
+    "Component"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "component_map",
+      "type": "dict[str, Any]",
+      "description": "Create a markdown component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Raises:\n            ValueError: If the children are not valid.\n\n        Returns:\n            The markdown component."
+    },
+    {
+      "name": "component_map_hash",
+      "type": "str",
+      "description": "Create a markdown component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Raises:\n            ValueError: If the children are not valid.\n\n        Returns:\n            The markdown component."
+    },
+    {
+      "name": "library",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "is_default",
+      "type": "bool",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
-  "subcomponents": {},
-  "error": "File not found: /Users/dave/code/griffe_reflex/reflex/reflex/components/markdown.py"
+  "subcomponents": {}
 }

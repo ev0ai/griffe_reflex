@@ -3,7 +3,7 @@
   "module_path": "components.radix.primitives.accordion",
   "module_name": "accordion",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/primitives/accordion.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/disclosure/accordion.md",
+  "doc_path": null,
   "docstring": "Accordion component.",
   "bases": [
     "ComponentNamespace"

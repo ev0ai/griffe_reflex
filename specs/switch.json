@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.switch",
   "module_name": "switch",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/switch.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/forms/switch.md",
+  "doc_path": null,
   "docstring": "A toggle switch alternative to the checkbox.",
   "bases": [
     "RadixThemesComponent"

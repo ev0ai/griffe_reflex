@@ -3,7 +3,7 @@
   "module_path": "components.radix.themes.components.tooltip",
   "module_name": "tooltip",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/tooltip.py",
-  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/tooltip.md",
+  "doc_path": null,
   "docstring": "Floating element that provides a control with contextual information via pointer or focus.",
   "bases": [
     "RadixThemesComponent"
