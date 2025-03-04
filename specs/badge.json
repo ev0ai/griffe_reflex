@@ -38,5 +38,6 @@
       "type": "LiteralRadius",
       "docstring": "Override theme radius for badge: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
     }
-  ]
+  ],
+  "subcomponents": {}
 }

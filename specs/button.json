@@ -44,5 +44,6 @@
       "type": "LiteralRadius",
       "docstring": "Override theme radius for button: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
     }
-  ]
+  ],
+  "subcomponents": {}
 }

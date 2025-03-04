@@ -1,91 +1,51 @@
 {
   "name": "theme",
   "module_path": "components.radix.themes.base",
-  "module_name": "theme",
+  "module_name": "base",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/base.py",
   "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/other/theme.md",
-  "docstring": "A theme provider for radix components.\n\n    This should be applied as `App.theme` to apply the theme to all radix\n    components in the app with the given settings.\n\n    It can also be used in a normal page to apply specified properties to all\n    child elements as an override of the main theme.",
+  "docstring": "Many radix-themes elements accept shorthand margin props.",
   "bases": [
-    "RadixThemesComponent"
+    "Component"
   ],
   "properties": [
     {
-      "name": "has_background",
-      "type": "bool",
-      "docstring": "Whether to apply the themes background color to the theme node. Defaults to True."
+      "name": "m",
+      "type": "LiteralSpacing",
+      "docstring": "Margin: \"0\" - \"9\" # noqa: ERA001"
     },
     {
-      "name": "appearance",
-      "type": "LiteralAppearance",
-      "docstring": "Override light or dark mode theme: \"inherit\" | \"light\" | \"dark\". Defaults to \"inherit\"."
+      "name": "mx",
+      "type": "LiteralSpacing",
+      "docstring": "Margin horizontal: \"0\" - \"9\""
     },
     {
-      "name": "accent_color",
-      "type": "LiteralAccentColor",
-      "docstring": "The color used for default buttons, typography, backgrounds, etc"
+      "name": "my",
+      "type": "LiteralSpacing",
+      "docstring": "Margin vertical: \"0\" - \"9\""
     },
     {
-      "name": "gray_color",
-      "type": "LiteralGrayColor",
-      "docstring": "The shade of gray, defaults to \"auto\"."
+      "name": "mt",
+      "type": "LiteralSpacing",
+      "docstring": "Margin top: \"0\" - \"9\""
     },
     {
-      "name": "panel_background",
-      "type": "LiteralPanelBackground",
-      "docstring": "Whether panel backgrounds are translucent: \"solid\" | \"translucent\" (default)"
+      "name": "mr",
+      "type": "LiteralSpacing",
+      "docstring": "Margin right: \"0\" - \"9\""
     },
     {
-      "name": "scaling",
-      "type": "LiteralScaling",
-      "docstring": "Scale of all theme items: \"90%\" | \"95%\" | \"100%\" | \"105%\" | \"110%\". Defaults to \"100%\""
+      "name": "mb",
+      "type": "LiteralSpacing",
+      "docstring": "Margin bottom: \"0\" - \"9\""
     },
     {
-      "name": "color_mode",
-      "type": "LiteralAppearance | None",
-      "docstring": ""
-    },
-    {
-      "name": "theme_panel",
-      "type": "bool",
-      "docstring": ""
-    },
-    {
-      "name": "Args",
-      "type": "*children: Child components.",
-      "docstring": ""
-    },
-    {
-      "name": "color_mode",
-      "type": "Map to appearance prop.",
-      "docstring": ""
-    },
-    {
-      "name": "theme_panel",
-      "type": "Whether to include a panel for editing the theme.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "A new component instance.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The import dict.",
-      "docstring": ""
-    },
-    {
-      "name": "_imports",
-      "type": "ImportDict",
-      "docstring": ""
+      "name": "ml",
+      "type": "LiteralSpacing",
+      "docstring": "Margin left: \"0\" - \"9\""
     }
   ],
   "events": [],
-  "styling_props": [
-    {
-      "name": "radius",
-      "type": "LiteralRadius",
-      "docstring": "Element border radius: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\". Defaults to \"medium\"."
-    }
-  ]
+  "styling_props": [],
+  "subcomponents": {}
 }

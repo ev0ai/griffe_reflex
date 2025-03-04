@@ -115,32 +115,33 @@ def scan_library_docs() -> Dict[str, Path]:
 
 def extract_component_info(component_name: str, component_data: Dict[str, str], doc_path: Path) -> Dict[str, Any]:
     """
-    Extract component information from the source code.
+    Extract component information from a file.
     
     Args:
         component_name: The name of the component.
-        component_data: Dictionary with module_path, module_name, and file_path.
-        doc_path: Path to the documentation file.
-        
+        component_data: The component data from the mappings.
+        doc_path: The path to the documentation file.
+    
     Returns:
-        A dictionary containing component information.
+        A dictionary with the component information.
     """
     module_path = component_data['module_path']
-    module_name = component_data['module_name']
+    module_name = module_path.split('.')[-1]
     file_path = component_data['file_path']
     
-    # Basic component structure to fill
+    # Create the base spec
     spec = {
         "name": component_name,
         "module_path": module_path,
         "module_name": module_name,
-        "file_path": file_path,
+        "file_path": str(file_path),
         "doc_path": str(doc_path),
         "docstring": "",
         "bases": [],
         "properties": [],
         "events": [],
-        "styling_props": []
+        "styling_props": [],
+        "subcomponents": {}  # New field to store subcomponent specs
     }
     
     # Check if file exists
@@ -274,10 +275,35 @@ def extract_component_info(component_name: str, component_data: Dict[str, str], 
                             if not sc_body:
                                 sc_body = content[sc_start:]
                             
-                            # Extract properties from subcomponent
-                            extract_properties_from_class_body(sc_body, spec, sc_class)
+                            # Extract subcomponent docstring
+                            sc_docstring = ""
+                            sc_docstring_match = re.search(r'"""(.*?)"""', sc_body, re.DOTALL)
+                            if sc_docstring_match:
+                                sc_docstring = sc_docstring_match.group(1).strip()
+                            
+                            # Extract subcomponent base classes
+                            sc_bases = []
+                            sc_bases_match = re.search(rf"class\s+{sc_class}\s*\((.*?)\)\s*:", sc_body)
+                            if sc_bases_match:
+                                sc_bases = [base.strip() for base in sc_bases_match.group(1).split(',')]
+                            
+                            # Create a subcomponent spec
+                            sc_spec = {
+                                "name": sc_class,
+                                "docstring": sc_docstring,
+                                "bases": sc_bases,
+                                "properties": [],
+                                "events": [],
+                                "styling_props": []
+                            }
+                            
+                            # Extract properties from the subcomponent
+                            extract_properties_from_class_body(sc_body, sc_spec)
+                            
+                            # Add the subcomponent spec to the main spec
+                            spec["subcomponents"][sc_class] = sc_spec
             
-            # Extract properties
+            # Extract properties from the main component class
             extract_properties_from_class_body(class_body, spec)
         
         else:
@@ -299,14 +325,44 @@ def extract_properties_from_class_body(class_body, spec, class_prefix=None):
         spec: The spec dictionary to update
         class_prefix: Optional prefix to add to property names to indicate the source class
     """
-    # Extract properties
+    # Skip special and internal attributes
+    def should_skip_property(name):
+        return (name.startswith('__') and name.endswith('__')) or \
+               name in ['tag', 'library', 'alias', '_valid_children', '_valid_parents'] or \
+               name in ['Args', 'Returns', 'Kwargs'] or \
+               name == 'prop' or name == 'else'  # Skip method parameters
+    
+    # Extract properties - look for class attributes, not method parameters
     property_pattern = r"^\s+(\w+)\s*:\s*(?:Var\[)?([^=\n]+?)(?:\])?\s*(?:=|$)"
+    
+    # Get method definition sections to exclude them
+    method_sections = []
+    method_pattern = r"^\s+(?:@\w+\s*\n\s+)*def\s+(\w+)"
+    for method_match in re.finditer(method_pattern, class_body, re.MULTILINE):
+        method_start = method_match.start()
+        
+        # Find method end (next method or end of class)
+        next_method = re.search(method_pattern, class_body[method_start + 1:], re.MULTILINE)
+        if next_method:
+            method_end = method_start + 1 + next_method.start()
+        else:
+            method_end = len(class_body)
+            
+        method_sections.append((method_start, method_end))
+    
+    # Now extract properties, excluding those within method definitions
     for prop_match in re.finditer(property_pattern, class_body, re.MULTILINE):
+        prop_start = prop_match.start()
+        
+        # Skip if this match is within a method definition
+        if any(start <= prop_start < end for start, end in method_sections):
+            continue
+            
         prop_name = prop_match.group(1)
         prop_type = prop_match.group(2).strip()
         
-        # Skip special methods
-        if prop_name.startswith('__') and prop_name.endswith('__'):
+        # Skip special methods and internal attributes
+        if should_skip_property(prop_name):
             continue
         
         # Extract property docstring
@@ -329,13 +385,8 @@ def extract_properties_from_class_body(class_body, spec, class_prefix=None):
         if prop_docstring_match:
             prop_docstring = prop_docstring_match.group(1).strip()
         
-        # Prefix the property name if specified
-        display_name = prop_name
-        if class_prefix:
-            display_name = f"{class_prefix}.{prop_name}"
-        
         prop_info = {
-            "name": display_name,
+            "name": prop_name,
             "type": prop_type,
             "docstring": prop_docstring
         }

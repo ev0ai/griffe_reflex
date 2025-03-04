@@ -8,105 +8,150 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [
-    {
-      "name": "PopoverRoot.open",
-      "type": "bool",
-      "docstring": "The controlled open state of the popover."
+  "properties": [],
+  "events": [],
+  "styling_props": [],
+  "subcomponents": {
+    "PopoverRoot": {
+      "name": "PopoverRoot",
+      "docstring": "Floating element for displaying rich content, triggered by a button.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "type": "bool",
+          "docstring": "The controlled open state of the popover."
+        },
+        {
+          "name": "modal",
+          "type": "bool",
+          "docstring": "The modality of the popover. When set to true, interaction with outside elements will be disabled and only popover content will be visible to screen readers."
+        },
+        {
+          "name": "default_open",
+          "type": "bool",
+          "docstring": "The open state of the popover when it is initially rendered. Use when you do not need to control its open state."
+        }
+      ],
+      "events": [
+        {
+          "name": "on_open_change",
+          "type": "EventHandler[passthrough_event_spec(bool)",
+          "docstring": "Fired when the open state changes."
+        }
+      ],
+      "styling_props": []
     },
-    {
-      "name": "PopoverRoot.modal",
-      "type": "bool",
-      "docstring": "The modality of the popover. When set to true, interaction with outside elements will be disabled and only popover content will be visible to screen readers."
+    "PopoverTrigger": {
+      "name": "PopoverTrigger",
+      "docstring": "Wraps the control that will open the popover.",
+      "bases": [
+        "RadixThemesTriggerComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "PopoverRoot.default_open",
-      "type": "bool",
-      "docstring": "The open state of the popover when it is initially rendered. Use when you do not need to control its open state."
+    "PopoverContent": {
+      "name": "PopoverContent",
+      "docstring": "Contains content to be rendered in the open popover.",
+      "bases": [
+        "elements.Div",
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "side",
+          "type": "Literal[\"top\", \"right\", \"bottom\", \"left\"]",
+          "docstring": "The preferred side of the anchor to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled."
+        },
+        {
+          "name": "side_offset",
+          "type": "int",
+          "docstring": "The distance in pixels from the anchor."
+        },
+        {
+          "name": "align",
+          "type": "Literal[\"start\", \"center\", \"end\"]",
+          "docstring": "The preferred alignment against the anchor. May change when collisions occur."
+        },
+        {
+          "name": "align_offset",
+          "type": "int",
+          "docstring": "The vertical distance in pixels from the anchor."
+        },
+        {
+          "name": "avoid_collisions",
+          "type": "bool",
+          "docstring": "When true, overrides the side andalign preferences to prevent collisions with boundary edges."
+        },
+        {
+          "name": "collision_padding",
+          "type": "float | int | dict[str, float | int]",
+          "docstring": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for all sides), or a partial padding object, for example: { \"top\": 20, \"left\": 20 }. Defaults to 0."
+        },
+        {
+          "name": "sticky",
+          "type": "Literal[\"partial\", \"always\"]",
+          "docstring": "The sticky behavior on the align axis. \"partial\" will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst \"always\" will keep the content in the boundary regardless. Defaults to \"partial\"."
+        },
+        {
+          "name": "hide_when_detached",
+          "type": "bool",
+          "docstring": "Whether to hide the content when the trigger becomes fully occluded. Defaults to False."
+        }
+      ],
+      "events": [
+        {
+          "name": "on_open_auto_focus",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the dialog is opened."
+        },
+        {
+          "name": "on_close_auto_focus",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the dialog is closed."
+        },
+        {
+          "name": "on_escape_key_down",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the escape key is pressed."
+        },
+        {
+          "name": "on_pointer_down_outside",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the pointer is down outside the dialog."
+        },
+        {
+          "name": "on_focus_outside",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when focus moves outside the dialog."
+        },
+        {
+          "name": "on_interact_outside",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the pointer interacts outside the dialog."
+        }
+      ],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]",
+          "docstring": "Size of the button: \"1\" | \"2\" | \"3\" | \"4\""
+        }
+      ]
     },
-    {
-      "name": "PopoverContent.side",
-      "type": "Literal[\"top\", \"right\", \"bottom\", \"left\"]",
-      "docstring": "The preferred side of the anchor to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled."
-    },
-    {
-      "name": "PopoverContent.side_offset",
-      "type": "int",
-      "docstring": "The distance in pixels from the anchor."
-    },
-    {
-      "name": "PopoverContent.align",
-      "type": "Literal[\"start\", \"center\", \"end\"]",
-      "docstring": "The preferred alignment against the anchor. May change when collisions occur."
-    },
-    {
-      "name": "PopoverContent.align_offset",
-      "type": "int",
-      "docstring": "The vertical distance in pixels from the anchor."
-    },
-    {
-      "name": "PopoverContent.avoid_collisions",
-      "type": "bool",
-      "docstring": "When true, overrides the side andalign preferences to prevent collisions with boundary edges."
-    },
-    {
-      "name": "PopoverContent.collision_padding",
-      "type": "float | int | dict[str, float | int]",
-      "docstring": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for all sides), or a partial padding object, for example: { \"top\": 20, \"left\": 20 }. Defaults to 0."
-    },
-    {
-      "name": "PopoverContent.sticky",
-      "type": "Literal[\"partial\", \"always\"]",
-      "docstring": "The sticky behavior on the align axis. \"partial\" will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst \"always\" will keep the content in the boundary regardless. Defaults to \"partial\"."
-    },
-    {
-      "name": "PopoverContent.hide_when_detached",
-      "type": "bool",
-      "docstring": "Whether to hide the content when the trigger becomes fully occluded. Defaults to False."
+    "PopoverClose": {
+      "name": "PopoverClose",
+      "docstring": "Wraps the control that will close the popover.",
+      "bases": [
+        "RadixThemesTriggerComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     }
-  ],
-  "events": [
-    {
-      "name": "PopoverRoot.on_open_change",
-      "type": "EventHandler[passthrough_event_spec(bool)",
-      "docstring": "Fired when the open state changes."
-    },
-    {
-      "name": "PopoverContent.on_open_auto_focus",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the dialog is opened."
-    },
-    {
-      "name": "PopoverContent.on_close_auto_focus",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the dialog is closed."
-    },
-    {
-      "name": "PopoverContent.on_escape_key_down",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the escape key is pressed."
-    },
-    {
-      "name": "PopoverContent.on_pointer_down_outside",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the pointer is down outside the dialog."
-    },
-    {
-      "name": "PopoverContent.on_focus_outside",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when focus moves outside the dialog."
-    },
-    {
-      "name": "PopoverContent.on_interact_outside",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the pointer interacts outside the dialog."
-    }
-  ],
-  "styling_props": [
-    {
-      "name": "PopoverContent.size",
-      "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]",
-      "docstring": "Size of the button: \"1\" | \"2\" | \"3\" | \"4\""
-    }
-  ]
+  }
 }

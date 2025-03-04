@@ -54,5 +54,6 @@
       "type": "LiteralAccentColor",
       "docstring": "Overrides the accent color inherited from the Theme."
     }
-  ]
+  ],
+  "subcomponents": {}
 }

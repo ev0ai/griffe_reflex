@@ -91,21 +91,6 @@
       "docstring": "How the text in the textarea is to be wrapped when submitting the form"
     },
     {
-      "name": "Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The component.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The style of the component.",
-      "docstring": ""
-    },
-    {
       "name": "added_style",
       "type": "dict[str, dict",
       "docstring": ""
@@ -133,5 +118,6 @@
       "type": "LiteralRadius",
       "docstring": "The radius of the text area: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
     }
-  ]
+  ],
+  "subcomponents": {}
 }

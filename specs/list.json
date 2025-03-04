@@ -1,46 +1,71 @@
 {
   "name": "list",
   "module_path": "components.radix.themes.layout.list",
-  "module_name": "list_ns",
+  "module_name": "list",
   "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/list.py",
   "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/data-display/list.md",
-  "docstring": "Base class for ordered and unordered lists.",
+  "docstring": "List components.",
   "bases": [
-    "Component",
-    "MarkdownComponentMap"
+    "ComponentNamespace"
   ],
-  "properties": [
-    {
-      "name": "list_style_type",
-      "type": "Var[",
-      "docstring": "The style of the list. Default to \"none\"."
-    },
-    {
-      "name": "items",
-      "type": "Iterable",
-      "docstring": "A list of items to add to the list."
-    },
-    {
-      "name": "Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The list component.",
-      "docstring": ""
-    },
-    {
-      "name": "else",
-      "type": "children",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The style of the component.",
-      "docstring": ""
-    }
-  ],
+  "properties": [],
   "events": [],
-  "styling_props": []
+  "styling_props": [],
+  "subcomponents": {
+    "ListItem": {
+      "name": "ListItem",
+      "docstring": "Display an item of an ordered or unordered list.",
+      "bases": [
+        "Li",
+        "MarkdownComponentMap"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
+    },
+    "OrderedList": {
+      "name": "OrderedList",
+      "docstring": "Display an ordered list.",
+      "bases": [
+        "BaseList",
+        "Ol"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
+    },
+    "UnorderedList": {
+      "name": "UnorderedList",
+      "docstring": "Display an unordered list.",
+      "bases": [
+        "BaseList",
+        "Ul"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
+    },
+    "BaseList": {
+      "name": "BaseList",
+      "docstring": "Base class for ordered and unordered lists.",
+      "bases": [
+        "Component",
+        "MarkdownComponentMap"
+      ],
+      "properties": [
+        {
+          "name": "list_style_type",
+          "type": "Var[",
+          "docstring": "The style of the list. Default to \"none\"."
+        },
+        {
+          "name": "items",
+          "type": "Iterable",
+          "docstring": "A list of items to add to the list."
+        }
+      ],
+      "events": [],
+      "styling_props": []
+    }
+  }
 }

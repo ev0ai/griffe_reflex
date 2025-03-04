@@ -60,38 +60,13 @@
       "docstring": "Marked True when any Upload component is created."
     },
     {
-      "name": "Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The upload component.",
-      "docstring": ""
-    },
-    {
       "name": "key",
       "type": "value for key, value in props.items() if key in supported_props",
       "docstring": ""
     },
     {
-      "name": "else",
-      "type": "on_drop",
-      "docstring": ""
-    },
-    {
       "name": "callback_str",
       "type": "None,",
-      "docstring": ""
-    },
-    {
-      "name": "Args",
-      "type": "arg_value: The arg tuple to update (if necessary).",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The updated arg_value tuple when arg is \"files\", otherwise the original arg_value.",
       "docstring": ""
     }
   ],
@@ -102,5 +77,6 @@
       "docstring": "Fired when files are dropped."
     }
   ],
-  "styling_props": []
+  "styling_props": [],
+  "subcomponents": {}
 }

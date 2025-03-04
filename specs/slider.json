@@ -58,16 +58,6 @@
       "name": "orientation",
       "type": "Literal[\"horizontal\", \"vertical\"]",
       "docstring": "The orientation of the slider."
-    },
-    {
-      "name": "Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The component.",
-      "docstring": ""
     }
   ],
   "events": [
@@ -108,5 +98,6 @@
       "type": "str | None",
       "docstring": "The width of the slider."
     }
-  ]
+  ],
+  "subcomponents": {}
 }

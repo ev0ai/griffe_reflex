@@ -8,55 +8,119 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [
-    {
-      "name": "DialogRoot.open",
-      "type": "bool",
-      "docstring": "The controlled open state of the dialog."
+  "properties": [],
+  "events": [],
+  "styling_props": [],
+  "subcomponents": {
+    "DialogRoot": {
+      "name": "DialogRoot",
+      "docstring": "Root component for Dialog.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "type": "bool",
+          "docstring": "The controlled open state of the dialog."
+        },
+        {
+          "name": "default_open",
+          "type": "bool",
+          "docstring": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state."
+        }
+      ],
+      "events": [
+        {
+          "name": "on_open_change",
+          "type": "EventHandler[passthrough_event_spec(bool)",
+          "docstring": "Fired when the open state changes."
+        }
+      ],
+      "styling_props": []
     },
-    {
-      "name": "DialogRoot.default_open",
-      "type": "bool",
-      "docstring": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state."
+    "DialogTrigger": {
+      "name": "DialogTrigger",
+      "docstring": "Trigger an action or event, to open a Dialog modal.",
+      "bases": [
+        "RadixThemesTriggerComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
+    },
+    "DialogTitle": {
+      "name": "DialogTitle",
+      "docstring": "Title component to display inside a Dialog modal.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
+    },
+    "DialogContent": {
+      "name": "DialogContent",
+      "docstring": "Content component to display inside a Dialog modal.",
+      "bases": [
+        "elements.Div",
+        "RadixThemesComponent"
+      ],
+      "properties": [],
+      "events": [
+        {
+          "name": "on_open_auto_focus",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the dialog is opened."
+        },
+        {
+          "name": "on_close_auto_focus",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the dialog is closed."
+        },
+        {
+          "name": "on_escape_key_down",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the escape key is pressed."
+        },
+        {
+          "name": "on_pointer_down_outside",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the pointer is down outside the dialog."
+        },
+        {
+          "name": "on_interact_outside",
+          "type": "EventHandler[no_args_event_spec",
+          "docstring": "Fired when the pointer interacts outside the dialog."
+        }
+      ],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]",
+          "docstring": "DialogContent size \"1\" - \"4\""
+        }
+      ]
+    },
+    "DialogDescription": {
+      "name": "DialogDescription",
+      "docstring": "Description component to display inside a Dialog modal.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
+    },
+    "DialogClose": {
+      "name": "DialogClose",
+      "docstring": "Close button component to close an open Dialog modal.",
+      "bases": [
+        "RadixThemesTriggerComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     }
-  ],
-  "events": [
-    {
-      "name": "DialogRoot.on_open_change",
-      "type": "EventHandler[passthrough_event_spec(bool)",
-      "docstring": "Fired when the open state changes."
-    },
-    {
-      "name": "DialogContent.on_open_auto_focus",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the dialog is opened."
-    },
-    {
-      "name": "DialogContent.on_close_auto_focus",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the dialog is closed."
-    },
-    {
-      "name": "DialogContent.on_escape_key_down",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the escape key is pressed."
-    },
-    {
-      "name": "DialogContent.on_pointer_down_outside",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the pointer is down outside the dialog."
-    },
-    {
-      "name": "DialogContent.on_interact_outside",
-      "type": "EventHandler[no_args_event_spec",
-      "docstring": "Fired when the pointer interacts outside the dialog."
-    }
-  ],
-  "styling_props": [
-    {
-      "name": "DialogContent.size",
-      "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]",
-      "docstring": "DialogContent size \"1\" - \"4\""
-    }
-  ]
+  }
 }

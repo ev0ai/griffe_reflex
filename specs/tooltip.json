@@ -88,16 +88,6 @@
       "name": "aria_label",
       "type": "str",
       "docstring": "By default, screenreaders will announce the content inside the component. If this is not descriptive enough, or you have content that cannot be announced, use aria-label as a more descriptive label."
-    },
-    {
-      "name": "Args",
-      "type": "*children: The positional arguments",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The created component.",
-      "docstring": ""
     }
   ],
   "events": [
@@ -117,5 +107,6 @@
       "docstring": "Fired when the pointer is down outside the tooltip."
     }
   ],
-  "styling_props": []
+  "styling_props": [],
+  "subcomponents": {}
 }

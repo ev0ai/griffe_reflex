@@ -33,26 +33,6 @@
       "name": "fill_color",
       "type": "str",
       "docstring": "The color of the progress bar fill animation."
-    },
-    {
-      "name": "Args",
-      "type": "color: Color of the fill part.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "Style: Style object with the correct css selector and color.",
-      "docstring": ""
-    },
-    {
-      "name": "Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The Progress Component.",
-      "docstring": ""
     }
   ],
   "events": [],
@@ -77,5 +57,6 @@
       "type": "Literal[\"none\", \"small\", \"medium\", \"large\", \"full\"]",
       "docstring": "Override theme radius for progress bar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
     }
-  ]
+  ],
+  "subcomponents": {}
 }

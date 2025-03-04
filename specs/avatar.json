@@ -47,5 +47,6 @@
       "type": "LiteralRadius",
       "docstring": "Override theme radius for avatar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
     }
-  ]
+  ],
+  "subcomponents": {}
 }

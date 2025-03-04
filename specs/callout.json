@@ -18,18 +18,9 @@
       "name": "icon",
       "type": "str",
       "docstring": "The icon of the callout."
-    },
-    {
-      "name": "Args",
-      "type": "text: The text of the callout.",
-      "docstring": ""
-    },
-    {
-      "name": "Returns",
-      "type": "The callout component.",
-      "docstring": ""
     }
   ],
   "events": [],
-  "styling_props": []
+  "styling_props": [],
+  "subcomponents": {}
 }

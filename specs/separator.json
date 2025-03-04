@@ -32,5 +32,6 @@
       "type": "LiteralAccentColor",
       "docstring": "The color of the select"
     }
-  ]
+  ],
+  "subcomponents": {}
 }

@@ -28,5 +28,6 @@
       "type": "Literal[\"surface\", \"classic\", \"ghost\"]",
       "docstring": "Variant of Card: \"surface\" | \"classic\" | \"ghost\""
     }
-  ]
+  ],
+  "subcomponents": {}
 }

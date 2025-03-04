@@ -8,160 +8,180 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [
-    {
-      "name": "RadioGroupRoot.high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the radio group with higher contrast color against background"
+  "properties": [],
+  "events": [],
+  "styling_props": [],
+  "subcomponents": {
+    "RadioGroupRoot": {
+      "name": "RadioGroupRoot",
+      "docstring": "A set of interactive radio buttons where only one can be selected at a time.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "high_contrast",
+          "type": "bool",
+          "docstring": "Whether to render the radio group with higher contrast color against background"
+        },
+        {
+          "name": "value",
+          "type": "str",
+          "docstring": "The controlled value of the radio item to check. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "default_value",
+          "type": "str",
+          "docstring": "The initial value of checked radio item. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "docstring": "Whether the radio group is disabled"
+        },
+        {
+          "name": "name",
+          "type": "str",
+          "docstring": "The name of the group. Submitted with its owning form as part of a name/value pair."
+        },
+        {
+          "name": "required",
+          "type": "bool",
+          "docstring": "Whether the radio group is required"
+        }
+      ],
+      "events": [
+        {
+          "name": "on_change",
+          "type": "EventHandler[passthrough_event_spec(str)",
+          "docstring": "Fired when the value of the radio group changes."
+        }
+      ],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
+          "docstring": "The size of the radio group: \"1\" | \"2\" | \"3\""
+        },
+        {
+          "name": "variant",
+          "type": "Literal[\"classic\", \"surface\", \"soft\"]",
+          "docstring": "The variant of the radio group"
+        },
+        {
+          "name": "color_scheme",
+          "type": "LiteralAccentColor",
+          "docstring": "The color of the radio group"
+        }
+      ]
     },
-    {
-      "name": "RadioGroupRoot.value",
-      "type": "str",
-      "docstring": "The controlled value of the radio item to check. Should be used in conjunction with on_change."
+    "RadioGroupItem": {
+      "name": "RadioGroupItem",
+      "docstring": "An item in the group that can be checked.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "type": "str",
+          "docstring": "The value of the radio item to check. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "docstring": "When true, prevents the user from interacting with the radio item."
+        },
+        {
+          "name": "required",
+          "type": "bool",
+          "docstring": "When true, indicates that the user must check the radio item before the owning form can be submitted."
+        }
+      ],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "RadioGroupRoot.default_value",
-      "type": "str",
-      "docstring": "The initial value of checked radio item. Should be used in conjunction with on_change."
-    },
-    {
-      "name": "RadioGroupRoot.disabled",
-      "type": "bool",
-      "docstring": "Whether the radio group is disabled"
-    },
-    {
-      "name": "RadioGroupRoot.name",
-      "type": "str",
-      "docstring": "The name of the group. Submitted with its owning form as part of a name/value pair."
-    },
-    {
-      "name": "RadioGroupRoot.required",
-      "type": "bool",
-      "docstring": "Whether the radio group is required"
-    },
-    {
-      "name": "RadioGroupItem.value",
-      "type": "str",
-      "docstring": "The value of the radio item to check. Should be used in conjunction with on_change."
-    },
-    {
-      "name": "RadioGroupItem.disabled",
-      "type": "bool",
-      "docstring": "When true, prevents the user from interacting with the radio item."
-    },
-    {
-      "name": "RadioGroupItem.required",
-      "type": "bool",
-      "docstring": "When true, indicates that the user must check the radio item before the owning form can be submitted."
-    },
-    {
-      "name": "HighLevelRadioGroup.items",
-      "type": "Sequence[str]",
-      "docstring": "The items of the radio group."
-    },
-    {
-      "name": "HighLevelRadioGroup.direction",
-      "type": "LiteralFlexDirection",
-      "docstring": "The direction of the radio group."
-    },
-    {
-      "name": "HighLevelRadioGroup.spacing",
-      "type": "LiteralSpacing",
-      "docstring": "The gap between the items of the radio group."
-    },
-    {
-      "name": "HighLevelRadioGroup.high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the radio group with higher contrast color against background"
-    },
-    {
-      "name": "HighLevelRadioGroup.value",
-      "type": "str",
-      "docstring": "The controlled value of the radio item to check. Should be used in conjunction with on_change."
-    },
-    {
-      "name": "HighLevelRadioGroup.default_value",
-      "type": "str",
-      "docstring": "The initial value of checked radio item. Should be used in conjunction with on_change."
-    },
-    {
-      "name": "HighLevelRadioGroup.disabled",
-      "type": "bool",
-      "docstring": "Whether the radio group is disabled"
-    },
-    {
-      "name": "HighLevelRadioGroup.name",
-      "type": "str",
-      "docstring": "The name of the group. Submitted with its owning form as part of a name/value pair."
-    },
-    {
-      "name": "HighLevelRadioGroup.required",
-      "type": "bool",
-      "docstring": "Whether the radio group is required"
-    },
-    {
-      "name": "HighLevelRadioGroup.items",
-      "type": "Sequence[str | int | float | list | dict | bool | None]],",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelRadioGroup.Args",
-      "type": "items: The items of the radio group.",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelRadioGroup.Returns",
-      "type": "The created radio group component.",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelRadioGroup.Raises",
-      "type": "TypeError: If the type of items is invalid.",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelRadioGroup.else",
-      "type": "default_value",
-      "docstring": ""
+    "HighLevelRadioGroup": {
+      "name": "HighLevelRadioGroup",
+      "docstring": "High level wrapper for the RadioGroup component.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "items",
+          "type": "Sequence[str]",
+          "docstring": "The items of the radio group."
+        },
+        {
+          "name": "direction",
+          "type": "LiteralFlexDirection",
+          "docstring": "The direction of the radio group."
+        },
+        {
+          "name": "spacing",
+          "type": "LiteralSpacing",
+          "docstring": "The gap between the items of the radio group."
+        },
+        {
+          "name": "high_contrast",
+          "type": "bool",
+          "docstring": "Whether to render the radio group with higher contrast color against background"
+        },
+        {
+          "name": "value",
+          "type": "str",
+          "docstring": "The controlled value of the radio item to check. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "default_value",
+          "type": "str",
+          "docstring": "The initial value of checked radio item. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "docstring": "Whether the radio group is disabled"
+        },
+        {
+          "name": "name",
+          "type": "str",
+          "docstring": "The name of the group. Submitted with its owning form as part of a name/value pair."
+        },
+        {
+          "name": "required",
+          "type": "bool",
+          "docstring": "Whether the radio group is required"
+        },
+        {
+          "name": "items",
+          "type": "Sequence[str | int | float | list | dict | bool | None]],",
+          "docstring": ""
+        },
+        {
+          "name": "Raises",
+          "type": "TypeError: If the type of items is invalid.",
+          "docstring": ""
+        }
+      ],
+      "events": [],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Literal[\"1\", \"2\", \"3\"]",
+          "docstring": "The size of the radio group."
+        },
+        {
+          "name": "variant",
+          "type": "Literal[\"classic\", \"surface\", \"soft\"]",
+          "docstring": "The variant of the radio group"
+        },
+        {
+          "name": "color_scheme",
+          "type": "LiteralAccentColor",
+          "docstring": "The color of the radio group"
+        }
+      ]
     }
-  ],
-  "events": [
-    {
-      "name": "RadioGroupRoot.on_change",
-      "type": "EventHandler[passthrough_event_spec(str)",
-      "docstring": "Fired when the value of the radio group changes."
-    }
-  ],
-  "styling_props": [
-    {
-      "name": "RadioGroupRoot.size",
-      "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
-      "docstring": "The size of the radio group: \"1\" | \"2\" | \"3\""
-    },
-    {
-      "name": "RadioGroupRoot.variant",
-      "type": "Literal[\"classic\", \"surface\", \"soft\"]",
-      "docstring": "The variant of the radio group"
-    },
-    {
-      "name": "RadioGroupRoot.color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "The color of the radio group"
-    },
-    {
-      "name": "HighLevelRadioGroup.size",
-      "type": "Literal[\"1\", \"2\", \"3\"]",
-      "docstring": "The size of the radio group."
-    },
-    {
-      "name": "HighLevelRadioGroup.variant",
-      "type": "Literal[\"classic\", \"surface\", \"soft\"]",
-      "docstring": "The variant of the radio group"
-    },
-    {
-      "name": "HighLevelRadioGroup.color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "The color of the radio group"
-    }
-  ]
+  }
 }

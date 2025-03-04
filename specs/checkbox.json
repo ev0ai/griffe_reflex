@@ -73,5 +73,6 @@
       "type": "LiteralAccentColor",
       "docstring": "Override theme color for checkbox"
     }
-  ]
+  ],
+  "subcomponents": {}
 }

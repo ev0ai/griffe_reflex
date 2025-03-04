@@ -8,235 +8,280 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [
-    {
-      "name": "SelectRoot.default_value",
-      "type": "str",
-      "docstring": "The value of the select when initially rendered. Use when you do not need to control the state of the select."
+  "properties": [],
+  "events": [],
+  "styling_props": [],
+  "subcomponents": {
+    "SelectRoot": {
+      "name": "SelectRoot",
+      "docstring": "Displays a list of options for the user to pick from, triggered by a button.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "default_value",
+          "type": "str",
+          "docstring": "The value of the select when initially rendered. Use when you do not need to control the state of the select."
+        },
+        {
+          "name": "value",
+          "type": "str",
+          "docstring": "The controlled value of the select. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "default_open",
+          "type": "bool",
+          "docstring": "The open state of the select when it is initially rendered. Use when you do not need to control its open state."
+        },
+        {
+          "name": "open",
+          "type": "bool",
+          "docstring": "The controlled open state of the select. Must be used in conjunction with on_open_change."
+        },
+        {
+          "name": "name",
+          "type": "str",
+          "docstring": "The name of the select control when submitting the form."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "docstring": "When True, prevents the user from interacting with select."
+        },
+        {
+          "name": "required",
+          "type": "bool",
+          "docstring": "When True, indicates that the user must select a value before the owning form can be submitted."
+        }
+      ],
+      "events": [
+        {
+          "name": "on_change",
+          "type": "rx.EventHandler[passthrough_event_spec(str)",
+          "docstring": "Fired when the value of the select changes."
+        },
+        {
+          "name": "on_open_change",
+          "type": "rx.EventHandler[passthrough_event_spec(bool)",
+          "docstring": "Fired when the select is opened or closed."
+        }
+      ],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
+          "docstring": "The size of the select: \"1\" | \"2\" | \"3\""
+        }
+      ]
     },
-    {
-      "name": "SelectRoot.value",
-      "type": "str",
-      "docstring": "The controlled value of the select. Should be used in conjunction with on_change."
+    "SelectTrigger": {
+      "name": "SelectTrigger",
+      "docstring": "The button that toggles the select.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "placeholder",
+          "type": "str",
+          "docstring": "The placeholder of the select trigger"
+        }
+      ],
+      "events": [],
+      "styling_props": [
+        {
+          "name": "variant",
+          "type": "Literal[\"classic\", \"surface\", \"soft\", \"ghost\"]",
+          "docstring": "Variant of the select trigger"
+        },
+        {
+          "name": "color_scheme",
+          "type": "LiteralAccentColor",
+          "docstring": "The color of the select trigger"
+        },
+        {
+          "name": "radius",
+          "type": "LiteralRadius",
+          "docstring": "The radius of the select trigger"
+        }
+      ]
     },
-    {
-      "name": "SelectRoot.default_open",
-      "type": "bool",
-      "docstring": "The open state of the select when it is initially rendered. Use when you do not need to control its open state."
+    "SelectContent": {
+      "name": "SelectContent",
+      "docstring": "The component that pops out when the select is open.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "high_contrast",
+          "type": "bool",
+          "docstring": "Whether to render the select content with higher contrast color against background"
+        },
+        {
+          "name": "position",
+          "type": "Literal[\"item-aligned\", \"popper\"]",
+          "docstring": "The positioning mode to use, item-aligned is the default and behaves similarly to a native MacOS menu by positioning content relative to the active item. popper positions content in the same way as our other primitives, for example Popover or DropdownMenu."
+        },
+        {
+          "name": "side",
+          "type": "Literal[\"top\", \"right\", \"bottom\", \"left\"]",
+          "docstring": "The preferred side of the anchor to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled. Only available when position is set to popper."
+        },
+        {
+          "name": "side_offset",
+          "type": "int",
+          "docstring": "The distance in pixels from the anchor. Only available when position is set to popper."
+        },
+        {
+          "name": "align",
+          "type": "Literal[\"start\", \"center\", \"end\"]",
+          "docstring": "The preferred alignment against the anchor. May change when collisions occur. Only available when position is set to popper."
+        },
+        {
+          "name": "align_offset",
+          "type": "int",
+          "docstring": "The vertical distance in pixels from the anchor. Only available when position is set to popper."
+        }
+      ],
+      "events": [
+        {
+          "name": "on_close_auto_focus",
+          "type": "rx.EventHandler[no_args_event_spec",
+          "docstring": "Fired when the select content is closed."
+        },
+        {
+          "name": "on_escape_key_down",
+          "type": "rx.EventHandler[no_args_event_spec",
+          "docstring": "Fired when the escape key is pressed."
+        },
+        {
+          "name": "on_pointer_down_outside",
+          "type": "rx.EventHandler[no_args_event_spec",
+          "docstring": "Fired when a pointer down event happens outside the select content."
+        }
+      ],
+      "styling_props": [
+        {
+          "name": "variant",
+          "type": "Literal[\"solid\", \"soft\"]",
+          "docstring": "The variant of the select content"
+        },
+        {
+          "name": "color_scheme",
+          "type": "LiteralAccentColor",
+          "docstring": "The color of the select content"
+        }
+      ]
     },
-    {
-      "name": "SelectRoot.open",
-      "type": "bool",
-      "docstring": "The controlled open state of the select. Must be used in conjunction with on_open_change."
+    "SelectGroup": {
+      "name": "SelectGroup",
+      "docstring": "Used to group multiple items.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "SelectRoot.name",
-      "type": "str",
-      "docstring": "The name of the select control when submitting the form."
+    "SelectItem": {
+      "name": "SelectItem",
+      "docstring": "The component that contains the select items.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "type": "str",
+          "docstring": "The value given as data when submitting a form with a name."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "docstring": "Whether the select item is disabled"
+        }
+      ],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "SelectRoot.disabled",
-      "type": "bool",
-      "docstring": "When True, prevents the user from interacting with select."
+    "SelectSeparator": {
+      "name": "SelectSeparator",
+      "docstring": "Used to visually separate items in the Select.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "SelectRoot.required",
-      "type": "bool",
-      "docstring": "When True, indicates that the user must select a value before the owning form can be submitted."
+    "SelectLabel": {
+      "name": "SelectLabel",
+      "docstring": "Used to render the label of a group, it isn't focusable using arrow keys.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "SelectTrigger.placeholder",
-      "type": "str",
-      "docstring": "The placeholder of the select trigger"
-    },
-    {
-      "name": "SelectTrigger._valid_parents",
-      "type": "list[str",
-      "docstring": ""
-    },
-    {
-      "name": "SelectContent.high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the select content with higher contrast color against background"
-    },
-    {
-      "name": "SelectContent.position",
-      "type": "Literal[\"item-aligned\", \"popper\"]",
-      "docstring": "The positioning mode to use, item-aligned is the default and behaves similarly to a native MacOS menu by positioning content relative to the active item. popper positions content in the same way as our other primitives, for example Popover or DropdownMenu."
-    },
-    {
-      "name": "SelectContent.side",
-      "type": "Literal[\"top\", \"right\", \"bottom\", \"left\"]",
-      "docstring": "The preferred side of the anchor to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled. Only available when position is set to popper."
-    },
-    {
-      "name": "SelectContent.side_offset",
-      "type": "int",
-      "docstring": "The distance in pixels from the anchor. Only available when position is set to popper."
-    },
-    {
-      "name": "SelectContent.align",
-      "type": "Literal[\"start\", \"center\", \"end\"]",
-      "docstring": "The preferred alignment against the anchor. May change when collisions occur. Only available when position is set to popper."
-    },
-    {
-      "name": "SelectContent.align_offset",
-      "type": "int",
-      "docstring": "The vertical distance in pixels from the anchor. Only available when position is set to popper."
-    },
-    {
-      "name": "SelectGroup._valid_parents",
-      "type": "list[str",
-      "docstring": ""
-    },
-    {
-      "name": "SelectItem.value",
-      "type": "str",
-      "docstring": "The value given as data when submitting a form with a name."
-    },
-    {
-      "name": "SelectItem.disabled",
-      "type": "bool",
-      "docstring": "Whether the select item is disabled"
-    },
-    {
-      "name": "SelectItem._valid_parents",
-      "type": "list[str",
-      "docstring": ""
-    },
-    {
-      "name": "SelectLabel._valid_parents",
-      "type": "list[str",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelSelect.items",
-      "type": "Sequence[str]",
-      "docstring": "The items of the select."
-    },
-    {
-      "name": "HighLevelSelect.placeholder",
-      "type": "str",
-      "docstring": "The placeholder of the select."
-    },
-    {
-      "name": "HighLevelSelect.label",
-      "type": "str",
-      "docstring": "The label of the select."
-    },
-    {
-      "name": "HighLevelSelect.high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the select with higher contrast color against background."
-    },
-    {
-      "name": "HighLevelSelect.position",
-      "type": "Literal[\"item-aligned\", \"popper\"]",
-      "docstring": "The positioning mode to use. Default is \"item-aligned\"."
-    },
-    {
-      "name": "HighLevelSelect.Args",
-      "type": "items: The items of the select.",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelSelect.Returns",
-      "type": "The select component.",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelSelect.prop",
-      "type": "props.pop(prop)",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelSelect.prop",
-      "type": "props.pop(prop) for prop in trigger_prop_list if prop in props",
-      "docstring": ""
-    },
-    {
-      "name": "HighLevelSelect.else",
-      "type": "child",
-      "docstring": ""
+    "HighLevelSelect": {
+      "name": "HighLevelSelect",
+      "docstring": "High level wrapper for the Select component.",
+      "bases": [
+        "SelectRoot"
+      ],
+      "properties": [
+        {
+          "name": "items",
+          "type": "Sequence[str]",
+          "docstring": "The items of the select."
+        },
+        {
+          "name": "placeholder",
+          "type": "str",
+          "docstring": "The placeholder of the select."
+        },
+        {
+          "name": "label",
+          "type": "str",
+          "docstring": "The label of the select."
+        },
+        {
+          "name": "high_contrast",
+          "type": "bool",
+          "docstring": "Whether to render the select with higher contrast color against background."
+        },
+        {
+          "name": "position",
+          "type": "Literal[\"item-aligned\", \"popper\"]",
+          "docstring": "The positioning mode to use. Default is \"item-aligned\"."
+        }
+      ],
+      "events": [],
+      "styling_props": [
+        {
+          "name": "color_scheme",
+          "type": "LiteralAccentColor",
+          "docstring": "The color of the select."
+        },
+        {
+          "name": "variant",
+          "type": "Literal[\"classic\", \"surface\", \"soft\", \"ghost\"]",
+          "docstring": "The variant of the select."
+        },
+        {
+          "name": "radius",
+          "type": "LiteralRadius",
+          "docstring": "The radius of the select."
+        },
+        {
+          "name": "width",
+          "type": "str",
+          "docstring": "The width of the select."
+        }
+      ]
     }
-  ],
-  "events": [
-    {
-      "name": "SelectRoot.on_change",
-      "type": "rx.EventHandler[passthrough_event_spec(str)",
-      "docstring": "Fired when the value of the select changes."
-    },
-    {
-      "name": "SelectRoot.on_open_change",
-      "type": "rx.EventHandler[passthrough_event_spec(bool)",
-      "docstring": "Fired when the select is opened or closed."
-    },
-    {
-      "name": "SelectContent.on_close_auto_focus",
-      "type": "rx.EventHandler[no_args_event_spec",
-      "docstring": "Fired when the select content is closed."
-    },
-    {
-      "name": "SelectContent.on_escape_key_down",
-      "type": "rx.EventHandler[no_args_event_spec",
-      "docstring": "Fired when the escape key is pressed."
-    },
-    {
-      "name": "SelectContent.on_pointer_down_outside",
-      "type": "rx.EventHandler[no_args_event_spec",
-      "docstring": "Fired when a pointer down event happens outside the select content."
-    }
-  ],
-  "styling_props": [
-    {
-      "name": "SelectRoot.size",
-      "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
-      "docstring": "The size of the select: \"1\" | \"2\" | \"3\""
-    },
-    {
-      "name": "SelectTrigger.variant",
-      "type": "Literal[\"classic\", \"surface\", \"soft\", \"ghost\"]",
-      "docstring": "Variant of the select trigger"
-    },
-    {
-      "name": "SelectTrigger.color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "The color of the select trigger"
-    },
-    {
-      "name": "SelectTrigger.radius",
-      "type": "LiteralRadius",
-      "docstring": "The radius of the select trigger"
-    },
-    {
-      "name": "SelectContent.variant",
-      "type": "Literal[\"solid\", \"soft\"]",
-      "docstring": "The variant of the select content"
-    },
-    {
-      "name": "SelectContent.color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "The color of the select content"
-    },
-    {
-      "name": "HighLevelSelect.color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "The color of the select."
-    },
-    {
-      "name": "HighLevelSelect.variant",
-      "type": "Literal[\"classic\", \"surface\", \"soft\", \"ghost\"]",
-      "docstring": "The variant of the select."
-    },
-    {
-      "name": "HighLevelSelect.radius",
-      "type": "LiteralRadius",
-      "docstring": "The radius of the select."
-    },
-    {
-      "name": "HighLevelSelect.width",
-      "type": "str",
-      "docstring": "The width of the select."
-    }
-  ]
+  }
 }

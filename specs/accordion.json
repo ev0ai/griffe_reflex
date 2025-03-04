@@ -8,190 +8,153 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [
-    {
-      "name": "AccordionContent.Returns",
-      "type": "The imports of the component.",
-      "docstring": ""
+  "properties": [],
+  "events": [],
+  "styling_props": [],
+  "subcomponents": {
+    "AccordionContent": {
+      "name": "AccordionContent",
+      "docstring": "An accordion component.",
+      "bases": [
+        "AccordionComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "AccordionContent.Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
+    "AccordionHeader": {
+      "name": "AccordionHeader",
+      "docstring": "An accordion component.",
+      "bases": [
+        "AccordionComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "AccordionContent.Returns",
-      "type": "The Accordion content Component.",
-      "docstring": ""
+    "AccordionItem": {
+      "name": "AccordionItem",
+      "docstring": "An accordion component.",
+      "bases": [
+        "AccordionComponent"
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "type": "str",
+          "docstring": "A unique identifier for the item."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "docstring": "When true, prevents the user from interacting with the item."
+        },
+        {
+          "name": "header",
+          "type": "Component | str",
+          "docstring": "The header of the accordion item."
+        },
+        {
+          "name": "content",
+          "type": "Component | str | None",
+          "docstring": "The content of the accordion item."
+        }
+      ],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "AccordionContent.Returns",
-      "type": "The custom code of the component.",
-      "docstring": "return ["
+    "AccordionIcon": {
+      "name": "AccordionIcon",
+      "docstring": "An accordion icon component.",
+      "bases": [
+        "Icon"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     },
-    {
-      "name": "AccordionHeader.Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
+    "AccordionRoot": {
+      "name": "AccordionRoot",
+      "docstring": "An accordion component.",
+      "bases": [
+        "AccordionComponent"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "type": "LiteralAccordionType",
+          "docstring": "The type of accordion (single or multiple)."
+        },
+        {
+          "name": "value",
+          "type": "str | Sequence[str]",
+          "docstring": "The value of the item to expand."
+        },
+        {
+          "name": "default_value",
+          "type": "str | Sequence[str]",
+          "docstring": "The default value of the item to expand."
+        },
+        {
+          "name": "collapsible",
+          "type": "bool",
+          "docstring": "Whether or not the accordion is collapsible."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "docstring": "Whether or not the accordion is disabled."
+        },
+        {
+          "name": "dir",
+          "type": "LiteralAccordionDir",
+          "docstring": "The reading direction of the accordion when applicable."
+        },
+        {
+          "name": "orientation",
+          "type": "LiteralAccordionOrientation",
+          "docstring": "The orientation of the accordion."
+        },
+        {
+          "name": "duration",
+          "type": "int",
+          "docstring": "The time in milliseconds to animate open and close"
+        },
+        {
+          "name": "easing",
+          "type": "str",
+          "docstring": "The easing function to use for the animation."
+        },
+        {
+          "name": "show_dividers",
+          "type": "bool",
+          "docstring": "Whether to show divider lines between items."
+        }
+      ],
+      "events": [
+        {
+          "name": "on_value_change",
+          "type": "EventHandler[on_value_change",
+          "docstring": "Fired when the opened the accordions changes."
+        }
+      ],
+      "styling_props": [
+        {
+          "name": "radius",
+          "type": "LiteralRadius",
+          "docstring": "The radius of the accordion corners."
+        }
+      ]
     },
-    {
-      "name": "AccordionHeader.Returns",
-      "type": "The Accordion header Component.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionHeader.Returns",
-      "type": "The style of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionItem.value",
-      "type": "str",
-      "docstring": "A unique identifier for the item."
-    },
-    {
-      "name": "AccordionItem.disabled",
-      "type": "bool",
-      "docstring": "When true, prevents the user from interacting with the item."
-    },
-    {
-      "name": "AccordionItem.header",
-      "type": "Component | str",
-      "docstring": "The header of the accordion item."
-    },
-    {
-      "name": "AccordionItem.content",
-      "type": "Component | str | None",
-      "docstring": "The content of the accordion item."
-    },
-    {
-      "name": "AccordionItem._valid_children",
-      "type": "list[str",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionItem._valid_parents",
-      "type": "list[str",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionItem.Args",
-      "type": "*children: The list of children to use if header and content are not provided.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionItem.Returns",
-      "type": "The accordion item.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionItem.Returns",
-      "type": "The style of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionIcon.Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionIcon.Returns",
-      "type": "The Accordion icon Component.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionRoot.type",
-      "type": "LiteralAccordionType",
-      "docstring": "The type of accordion (single or multiple)."
-    },
-    {
-      "name": "AccordionRoot.value",
-      "type": "str | Sequence[str]",
-      "docstring": "The value of the item to expand."
-    },
-    {
-      "name": "AccordionRoot.default_value",
-      "type": "str | Sequence[str]",
-      "docstring": "The default value of the item to expand."
-    },
-    {
-      "name": "AccordionRoot.collapsible",
-      "type": "bool",
-      "docstring": "Whether or not the accordion is collapsible."
-    },
-    {
-      "name": "AccordionRoot.disabled",
-      "type": "bool",
-      "docstring": "Whether or not the accordion is disabled."
-    },
-    {
-      "name": "AccordionRoot.dir",
-      "type": "LiteralAccordionDir",
-      "docstring": "The reading direction of the accordion when applicable."
-    },
-    {
-      "name": "AccordionRoot.orientation",
-      "type": "LiteralAccordionOrientation",
-      "docstring": "The orientation of the accordion."
-    },
-    {
-      "name": "AccordionRoot.duration",
-      "type": "int",
-      "docstring": "The time in milliseconds to animate open and close"
-    },
-    {
-      "name": "AccordionRoot.easing",
-      "type": "str",
-      "docstring": "The easing function to use for the animation."
-    },
-    {
-      "name": "AccordionRoot.show_dividers",
-      "type": "bool",
-      "docstring": "Whether to show divider lines between items."
-    },
-    {
-      "name": "AccordionRoot._valid_children",
-      "type": "list[str",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionRoot.Returns",
-      "type": "The style of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionRoot.else",
-      "type": "style[\"&[data-variant",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionTrigger.Args",
-      "type": "*children: The children of the component.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionTrigger.Returns",
-      "type": "The Accordion trigger Component.",
-      "docstring": ""
-    },
-    {
-      "name": "AccordionTrigger.Returns",
-      "type": "The style of the component.",
-      "docstring": ""
+    "AccordionTrigger": {
+      "name": "AccordionTrigger",
+      "docstring": "An accordion component.",
+      "bases": [
+        "AccordionComponent"
+      ],
+      "properties": [],
+      "events": [],
+      "styling_props": []
     }
-  ],
-  "events": [
-    {
-      "name": "AccordionRoot.on_value_change",
-      "type": "EventHandler[on_value_change",
-      "docstring": "Fired when the opened the accordions changes."
-    }
-  ],
-  "styling_props": [
-    {
-      "name": "AccordionRoot.radius",
-      "type": "LiteralRadius",
-      "docstring": "The radius of the accordion corners."
-    }
-  ]
+  }
 }
