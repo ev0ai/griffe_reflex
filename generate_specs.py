@@ -703,8 +703,8 @@ def find_all_components(base_dir):
             "file_path": f"{base_dir}/reflex/reflex/components/recharts/charts.py"
         },
         "ag_grid": {
-            "module_path": "components.datadisplay.ag_grid",
-            "file_path": f"{base_dir}/reflex/reflex/components/datadisplay/ag_grid.py"
+            "module_path": "components.ag_grid.ag_grid",
+            "file_path": f"{base_dir}/reflex/reflex/components/ag_grid/ag_grid.py"
         },
         "code_block": {
             "module_path": "components.datadisplay.code",

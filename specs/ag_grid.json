@@ -1,12 +1,262 @@
 {
   "name": "ag_grid",
-  "module_path": "components.datadisplay.ag_grid",
-  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/datadisplay/ag_grid.py",
-  "docstring": "",
-  "bases": [],
-  "properties": [],
-  "event_names": [],
-  "enum_values": {},
-  "styling_properties": {},
+  "module_path": "components.ag_grid.ag_grid",
+  "module_name": "ag_grid",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/ag_grid/ag_grid.py",
+  "doc_path": null,
+  "docstring": "Reflex AgGrid component is a high-performance and highly customizable component that wraps AG Grid, designed for creating rich datagrids.",
+  "bases": [
+    "rx.Component"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "library",
+      "type": "str",
+      "description": "The library name for the ag-grid-react component"
+    },
+    {
+      "name": "column_defs",
+      "type": "rx.Var[list[dict[str, Any] | ColumnDef | ColumnGroup]]",
+      "description": "Variable for column definitions"
+    },
+    {
+      "name": "row_data",
+      "type": "rx.Var[list[dict[str, Any]]]",
+      "description": "Variable for row data"
+    },
+    {
+      "name": "cell_selection",
+      "type": "bool | rx.Var[bool]",
+      "description": "Variable for cell selection"
+    },
+    {
+      "name": "row_selection",
+      "type": "rx.Var[str]",
+      "description": "Variable for row selection type"
+    },
+    {
+      "name": "animate_rows",
+      "type": "rx.Var[bool]",
+      "description": "Variable to animate rows"
+    },
+    {
+      "name": "pagination",
+      "type": "rx.Var[bool]",
+      "description": "Variable for pagination"
+    },
+    {
+      "name": "pagination_page_size",
+      "type": "rx.Var[int]",
+      "description": "Page size for pagination"
+    },
+    {
+      "name": "auto_size_strategy",
+      "type": "rx.Var[dict]",
+      "description": "Strategy for auto sizing"
+    },
+    {
+      "name": "pagination_page_size_selector",
+      "type": "rx.Var[list[int]]",
+      "description": "Selector for pagination page size options"
+    },
+    {
+      "name": "side_bar",
+      "type": "rx.Var[Union[str, dict[str, Any], bool, list[str]]]",
+      "description": "Variable for the side bar configuration"
+    },
+    {
+      "name": "tree_data",
+      "type": "rx.Var[bool]",
+      "description": "Variable to indicate if tree data is used"
+    },
+    {
+      "name": "default_col_def",
+      "type": "rx.Var[dict[str, Any]]",
+      "description": "Default column definition"
+    },
+    {
+      "name": "auto_group_column_def",
+      "type": "rx.Var[Any]",
+      "description": "Definition for the auto group column"
+    },
+    {
+      "name": "pinned_top_row_data",
+      "type": "rx.Var[list[dict[str, Any]]]",
+      "description": "Data for pinned top rows"
+    },
+    {
+      "name": "pinned_bottom_row_data",
+      "type": "rx.Var[list[dict[str, Any]]]",
+      "description": "Data for pinned bottom rows"
+    },
+    {
+      "name": "group_default_expanded",
+      "type": "rx.Var[int] | None",
+      "description": "Default expanded group level"
+    },
+    {
+      "name": "group_selects_children",
+      "type": "rx.Var[bool]",
+      "description": "Variable to indicate if group selects children"
+    },
+    {
+      "name": "suppress_row_click_selection",
+      "type": "rx.Var[bool]",
+      "description": "Variable to suppress row click selection"
+    },
+    {
+      "name": "get_data_path",
+      "type": "rx.EventHandler[lambda e0: [e0]]",
+      "description": "Event handler for getting the data path"
+    },
+    {
+      "name": "group_allow_unbalanced",
+      "type": "rx.Var[bool]",
+      "description": "Variable to allow unbalanced groups"
+    },
+    {
+      "name": "pivot_panel_show",
+      "type": "rx.Var[str]",
+      "description": "Variable to show pivot panel"
+    },
+    {
+      "name": "row_group_panel_show",
+      "type": "rx.Var[str]",
+      "description": "Variable to show row group panel"
+    },
+    {
+      "name": "suppress_agg_func_in_header",
+      "type": "rx.Var[bool]",
+      "description": "Variable to suppress aggregate function in header"
+    },
+    {
+      "name": "group_lock_group_columns",
+      "type": "rx.Var[int]",
+      "description": "Variable to lock group columns"
+    },
+    {
+      "name": "maintain_column_order",
+      "type": "rx.Var[bool]",
+      "description": "Variable to maintain column order"
+    },
+    {
+      "name": "row_model_type",
+      "type": "rx.Var[str]",
+      "description": "Row model type for infinite/serverside row model"
+    },
+    {
+      "name": "cache_block_size",
+      "type": "rx.Var[int]",
+      "description": "Cache block size for infinite/serverside row model"
+    },
+    {
+      "name": "max_blocks_in_cache",
+      "type": "rx.Var[int]",
+      "description": "Maximum blocks in cache for infinite/serverside row model"
+    },
+    {
+      "name": "row_buffer",
+      "type": "rx.Var[int]",
+      "description": "Row buffer size for infinite/serverside row model"
+    },
+    {
+      "name": "cache_overflow_size",
+      "type": "rx.Var[int]",
+      "description": "Cache overflow size for infinite/serverside row model"
+    },
+    {
+      "name": "max_concurrent_datasource_requests",
+      "type": "rx.Var[int]",
+      "description": "Maximum concurrent datasource requests for infinite/serverside row model"
+    },
+    {
+      "name": "infinite_initial_row_count",
+      "type": "rx.Var[int]",
+      "description": "Initial row count for infinite row model"
+    },
+    {
+      "name": "datasource",
+      "type": "rx.Var[Datasource]",
+      "description": "Datasource for infinite/serverside row model"
+    },
+    {
+      "name": "get_row_id",
+      "type": "rx.EventHandler[lambda e0: [e0]]",
+      "description": "Event handler for getting the row ID"
+    },
+    {
+      "name": "is_server_side_group",
+      "type": "rx.EventHandler[lambda e0: [e0]]",
+      "description": "Event handler to check if it is a server-side group"
+    },
+    {
+      "name": "get_server_side_group_key",
+      "type": "rx.EventHandler[lambda e0: [e0]]",
+      "description": "Event handler to get the server-side group key"
+    },
+    {
+      "name": "server_side_datasource",
+      "type": "rx.Var[SSRMDatasource]",
+      "description": "Server-side datasource for infinite/serverside row model"
+    },
+    {
+      "name": "is_server_side_group_open_by_default",
+      "type": "rx.EventHandler[lambda e0: [e0]]",
+      "description": "Event handler to check if server-side group is open by default"
+    },
+    {
+      "name": "server_side_enable_client_side_sort",
+      "type": "rx.Var[bool]",
+      "description": "Variable to enable client-side sort on server-side"
+    },
+    {
+      "name": "get_child_count",
+      "type": "rx.EventHandler[lambda e0: [e0]]",
+      "description": "Event handler to get the child count"
+    },
+    {
+      "name": "theme",
+      "type": "rx.Var[Literal[\"quartz\", \"balham\", \"alpine\", \"material\"]]",
+      "description": "Change the aesthetic theme of the grid"
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount",
+    "on_cell_clicked",
+    "on_cell_focused",
+    "on_cell_mouse_over",
+    "on_cell_mouse_out",
+    "on_cell_double_clicked",
+    "on_cell_context_menu",
+    "on_cell_value_changed",
+    "on_row_clicked",
+    "on_row_double_clicked",
+    "on_row_selected",
+    "on_selection_changed",
+    "on_column_header_clicked",
+    "on_column_resized",
+    "on_column_moved",
+    "on_column_pinned",
+    "on_column_header_context_menu",
+    "on_header_focused",
+    "on_first_data_rendered",
+    "on_grid_ready"
+  ],
+  "styling_props": [],
   "subcomponents": {}
 }
