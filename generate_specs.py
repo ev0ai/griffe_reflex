@@ -628,38 +628,47 @@ def extract_properties_from_class_body(class_body, spec, class_prefix=None):
 
 def find_all_components():
     """
-    Recursively find all components in the codebase.
+    Find specifically requested components in the codebase.
     
     Returns a dictionary of component names to their module paths and file paths.
     """
     component_to_paths = {}
-    components_dir = REFLEX_ROOT / 'reflex' / 'components'
     
-    # Component modules to explicitly check
-    component_modules = [
-        'base', 'core', 'datadisplay', 'el', 'gridjs', 'lucide', 'markdown',
-        'moment', 'plotly', 'radix', 'react_player', 'recharts', 'sonner', 'suneditor'
-    ]
-    
-    # Additional component names mentioned by the user
-    additional_components = [
+    # ONLY include components specifically requested by the user
+    requested_components = [
+        # Components explicitly mentioned by the user
+        'accordion', 'segmented_control', 'tabs', 'input', 'slider', 'form',
+        'button', 'checkbox', 'select', 'text_area', 'radio_group', 'upload',
+        'switch', 'table', 'stack', 'hstack', 'vstack', 'card', 'separator',
+        'inset', 'theme', 'callout', 'scroll_area', 'progress', 'list',
+        'data_list', 'avatar', 'badge', 'text', 'popover', 'hover_card',
+        'drawer', 'dialog', 'tooltip',
+        
+        # Missing components specifically requested
         'code_block', 'icon', 'moment', 'spinner', 'segmented_control',
         'cond', 'foreach', 'match', 'editor', 'box', 'center', 'container',
         'flex', 'fragment', 'grid', 'section', 'spacer', 'audio', 'image',
-        'video', 'clipboard', 'html_embed', 'gtml', 'script', 'skeleton',
+        'video', 'clipboard', 'html_embed', 'html', 'script', 'skeleton',
         'alert_dialog', 'context_menu', 'dropdown_menu', 'toast', 'ag_grid',
         'data_editor', 'data_table', 'blockquote', 'code', 'em', 'heading',
-        'kbd', 'link', 'markdown', 'quote', 'strong', 'areachart', 'barchart',
-        'composedchart', 'errorbar', 'funnelchart', 'linechart', 'piechart',
-        'radarchart', 'radialbarchart', 'scatterchart', 'axis', 'brush',
-        'cartesiangrid', 'label', 'legend', 'reference', 'tooltip'
+        'kbd', 'link', 'markdown', 'quote', 'strong',
+        
+        # Recharts/graphing components specifically requested
+        'areachart', 'barchart', 'composedchart', 'errorbar', 'funnelchart',
+        'linechart', 'piechart', 'radarchart', 'radialbarchart', 'scatterchart',
+        'axis', 'brush', 'cartesiangrid', 'label', 'legend', 'reference', 'tooltip'
     ]
     
     # First, get component paths from the existing mapping function
-    component_to_paths = extract_component_mappings()
+    initial_mapping = extract_component_mappings()
     
-    # Now add modules where we couldn't automatically detect the path
-    for component_name in additional_components:
+    # Only keep components that were explicitly requested
+    for component_name in requested_components:
+        if component_name in initial_mapping:
+            component_to_paths[component_name] = initial_mapping[component_name]
+    
+    # Now try to find paths for missing components
+    for component_name in requested_components:
         if component_name not in component_to_paths:
             # Try to guess the module path based on the component name
             module_name = component_name
@@ -679,6 +688,10 @@ def find_all_components():
                 f"components.base.{module_name}",
                 # Try in el components
                 f"components.el.{module_name}",
+                # Try in typography
+                f"components.radix.themes.typography.{module_name}",
+                # Try in layout
+                f"components.radix.themes.layout.{module_name}",
             ]
             
             for module_path in possible_paths:
