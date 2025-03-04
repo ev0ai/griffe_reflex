@@ -36,6 +36,62 @@ SPECS_DIR.mkdir(exist_ok=True)
 init_path = REFLEX_ROOT / 'reflex' / '__init__.py'
 pyi_path = REFLEX_ROOT / 'reflex' / '__init__.pyi'
 
+# Common Reflex event handlers that should be included in all component specs
+COMMON_EVENT_HANDLERS = [
+    "on_blur", "on_click", "on_context_menu", "on_double_click", "on_focus",
+    "on_mount", "on_mouse_down", "on_mouse_enter", "on_mouse_leave", "on_mouse_move",
+    "on_mouse_out", "on_mouse_over", "on_mouse_up", "on_scroll", "on_unmount"
+]
+
+# Common prop sets
+COMMON_PROP_CATEGORIES = {
+    "layout_props": ["width", "height", "min_width", "max_width", "min_height", "max_height", "padding", "padding_x", "padding_y", "padding_top", "padding_right", "padding_bottom", "padding_left"],
+    "position_props": ["position", "top", "right", "bottom", "left", "z_index"],
+    "flex_props": ["flex", "flex_grow", "flex_shrink", "flex_basis", "justify_content", "align_items", "align_content", "align_self", "order"],
+    "grid_props": ["grid_template_columns", "grid_template_rows", "grid_template_areas", "grid_column", "grid_row", "grid_area", "grid_auto_flow", "grid_auto_rows", "grid_auto_columns", "gap", "row_gap", "column_gap"],
+    "spacing_props": ["margin", "margin_top", "margin_right", "margin_bottom", "margin_left", "margin_x", "margin_y"],
+    "border_props": ["border", "border_width", "border_style", "border_color", "border_top", "border_right", "border_bottom", "border_left", "border_radius"],
+    "shadow_props": ["box_shadow", "text_shadow"],
+    "color_props": ["color", "background", "background_color", "opacity"],
+    "typography_props": ["font_family", "font_size", "font_weight", "line_height", "text_align", "font_style", "text_decoration", "text_transform", "letter_spacing"],
+}
+
+# Modify TYPE_MAPPINGS to be much simpler
+TYPE_MAPPINGS = {
+    "LiteralRadius": {
+        "values": ["none", "small", "medium", "large", "full"]
+    },
+    "LiteralButtonSize": {
+        "values": ["1", "2", "3", "4"]
+    },
+    "LiteralVariant": {
+        "values": ["solid", "soft", "outline", "ghost"]
+    },
+    "LiteralAccentColor": {
+        "values": ["gray", "tomato", "red", "ruby", "crimson", "pink", "plum", "purple", "violet", "iris", "indigo", "blue", "cyan", "teal", "jade", "green", "grass", "brown", "orange", "sky", "mint", "lime", "yellow", "amber", "gold", "bronze"]
+    },
+    "LiteralAccordionType": {
+        "values": ["single", "multiple"]
+    },
+    "LiteralAccordionDir": {
+        "values": ["ltr", "rtl"]
+    },
+    "LiteralAccordionOrientation": {
+        "values": ["vertical", "horizontal"]
+    }
+}
+
+# Add function to parse enum values from descriptions
+def extract_enum_values_from_description(description):
+    """Extract enum values from description strings like 'Options: "value1" | "value2" | "value3"'"""
+    # Find patterns like "value1" | "value2" | "value3"
+    enum_match = re.search(r'(?:"([^"]+)"(?:\s*\|\s*"([^"]+)")+)', description)
+    if enum_match:
+        # Extract all double-quoted values
+        values = re.findall(r'"([^"]+)"', description)
+        return values
+    return None
+
 def print_debug(*args, **kwargs):
     """Debug print function."""
     # Uncomment to enable debug printing
@@ -135,11 +191,12 @@ def extract_component_info(component_name: str, component_data: Dict[str, str], 
         "module_path": module_path,
         "module_name": module_name,
         "file_path": str(file_path),
-        "doc_path": str(doc_path),
+        "doc_path": str(doc_path) if doc_path else None,
         "docstring": "",
         "bases": [],
+        "supports_common_props": False,  # Will be set to True for components that support common props
         "properties": [],
-        "events": [],
+        "event_names": [],  # Change from 'events' to 'event_names' - just a list of names
         "styling_props": [],
         "subcomponents": {}  # New field to store subcomponent specs
     }
@@ -227,6 +284,22 @@ def extract_component_info(component_name: str, component_data: Dict[str, str], 
                 bases = bases_match.group(1)
                 spec["bases"] = [base.strip() for base in bases.split(',')]
             
+            # Check if component supports common prop categories
+            supports_common_props = False
+            for base in spec["bases"]:
+                if any(common_base in base for common_base in ["Component", "Element", "Box", "Div", "Link"]):
+                    supports_common_props = True
+                    break
+            
+            spec["supports_common_props"] = supports_common_props
+            
+            # Add standard event handlers if component supports common props - just the names
+            if supports_common_props and not spec.get('error'):
+                for event_name in COMMON_EVENT_HANDLERS:
+                    # Check if event already exists
+                    if event_name not in spec["event_names"]:
+                        spec["event_names"].append(event_name)
+            
             # Check if this is a ComponentNamespace or contains other component classes
             if "ComponentNamespace" in spec["bases"]:
                 print(f"  This is a ComponentNamespace, looking for member components...")
@@ -275,27 +348,39 @@ def extract_component_info(component_name: str, component_data: Dict[str, str], 
                             if not sc_body:
                                 sc_body = content[sc_start:]
                             
+                            # Extract subcomponent base classes to check if it supports common props
+                            sc_bases_match = re.search(rf"class\s+{sc_class}\s*\((.*?)\)\s*:", sc_body)
+                            sc_bases = []
+                            supports_common_props = False
+                            
+                            if sc_bases_match:
+                                sc_bases = [base.strip() for base in sc_bases_match.group(1).split(',')]
+                                for base in sc_bases:
+                                    if any(common_base in base for common_base in ["Component", "Element", "RadixThemesComponent", "HTMLElement"]):
+                                        supports_common_props = True
+                                        break
+                            
                             # Extract subcomponent docstring
                             sc_docstring = ""
                             sc_docstring_match = re.search(r'"""(.*?)"""', sc_body, re.DOTALL)
                             if sc_docstring_match:
                                 sc_docstring = sc_docstring_match.group(1).strip()
                             
-                            # Extract subcomponent base classes
-                            sc_bases = []
-                            sc_bases_match = re.search(rf"class\s+{sc_class}\s*\((.*?)\)\s*:", sc_body)
-                            if sc_bases_match:
-                                sc_bases = [base.strip() for base in sc_bases_match.group(1).split(',')]
-                            
                             # Create a subcomponent spec
                             sc_spec = {
                                 "name": sc_class,
                                 "docstring": sc_docstring,
                                 "bases": sc_bases,
+                                "supports_common_props": supports_common_props,
                                 "properties": [],
-                                "events": [],
+                                "event_names": [],
                                 "styling_props": []
                             }
+                            
+                            # Add common event handlers if this component supports common props
+                            if supports_common_props:
+                                for event_name in COMMON_EVENT_HANDLERS:
+                                    sc_spec["event_names"].append(event_name)
                             
                             # Extract properties from the subcomponent
                             extract_properties_from_class_body(sc_body, sc_spec)
@@ -317,92 +402,240 @@ def extract_component_info(component_name: str, component_data: Dict[str, str], 
     return spec
 
 def extract_properties_from_class_body(class_body, spec, class_prefix=None):
-    """
-    Extract properties from a class body and add them to the spec.
+    """Extract properties from a class body."""
     
-    Args:
-        class_body: The class body text
-        spec: The spec dictionary to update
-        class_prefix: Optional prefix to add to property names to indicate the source class
-    """
-    # Skip special and internal attributes
     def should_skip_property(name):
-        return (name.startswith('__') and name.endswith('__')) or \
-               name in ['tag', 'library', 'alias', '_valid_children', '_valid_parents'] or \
-               name in ['Args', 'Returns', 'Kwargs'] or \
-               name == 'prop' or name == 'else'  # Skip method parameters
+        """Check if a property should be skipped."""
+        # Skip special methods and internal attributes
+        if name.startswith('__') or name.startswith('_') or name == 'tag':
+            return True
+        
+        # Skip method parameters like "Returns", "Args", "Parameters"
+        if name in ['Returns', 'Args', 'Parameters', 'Example', 'Examples', 'Note', 'Notes', 'Raises']:
+            return True
+        
+        # Skip other internal attributes
+        internal_attrs = ['children', 'component_name', 'lib', 'lib_dependencies', 'alias']
+        if name in internal_attrs:
+            return True
+        
+        return False
     
-    # Extract properties - look for class attributes, not method parameters
-    property_pattern = r"^\s+(\w+)\s*:\s*(?:Var\[)?([^=\n]+?)(?:\])?\s*(?:=|$)"
+    # Define patterns for matching properties and methods
+    property_pattern = re.compile(r'(?:^|\n)\s*([\w]+)\s*(?::|=)', re.MULTILINE)
     
-    # Get method definition sections to exclude them
+    # Identify method definitions to avoid capturing their parameters as properties
+    method_pattern = re.compile(r'(?:^|\n)\s*def\s+([\w_]+)\s*\(', re.MULTILINE)
     method_sections = []
-    method_pattern = r"^\s+(?:@\w+\s*\n\s+)*def\s+(\w+)"
-    for method_match in re.finditer(method_pattern, class_body, re.MULTILINE):
+    
+    # Find all method definitions and mark their sections
+    for method_match in re.finditer(method_pattern, class_body):
+        method_name = method_match.group(1)
         method_start = method_match.start()
         
-        # Find method end (next method or end of class)
-        next_method = re.search(method_pattern, class_body[method_start + 1:], re.MULTILINE)
-        if next_method:
-            method_end = method_start + 1 + next_method.start()
-        else:
-            method_end = len(class_body)
+        # Find the end of the method by tracking indentation
+        lines = class_body[method_start:].split('\n')
+        method_end = method_start
+        method_indent = None
+        
+        for i, line in enumerate(lines):
+            if i == 0:
+                # First line defines the method, get its indentation level
+                method_indent = len(line) - len(line.lstrip())
+                continue
+                
+            line_stripped = line.lstrip()
+            if not line_stripped:  # Skip empty lines
+                continue
+                
+            current_indent = len(line) - len(line_stripped)
             
+            # If we find a line with same or less indentation than the method definition,
+            # we've reached the end of the method
+            if current_indent <= method_indent:
+                method_end += len('\n'.join(lines[:i]))
+                break
+        
+        # If we didn't find the end, assume it goes to the end of the class
+        if method_end == method_start:
+            method_end = len(class_body)
+        
         method_sections.append((method_start, method_end))
     
-    # Now extract properties, excluding those within method definitions
-    for prop_match in re.finditer(property_pattern, class_body, re.MULTILINE):
-        prop_start = prop_match.start()
-        
-        # Skip if this match is within a method definition
-        if any(start <= prop_start < end for start, end in method_sections):
-            continue
-            
-        prop_name = prop_match.group(1)
-        prop_type = prop_match.group(2).strip()
-        
-        # Skip special methods and internal attributes
-        if should_skip_property(prop_name):
+    # First get class attributes with type annotations
+    type_pattern = re.compile(r'(?:^|\n)\s*([\w]+)\s*:\s*([^=\n]+)(?:=|$|\n)', re.MULTILINE)
+    for match in re.finditer(type_pattern, class_body):
+        name = match.group(1)
+        if should_skip_property(name):
             continue
         
-        # Extract property docstring
-        prop_docstring = ""
-        prop_context = class_body[max(0, prop_match.start() - 100):min(len(class_body), prop_match.end() + 100)]
-        prop_docstring_match = re.search(rf"{prop_name}\s*:.*?\n\s+\"\"\"(.*?)\"\"\"", prop_context, re.DOTALL)
+        # Skip if property is in a method section
+        if any(start <= match.start() <= end for start, end in method_sections):
+            continue
         
-        # If no docstring found in the property definition, look for comment directly above
-        if not prop_docstring_match:
-            line_start = prop_match.start()
-            while line_start > 0 and class_body[line_start] != '\n':
-                line_start -= 1
+        # Check if this is a property or an event handler
+        is_event = name.startswith('on_')
+        
+        # Get the type annotation
+        type_annotation = match.group(2).strip()
+        
+        # Extract docstring or comment
+        docstring = ''
+        
+        # Look for a docstring in triple quotes after the property
+        docstring_pattern = r'"""(.*?)"""'
+        docstring_match = re.search(docstring_pattern, class_body[match.end():match.end() + 500], re.DOTALL)
+        if docstring_match:
+            docstring = docstring_match.group(1).strip()
+        
+        # Fallback to looking for a comment
+        if not docstring:
+            # Look for a comment on the same line or the line above
+            line_start = class_body.rfind('\n', 0, match.start()) + 1
+            line_end = class_body.find('\n', match.start())
+            line = class_body[line_start:line_end]
             
-            # Look for a comment line above
-            comment_start = class_body.rfind('\n', 0, line_start) + 1
-            comment_line = class_body[comment_start:line_start].strip()
-            if comment_line.startswith('#'):
-                prop_docstring = comment_line[1:].strip()
+            comment_match = re.search(r'#\s*(.*)', line)
+            if comment_match:
+                docstring = comment_match.group(1).strip()
+            else:
+                # Check if there's a comment in the previous line
+                prev_line_end = line_start - 1
+                prev_line_start = class_body.rfind('\n', 0, prev_line_end) + 1
+                prev_line = class_body[prev_line_start:prev_line_end]
+                
+                prev_comment_match = re.search(r'#\s*(.*)', prev_line)
+                if prev_comment_match:
+                    docstring = prev_comment_match.group(1).strip()
         
-        if prop_docstring_match:
-            prop_docstring = prop_docstring_match.group(1).strip()
-        
-        prop_info = {
-            "name": prop_name,
-            "type": prop_type,
-            "docstring": prop_docstring
+        # Create simplified property data
+        property_data = {
+            "name": name,
+            "type": type_annotation,
+            "description": docstring
         }
         
-        # Categorize properties
-        if prop_name.startswith("on_"):
-            spec["events"].append(prop_info)
-        elif prop_name in ["style", "class_name", "color_scheme", "variant", "size", "width", "height", "radius"]:
-            spec["styling_props"].append(prop_info)
+        # Try to extract enum values from type or description
+        enum_type = None
+        
+        # Check if the type or a part of it matches a known enum type
+        for enum_type_name, enum_info in TYPE_MAPPINGS.items():
+            if enum_type_name in type_annotation:
+                enum_type = enum_type_name
+                # Add the enum values from our mapping
+                property_data["values"] = enum_info["values"]
+                break
+        
+        # If we didn't find a match in known types, try to extract from description
+        if "values" not in property_data:
+            enum_values = extract_enum_values_from_description(docstring)
+            if enum_values:
+                property_data["values"] = enum_values
+        
+        # Add to the appropriate list, but for events just track the name
+        if is_event:
+            if "event_names" not in spec:
+                spec["event_names"] = []
+            if name not in spec["event_names"]:
+                spec["event_names"].append(name)
+        elif name in ["size", "variant", "color_scheme", "radius"] or name.endswith("_style"):
+            spec["styling_props"].append(property_data)
         else:
-            spec["properties"].append(prop_info)
+            spec["properties"].append(property_data)
+    
+    # Then get class attributes with assignments but no type annotations
+    assign_pattern = re.compile(r'(?:^|\n)\s*([\w]+)\s*=\s*([^:\n]+)(?:$|\n)', re.MULTILINE)
+    for match in re.finditer(assign_pattern, class_body):
+        name = match.group(1)
+        if should_skip_property(name):
+            continue
+        
+        # Skip if already processed with type annotation
+        if any(p.get("name") == name for p in spec["properties"] + spec["styling_props"]):
+            continue
+            
+        # Skip if property is in a method section
+        if any(start <= match.start() <= end for start, end in method_sections):
+            continue
+        
+        # Check if this is a property or an event handler
+        is_event = name.startswith('on_')
+        
+        # Try to infer the type from the assignment
+        value = match.group(2).strip()
+        inferred_type = "Any"
+        
+        if value == "True" or value == "False":
+            inferred_type = "bool"
+        elif value.startswith('"') or value.startswith("'"):
+            inferred_type = "str"
+        elif value.isdigit():
+            inferred_type = "int"
+        elif "." in value and all(part.isdigit() for part in value.split(".")):
+            inferred_type = "float"
+        
+        # Extract docstring or comment (same as above)
+        docstring = ''
+        
+        # Look for a docstring in triple quotes after the property
+        docstring_pattern = r'"""(.*?)"""'
+        docstring_match = re.search(docstring_pattern, class_body[match.end():match.end() + 500], re.DOTALL)
+        if docstring_match:
+            docstring = docstring_match.group(1).strip()
+        
+        # Fallback to looking for a comment
+        if not docstring:
+            # Look for a comment on the same line or the line above
+            line_start = class_body.rfind('\n', 0, match.start()) + 1
+            line_end = class_body.find('\n', match.start())
+            line = class_body[line_start:line_end]
+            
+            comment_match = re.search(r'#\s*(.*)', line)
+            if comment_match:
+                docstring = comment_match.group(1).strip()
+            else:
+                # Check if there's a comment in the previous line
+                prev_line_end = line_start - 1
+                prev_line_start = class_body.rfind('\n', 0, prev_line_end) + 1
+                prev_line = class_body[prev_line_start:prev_line_end]
+                
+                prev_comment_match = re.search(r'#\s*(.*)', prev_line)
+                if prev_comment_match:
+                    docstring = prev_comment_match.group(1).strip()
+        
+        # Create simplified property data
+        property_data = {
+            "name": name,
+            "type": inferred_type,
+            "description": docstring
+        }
+        
+        # Try to extract enum values from description
+        enum_values = extract_enum_values_from_description(docstring)
+        if enum_values:
+            property_data["values"] = enum_values
+        
+        # Add to the appropriate list, but for events just track the name
+        if is_event:
+            if "event_names" not in spec:
+                spec["event_names"] = []
+            if name not in spec["event_names"]:
+                spec["event_names"].append(name)
+        elif name in ["size", "variant", "color_scheme", "radius"] or name.endswith("_style"):
+            spec["styling_props"].append(property_data)
+        else:
+            spec["properties"].append(property_data)
 
 def generate_spec_files():
     """
     Generate spec files for all documented components.
     """
+    # Create specs directory if it doesn't exist
+    os.makedirs(SPECS_DIR, exist_ok=True)
+    
+    # Generate common props spec
+    generate_common_props_spec()
+    
     # Extract component mappings
     component_mappings = extract_component_mappings()
     
@@ -442,6 +675,33 @@ def generate_spec_files():
     
     print(f"\nProcessed {processed} components with {failures} failures")
     print(f"Spec files saved to: {SPECS_DIR}")
+
+def generate_common_props_spec():
+    """Generate a compact spec file for common properties"""
+    common_props_spec = {
+        "name": "common_props",
+        "description": "Common properties shared by most Reflex components",
+        "events": COMMON_EVENT_HANDLERS,  # Just a list of event names
+        "categories": {}
+    }
+    
+    # Add common prop categories
+    for category, props in COMMON_PROP_CATEGORIES.items():
+        category_name = f"{category}_props"
+        common_props_spec["categories"][category_name] = {
+            "description": f"Common {category} props",
+            "props": props  # Just the list of property names
+        }
+    
+    # Add type mappings with enum values
+    common_props_spec["type_mappings"] = TYPE_MAPPINGS
+    
+    # Save the common props spec
+    common_props_spec_path = SPECS_DIR / "common_props.json"
+    with open(common_props_spec_path, 'w') as f:
+        json.dump(common_props_spec, f, indent=2)
+    
+    print(f"Common props spec file saved to: {common_props_spec_path}")
 
 if __name__ == "__main__":
     generate_spec_files() 

@@ -8,44 +8,96 @@
   "bases": [
     "RadixThemesComponent"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the avatar with higher contrast color against background"
+      "type": "Var[bool]",
+      "description": "Whether to render the avatar with higher contrast color against background"
     },
     {
       "name": "src",
-      "type": "str",
-      "docstring": "The src of the avatar image"
+      "type": "Var[str]",
+      "description": "The src of the avatar image"
     },
     {
       "name": "fallback",
-      "type": "str",
-      "docstring": "The rendered fallback text"
+      "type": "Var[str]",
+      "description": "The rendered fallback text"
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [
     {
       "name": "variant",
-      "type": "Literal[\"solid\", \"soft\"]",
-      "docstring": "The variant of the avatar"
+      "type": "Var[Literal[\"solid\", \"soft\"]]",
+      "description": "The variant of the avatar"
     },
     {
       "name": "size",
-      "type": "Responsive[LiteralSize]",
-      "docstring": "The size of the avatar: \"1\" - \"9\""
+      "type": "Var[Responsive[LiteralSize]]",
+      "description": "The size of the avatar: \"1\" - \"9\""
     },
     {
       "name": "color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "Color theme of the avatar"
+      "type": "Var[LiteralAccentColor]",
+      "description": "Color theme of the avatar",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
     },
     {
       "name": "radius",
-      "type": "LiteralRadius",
-      "docstring": "Override theme radius for avatar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+      "type": "Var[LiteralRadius]",
+      "description": "Override theme radius for avatar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\"",
+      "values": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "full"
+      ]
     }
   ],
   "subcomponents": {}

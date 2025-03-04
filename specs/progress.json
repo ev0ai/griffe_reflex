@@ -8,54 +8,116 @@
   "bases": [
     "RadixThemesComponent"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "value",
-      "type": "int",
-      "docstring": "The value of the progress bar: 0 to max (default 100)"
+      "type": "Var[int]",
+      "description": "The value of the progress bar: 0 to max (default 100)"
     },
     {
       "name": "max",
-      "type": "int",
-      "docstring": "The maximum progress value."
+      "type": "Var[int]",
+      "description": "The maximum progress value."
     },
     {
       "name": "high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the progress bar with higher contrast color against background"
+      "type": "Var[bool]",
+      "description": "Whether to render the progress bar with higher contrast color against background"
     },
     {
       "name": "duration",
-      "type": "str",
-      "docstring": "The duration of the progress bar animation. Once the duration times out, the progress bar will start an indeterminate animation."
+      "type": "Var[str]",
+      "description": "Return a style object with the correct color and css selector.\n\n        Args:\n            color: Color of the fill part.\n\n        Returns:\n            Style: Style object with the correct css selector and color."
     },
     {
       "name": "fill_color",
-      "type": "str",
-      "docstring": "The color of the progress bar fill animation."
+      "type": "Var[str]",
+      "description": "Return a style object with the correct color and css selector.\n\n        Args:\n            color: Color of the fill part.\n\n        Returns:\n            Style: Style object with the correct css selector and color."
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [
     {
       "name": "size",
-      "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
-      "docstring": "The size of the progress bar: \"1\" | \"2\" | \"3\""
+      "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
+      "description": "The size of the progress bar: \"1\" | \"2\" | \"3\"",
+      "values": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "name": "variant",
-      "type": "Literal[\"classic\", \"surface\", \"soft\"]",
-      "docstring": "The variant of the progress bar: \"classic\" | \"surface\" | \"soft\""
+      "type": "Var[Literal[\"classic\", \"surface\", \"soft\"]]",
+      "description": "The variant of the progress bar: \"classic\" | \"surface\" | \"soft\"",
+      "values": [
+        "classic",
+        "surface",
+        "soft"
+      ]
     },
     {
       "name": "color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "The color theme of the progress bar"
+      "type": "Var[LiteralAccentColor]",
+      "description": "The color theme of the progress bar",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
     },
     {
       "name": "radius",
-      "type": "Literal[\"none\", \"small\", \"medium\", \"large\", \"full\"]",
-      "docstring": "Override theme radius for progress bar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+      "type": "Var[Literal[\"none\", \"small\", \"medium\", \"large\", \"full\"]]",
+      "description": "Override theme radius for progress bar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\"",
+      "values": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "full"
+      ]
     }
   ],
   "subcomponents": {}

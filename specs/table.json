@@ -8,8 +8,61 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "header",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "body",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "row",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "cell",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "column_header_cell",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "row_header_cell",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "TableRoot": {
@@ -19,18 +72,40 @@
         "elements.Table",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": [
         {
           "name": "size",
-          "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
-          "docstring": "The size of the table: \"1\" | \"2\" | \"3\""
+          "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
+          "description": "The size of the table: \"1\" | \"2\" | \"3\"",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ]
         },
         {
           "name": "variant",
-          "type": "Literal[\"surface\", \"ghost\"]",
-          "docstring": "The variant of the table"
+          "type": "Var[Literal[\"surface\", \"ghost\"]]",
+          "description": "The variant of the table"
         }
       ]
     },
@@ -41,14 +116,25 @@
         "elements.Thead",
         "RadixThemesComponent"
       ],
-      "properties": [
-        {
-          "name": "_invalid_children",
-          "type": "list[str",
-          "docstring": ""
-        }
+      "supports_common_props": true,
+      "properties": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
       ],
-      "events": [],
       "styling_props": []
     },
     "TableBody": {
@@ -58,14 +144,25 @@
         "elements.Tbody",
         "RadixThemesComponent"
       ],
-      "properties": [
-        {
-          "name": "_invalid_children",
-          "type": "list[str",
-          "docstring": ""
-        }
+      "supports_common_props": true,
+      "properties": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
       ],
-      "events": [],
       "styling_props": []
     },
     "TableRow": {
@@ -75,19 +172,31 @@
         "elements.Tr",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "align",
-          "type": "Literal[\"start\", \"center\", \"end\", \"baseline\"]",
-          "docstring": "The alignment of the row"
-        },
-        {
-          "name": "_invalid_children",
-          "type": "list[str",
-          "docstring": ""
+          "type": "Var[Literal[\"start\", \"center\", \"end\", \"baseline\"]]",
+          "description": "The alignment of the row"
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "TableCell": {
@@ -98,29 +207,41 @@
         "CommonPaddingProps",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "justify",
-          "type": "Literal[\"start\", \"center\", \"end\"]",
-          "docstring": "The justification of the column"
+          "type": "Var[Literal[\"start\", \"center\", \"end\"]]",
+          "description": "The justification of the column"
         },
         {
           "name": "min_width",
-          "type": "Responsive[str]",
-          "docstring": "The minimum width of the cell"
+          "type": "Var[Responsive[str]]",
+          "description": "The minimum width of the cell"
         },
         {
           "name": "max_width",
-          "type": "Responsive[str]",
-          "docstring": "The maximum width of the cell"
-        },
-        {
-          "name": "_invalid_children",
-          "type": "list[str",
-          "docstring": ""
+          "type": "Var[Responsive[str]]",
+          "description": "The maximum width of the cell"
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "TableColumnHeaderCell": {
@@ -130,29 +251,41 @@
         "elements.Th",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "justify",
-          "type": "Literal[\"start\", \"center\", \"end\"]",
-          "docstring": "The justification of the column"
+          "type": "Var[Literal[\"start\", \"center\", \"end\"]]",
+          "description": "The justification of the column"
         },
         {
           "name": "min_width",
-          "type": "Responsive[str]",
-          "docstring": "The minimum width of the cell"
+          "type": "Var[Responsive[str]]",
+          "description": "The minimum width of the cell"
         },
         {
           "name": "max_width",
-          "type": "Responsive[str]",
-          "docstring": "The maximum width of the cell"
-        },
-        {
-          "name": "_invalid_children",
-          "type": "list[str",
-          "docstring": ""
+          "type": "Var[Responsive[str]]",
+          "description": "The maximum width of the cell"
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "TableRowHeaderCell": {
@@ -163,29 +296,41 @@
         "CommonPaddingProps",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "justify",
-          "type": "Literal[\"start\", \"center\", \"end\"]",
-          "docstring": "The justification of the column"
+          "type": "Var[Literal[\"start\", \"center\", \"end\"]]",
+          "description": "The justification of the column"
         },
         {
           "name": "min_width",
-          "type": "Responsive[str]",
-          "docstring": "The minimum width of the cell"
+          "type": "Var[Responsive[str]]",
+          "description": "The minimum width of the cell"
         },
         {
           "name": "max_width",
-          "type": "Responsive[str]",
-          "docstring": "The maximum width of the cell"
-        },
-        {
-          "name": "_invalid_children",
-          "type": "list[str",
-          "docstring": ""
+          "type": "Var[Responsive[str]]",
+          "description": "The maximum width of the cell"
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     }
   }

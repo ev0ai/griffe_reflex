@@ -9,54 +9,75 @@
     "elements.Div",
     "RadixThemesComponent"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "side",
-      "type": "Responsive[Literal[\"x\", \"y\", \"top\", \"bottom\", \"right\", \"left\"]]",
-      "docstring": "The side"
+      "type": "Var[Responsive[Literal[\"x\", \"y\", \"top\", \"bottom\", \"right\", \"left\"]]]",
+      "description": "The side"
     },
     {
       "name": "clip",
-      "type": "Responsive[Literal[\"border-box\", \"padding-box\"]]",
-      "docstring": "How to clip the element's content: \"border-box\" | \"padding-box\""
+      "type": "Var[Responsive[Literal[\"border-box\", \"padding-box\"]]]",
+      "description": "How to clip the element's content: \"border-box\" | \"padding-box\"",
+      "values": [
+        "border-box",
+        "padding-box"
+      ]
     },
     {
       "name": "p",
-      "type": "Responsive[int | str]",
-      "docstring": "Padding"
+      "type": "Var[Responsive[int | str]]",
+      "description": "Padding"
     },
     {
       "name": "px",
-      "type": "Responsive[int | str]",
-      "docstring": "Padding on the x axis"
+      "type": "Var[Responsive[int | str]]",
+      "description": "Padding on the x axis"
     },
     {
       "name": "py",
-      "type": "Responsive[int | str]",
-      "docstring": "Padding on the y axis"
+      "type": "Var[Responsive[int | str]]",
+      "description": "Padding on the y axis"
     },
     {
       "name": "pt",
-      "type": "Responsive[int | str]",
-      "docstring": "Padding on the top"
+      "type": "Var[Responsive[int | str]]",
+      "description": "Padding on the top"
     },
     {
       "name": "pr",
-      "type": "Responsive[int | str]",
-      "docstring": "Padding on the right"
+      "type": "Var[Responsive[int | str]]",
+      "description": "Padding on the right"
     },
     {
       "name": "pb",
-      "type": "Responsive[int | str]",
-      "docstring": "Padding on the bottom"
+      "type": "Var[Responsive[int | str]]",
+      "description": "Padding on the bottom"
     },
     {
       "name": "pl",
-      "type": "Responsive[int | str]",
-      "docstring": "Padding on the left"
+      "type": "Var[Responsive[int | str]]",
+      "description": "Padding on the left"
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {}
 }

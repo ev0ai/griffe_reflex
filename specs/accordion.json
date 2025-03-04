@@ -8,8 +8,56 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "content",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "header",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "item",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "icon",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "trigger",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "AccordionContent": {
@@ -18,8 +66,25 @@
       "bases": [
         "AccordionComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "AccordionHeader": {
@@ -28,8 +93,25 @@
       "bases": [
         "AccordionComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "AccordionItem": {
@@ -38,29 +120,46 @@
       "bases": [
         "AccordionComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "value",
-          "type": "str",
-          "docstring": "A unique identifier for the item."
+          "type": "Var[str]",
+          "description": "A unique identifier for the item."
         },
         {
           "name": "disabled",
-          "type": "bool",
-          "docstring": "When true, prevents the user from interacting with the item."
+          "type": "Var[bool]",
+          "description": "When true, prevents the user from interacting with the item."
         },
         {
           "name": "header",
-          "type": "Component | str",
-          "docstring": "The header of the accordion item."
+          "type": "Var[Component | str]",
+          "description": "The header of the accordion item."
         },
         {
           "name": "content",
-          "type": "Component | str | None",
-          "docstring": "The content of the accordion item."
+          "type": "Var[Component | str | None]",
+          "description": "The content of the accordion item."
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "AccordionIcon": {
@@ -69,8 +168,9 @@
       "bases": [
         "Icon"
       ],
+      "supports_common_props": false,
       "properties": [],
-      "events": [],
+      "event_names": [],
       "styling_props": []
     },
     "AccordionRoot": {
@@ -79,70 +179,101 @@
       "bases": [
         "AccordionComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "type",
-          "type": "LiteralAccordionType",
-          "docstring": "The type of accordion (single or multiple)."
+          "type": "Var[LiteralAccordionType]",
+          "description": "The type of accordion (single or multiple).",
+          "values": [
+            "single",
+            "multiple"
+          ]
         },
         {
           "name": "value",
-          "type": "str | Sequence[str]",
-          "docstring": "The value of the item to expand."
+          "type": "Var[str | Sequence[str]]",
+          "description": "The value of the item to expand."
         },
         {
           "name": "default_value",
-          "type": "str | Sequence[str]",
-          "docstring": "The default value of the item to expand."
+          "type": "Var[str | Sequence[str]]",
+          "description": "The default value of the item to expand."
         },
         {
           "name": "collapsible",
-          "type": "bool",
-          "docstring": "Whether or not the accordion is collapsible."
+          "type": "Var[bool]",
+          "description": "Whether or not the accordion is collapsible."
         },
         {
           "name": "disabled",
-          "type": "bool",
-          "docstring": "Whether or not the accordion is disabled."
+          "type": "Var[bool]",
+          "description": "Whether or not the accordion is disabled."
         },
         {
           "name": "dir",
-          "type": "LiteralAccordionDir",
-          "docstring": "The reading direction of the accordion when applicable."
+          "type": "Var[LiteralAccordionDir]",
+          "description": "The reading direction of the accordion when applicable.",
+          "values": [
+            "ltr",
+            "rtl"
+          ]
         },
         {
           "name": "orientation",
-          "type": "LiteralAccordionOrientation",
-          "docstring": "The orientation of the accordion."
+          "type": "Var[LiteralAccordionOrientation]",
+          "description": "The orientation of the accordion.",
+          "values": [
+            "vertical",
+            "horizontal"
+          ]
         },
         {
           "name": "duration",
-          "type": "int",
-          "docstring": "The time in milliseconds to animate open and close"
+          "type": "Var[int]",
+          "description": "The time in milliseconds to animate open and close"
         },
         {
           "name": "easing",
-          "type": "str",
-          "docstring": "The easing function to use for the animation."
+          "type": "Var[str]",
+          "description": "The easing function to use for the animation."
         },
         {
           "name": "show_dividers",
-          "type": "bool",
-          "docstring": "Whether to show divider lines between items."
+          "type": "Var[bool]",
+          "description": "Add style to the component.\n\n        Returns:\n            The style of the component."
         }
       ],
-      "events": [
-        {
-          "name": "on_value_change",
-          "type": "EventHandler[on_value_change",
-          "docstring": "Fired when the opened the accordions changes."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_value_change"
       ],
       "styling_props": [
         {
           "name": "radius",
-          "type": "LiteralRadius",
-          "docstring": "The radius of the accordion corners."
+          "type": "Var[LiteralRadius]",
+          "description": "The radius of the accordion corners.",
+          "values": [
+            "none",
+            "small",
+            "medium",
+            "large",
+            "full"
+          ]
         }
       ]
     },
@@ -152,8 +283,25 @@
       "bases": [
         "AccordionComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     }
   }

@@ -8,8 +8,41 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "item",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "ordered",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "unordered",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "ListItem": {
@@ -19,8 +52,25 @@
         "Li",
         "MarkdownComponentMap"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "OrderedList": {
@@ -30,8 +80,9 @@
         "BaseList",
         "Ol"
       ],
+      "supports_common_props": false,
       "properties": [],
-      "events": [],
+      "event_names": [],
       "styling_props": []
     },
     "UnorderedList": {
@@ -41,8 +92,9 @@
         "BaseList",
         "Ul"
       ],
+      "supports_common_props": false,
       "properties": [],
-      "events": [],
+      "event_names": [],
       "styling_props": []
     },
     "BaseList": {
@@ -52,19 +104,36 @@
         "Component",
         "MarkdownComponentMap"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "list_style_type",
           "type": "Var[",
-          "docstring": "The style of the list. Default to \"none\"."
+          "description": "Create a list component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Returns:\n            The list component."
         },
         {
           "name": "items",
-          "type": "Iterable",
-          "docstring": "A list of items to add to the list."
+          "type": "Var[Iterable]",
+          "description": "Create a list component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Returns:\n            The list component."
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     }
   }

@@ -8,8 +8,56 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "trigger",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "title",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "content",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "description",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "close",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "DialogRoot": {
@@ -18,24 +66,36 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "open",
-          "type": "bool",
-          "docstring": "The controlled open state of the dialog."
+          "type": "Var[bool]",
+          "description": "The controlled open state of the dialog."
         },
         {
           "name": "default_open",
-          "type": "bool",
-          "docstring": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state."
+          "type": "Var[bool]",
+          "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state."
         }
       ],
-      "events": [
-        {
-          "name": "on_open_change",
-          "type": "EventHandler[passthrough_event_spec(bool)",
-          "docstring": "Fired when the open state changes."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_open_change"
       ],
       "styling_props": []
     },
@@ -45,8 +105,25 @@
       "bases": [
         "RadixThemesTriggerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "DialogTitle": {
@@ -55,8 +132,25 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "DialogContent": {
@@ -66,39 +160,35 @@
         "elements.Div",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [
-        {
-          "name": "on_open_auto_focus",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the dialog is opened."
-        },
-        {
-          "name": "on_close_auto_focus",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the dialog is closed."
-        },
-        {
-          "name": "on_escape_key_down",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the escape key is pressed."
-        },
-        {
-          "name": "on_pointer_down_outside",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the pointer is down outside the dialog."
-        },
-        {
-          "name": "on_interact_outside",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the pointer interacts outside the dialog."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_open_auto_focus",
+        "on_close_auto_focus",
+        "on_escape_key_down",
+        "on_pointer_down_outside",
+        "on_interact_outside"
       ],
       "styling_props": [
         {
           "name": "size",
-          "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]",
-          "docstring": "DialogContent size \"1\" - \"4\""
+          "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]]",
+          "description": "DialogContent size \"1\" - \"4\""
         }
       ]
     },
@@ -108,8 +198,25 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "DialogClose": {
@@ -118,8 +225,25 @@
       "bases": [
         "RadixThemesTriggerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     }
   }

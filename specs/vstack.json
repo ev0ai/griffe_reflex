@@ -8,19 +8,20 @@
   "bases": [
     "Flex"
   ],
+  "supports_common_props": false,
   "properties": [
     {
       "name": "spacing",
-      "type": "LiteralSpacing",
-      "docstring": "The spacing between each stack item."
+      "type": "Var[LiteralSpacing]",
+      "description": "Create a new instance of the component.\n\n        Args:\n            *children: The children of the stack.\n            **props: The properties of the stack.\n\n        Returns:\n            The stack component."
     },
     {
       "name": "align",
-      "type": "LiteralAlign",
-      "docstring": "The alignment of the stack items."
+      "type": "Var[LiteralAlign]",
+      "description": "Create a new instance of the component.\n\n        Args:\n            *children: The children of the stack.\n            **props: The properties of the stack.\n\n        Returns:\n            The stack component."
     }
   ],
-  "events": [],
+  "event_names": [],
   "styling_props": [],
   "subcomponents": {}
 }

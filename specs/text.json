@@ -10,49 +10,111 @@
     "RadixThemesComponent",
     "MarkdownComponentMap"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "as_child",
-      "type": "bool",
-      "docstring": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+      "type": "Var[bool]",
+      "description": "Change the default rendered element for the one passed as a child, merging their props and behavior."
     },
     {
       "name": "as_",
-      "type": "LiteralType",
-      "docstring": "Change the default rendered element into a semantically appropriate alternative (cannot be used with asChild)"
+      "type": "Var[LiteralType]",
+      "description": "Change the default rendered element into a semantically appropriate alternative (cannot be used with asChild)"
     },
     {
       "name": "weight",
-      "type": "Responsive[LiteralTextWeight]",
-      "docstring": "Thickness of text: \"light\" | \"regular\" | \"medium\" | \"bold\""
+      "type": "Var[Responsive[LiteralTextWeight]]",
+      "description": "Thickness of text: \"light\" | \"regular\" | \"medium\" | \"bold\"",
+      "values": [
+        "light",
+        "regular",
+        "medium",
+        "bold"
+      ]
     },
     {
       "name": "align",
-      "type": "Responsive[LiteralTextAlign]",
-      "docstring": "Alignment of text in element: \"left\" | \"center\" | \"right\""
+      "type": "Var[Responsive[LiteralTextAlign]]",
+      "description": "Alignment of text in element: \"left\" | \"center\" | \"right\"",
+      "values": [
+        "left",
+        "center",
+        "right"
+      ]
     },
     {
       "name": "trim",
-      "type": "Responsive[LiteralTextTrim]",
-      "docstring": "Removes the leading trim space: \"normal\" | \"start\" | \"end\" | \"both\""
+      "type": "Var[Responsive[LiteralTextTrim]]",
+      "description": "Removes the leading trim space: \"normal\" | \"start\" | \"end\" | \"both\"",
+      "values": [
+        "normal",
+        "start",
+        "end",
+        "both"
+      ]
     },
     {
       "name": "high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the text with higher contrast color"
+      "type": "Var[bool]",
+      "description": "Whether to render the text with higher contrast color"
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [
     {
       "name": "size",
-      "type": "Responsive[LiteralTextSize]",
-      "docstring": "Text size: \"1\" - \"9\""
+      "type": "Var[Responsive[LiteralTextSize]]",
+      "description": "Text size: \"1\" - \"9\""
     },
     {
       "name": "color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "Overrides the accent color inherited from the Theme."
+      "type": "Var[LiteralAccentColor]",
+      "description": "Overrides the accent color inherited from the Theme.",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
     }
   ],
   "subcomponents": {}

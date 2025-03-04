@@ -8,8 +8,71 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "trigger",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "portal",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "content",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "overlay",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "close",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "title",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "description",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "handle",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "DrawerRoot": {
@@ -18,79 +81,87 @@
       "bases": [
         "DrawerComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "default_open",
-          "type": "bool",
-          "docstring": "The open state of the drawer when it is initially rendered. Use when you do not need to control its open state."
+          "type": "Var[bool]",
+          "description": "The open state of the drawer when it is initially rendered. Use when you do not need to control its open state."
         },
         {
           "name": "open",
-          "type": "bool",
-          "docstring": "Whether the drawer is open or not."
+          "type": "Var[bool]",
+          "description": "Whether the drawer is open or not."
         },
         {
           "name": "modal",
-          "type": "bool",
-          "docstring": "When `False`, it allows interaction with elements outside of the drawer without closing it. Defaults to `True`."
+          "type": "Var[bool]",
+          "description": "When `False`, it allows interaction with elements outside of the drawer without closing it. Defaults to `True`."
         },
         {
           "name": "direction",
-          "type": "LiteralDirectionType",
-          "docstring": "Direction of the drawer. This adjusts the animations and the drag direction. Defaults to `\"bottom\"`"
+          "type": "Var[LiteralDirectionType]",
+          "description": "Direction of the drawer. This adjusts the animations and the drag direction. Defaults to `\"bottom\"`"
         },
         {
           "name": "dismissible",
-          "type": "bool",
-          "docstring": "When `False`, dragging, clicking outside, pressing esc, etc. will not close the drawer. Use this in combination with the open prop, otherwise you won't be able to open/close the drawer."
+          "type": "Var[bool]",
+          "description": "When `False`, dragging, clicking outside, pressing esc, etc. will not close the drawer. Use this in combination with the open prop, otherwise you won't be able to open/close the drawer."
         },
         {
           "name": "handle_only",
-          "type": "bool",
-          "docstring": "When `True`, dragging will only be possible by the handle."
+          "type": "Var[bool]",
+          "description": "When `True`, dragging will only be possible by the handle."
         },
         {
           "name": "snap_points",
           "type": "Sequence[str | float] | None",
-          "docstring": "Array of numbers from 0 to 100 that corresponds to % of the screen a given snap point should take up. Should go from least visible. Also Accept px values, which doesn't take screen height into account."
+          "description": "Array of numbers from 0 to 100 that corresponds to % of the screen a given snap point should take up. Should go from least visible. Also Accept px values, which doesn't take screen height into account."
         },
         {
           "name": "fade_from_index",
-          "type": "int",
-          "docstring": "Index of a snapPoint from which the overlay fade should be applied. Defaults to the last snap point."
+          "type": "Var[int]",
+          "description": "Index of a snapPoint from which the overlay fade should be applied. Defaults to the last snap point."
         },
         {
           "name": "scroll_lock_timeout",
-          "type": "int",
-          "docstring": "Duration for which the drawer is not draggable after scrolling content inside of the drawer. Defaults to 500ms"
+          "type": "Var[int]",
+          "description": "Duration for which the drawer is not draggable after scrolling content inside of the drawer. Defaults to 500ms"
         },
         {
           "name": "prevent_scroll_restoration",
-          "type": "bool",
-          "docstring": "When `True`, it prevents scroll restoration. Defaults to `True`."
+          "type": "Var[bool]",
+          "description": "When `True`, it prevents scroll restoration. Defaults to `True`."
         },
         {
           "name": "should_scale_background",
-          "type": "bool",
-          "docstring": "Enable background scaling, it requires container element with `vaul-drawer-wrapper` attribute to scale its background."
+          "type": "Var[bool]",
+          "description": "Enable background scaling, it requires container element with `vaul-drawer-wrapper` attribute to scale its background."
         },
         {
           "name": "close_threshold",
-          "type": "float",
-          "docstring": "Number between 0 and 1 that determines when the drawer should be closed."
+          "type": "Var[float]",
+          "description": "Number between 0 and 1 that determines when the drawer should be closed."
         }
       ],
-      "events": [
-        {
-          "name": "on_open_change",
-          "type": "EventHandler[passthrough_event_spec(bool)",
-          "docstring": "Fires when the drawer is opened or closed."
-        },
-        {
-          "name": "on_animation_end",
-          "type": "EventHandler[passthrough_event_spec(bool)",
-          "docstring": "Gets triggered after the open or close animation ends, it receives an open argument with the open state of the drawer by the time the function was triggered."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_open_change",
+        "on_animation_end"
       ],
       "styling_props": []
     },
@@ -100,14 +171,31 @@
       "bases": [
         "DrawerComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "as_child",
-          "type": "bool",
-          "docstring": "Defaults to true, if the first child acts as the trigger."
+          "type": "Var[bool]",
+          "description": "Create a new DrawerTrigger instance.\n\n        Args:\n            *children: The children of the element.\n            **props: The properties of the element.\n\n        Returns:\n            The new DrawerTrigger instance."
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "DrawerPortal": {
@@ -116,8 +204,25 @@
       "bases": [
         "DrawerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "DrawerContent": {
@@ -126,33 +231,24 @@
       "bases": [
         "DrawerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [
-        {
-          "name": "on_open_auto_focus",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the drawer content is opened."
-        },
-        {
-          "name": "on_close_auto_focus",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the drawer content is closed."
-        },
-        {
-          "name": "on_escape_key_down",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the escape key is pressed."
-        },
-        {
-          "name": "on_pointer_down_outside",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the pointer is down outside the drawer content."
-        },
-        {
-          "name": "on_interact_outside",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when interacting outside the drawer content."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
       ],
       "styling_props": []
     },
@@ -162,8 +258,25 @@
       "bases": [
         "DrawerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "DrawerClose": {
@@ -172,8 +285,9 @@
       "bases": [
         "DrawerTrigger"
       ],
+      "supports_common_props": false,
       "properties": [],
-      "events": [],
+      "event_names": [],
       "styling_props": []
     },
     "DrawerTitle": {
@@ -182,8 +296,25 @@
       "bases": [
         "DrawerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "DrawerDescription": {
@@ -192,8 +323,25 @@
       "bases": [
         "DrawerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "DrawerHandle": {
@@ -202,8 +350,25 @@
       "bases": [
         "DrawerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     }
   }

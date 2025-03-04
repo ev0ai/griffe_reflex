@@ -8,8 +8,30 @@
   "bases": [
     "SimpleNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "item",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "label",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "value",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [],
   "styling_props": [],
   "subcomponents": {}
 }

@@ -9,34 +9,86 @@
     "elements.Span",
     "RadixThemesComponent"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the badge with higher contrast color against background"
+      "type": "Var[bool]",
+      "description": "Whether to render the badge with higher contrast color against background"
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [
     {
       "name": "variant",
-      "type": "Literal[\"solid\", \"soft\", \"surface\", \"outline\"]",
-      "docstring": "The variant of the badge"
+      "type": "Var[Literal[\"solid\", \"soft\", \"surface\", \"outline\"]]",
+      "description": "The variant of the badge"
     },
     {
       "name": "size",
-      "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
-      "docstring": "The size of the badge"
+      "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
+      "description": "The size of the badge"
     },
     {
       "name": "color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "Color theme of the badge"
+      "type": "Var[LiteralAccentColor]",
+      "description": "Color theme of the badge",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
     },
     {
       "name": "radius",
-      "type": "LiteralRadius",
-      "docstring": "Override theme radius for badge: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+      "type": "Var[LiteralRadius]",
+      "description": "Override theme radius for badge: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\"",
+      "values": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "full"
+      ]
     }
   ],
   "subcomponents": {}

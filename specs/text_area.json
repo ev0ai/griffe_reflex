@@ -9,114 +9,172 @@
     "RadixThemesComponent",
     "elements.Textarea"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "resize",
-      "type": "Responsive[LiteralTextAreaResize]",
-      "docstring": "The resize behavior of the text area: \"none\" | \"vertical\" | \"horizontal\" | \"both\""
+      "type": "Var[Responsive[LiteralTextAreaResize]]",
+      "description": "The resize behavior of the text area: \"none\" | \"vertical\" | \"horizontal\" | \"both\"",
+      "values": [
+        "none",
+        "vertical",
+        "horizontal",
+        "both"
+      ]
     },
     {
       "name": "auto_complete",
-      "type": "bool",
-      "docstring": "Whether the form control should have autocomplete enabled"
+      "type": "Var[bool]",
+      "description": "Whether the form control should have autocomplete enabled"
     },
     {
       "name": "auto_focus",
-      "type": "bool",
-      "docstring": "Automatically focuses the textarea when the page loads"
+      "type": "Var[bool]",
+      "description": "Automatically focuses the textarea when the page loads"
     },
     {
       "name": "default_value",
-      "type": "str",
-      "docstring": "The default value of the textarea when initially rendered"
+      "type": "Var[str]",
+      "description": "The default value of the textarea when initially rendered"
     },
     {
       "name": "dirname",
-      "type": "str",
-      "docstring": "Name part of the textarea to submit in 'dir' and 'name' pair when form is submitted"
+      "type": "Var[str]",
+      "description": "Name part of the textarea to submit in 'dir' and 'name' pair when form is submitted"
     },
     {
       "name": "disabled",
-      "type": "bool",
-      "docstring": "Disables the textarea"
+      "type": "Var[bool]",
+      "description": "Disables the textarea"
     },
     {
       "name": "form",
-      "type": "str",
-      "docstring": "Associates the textarea with a form (by id)"
+      "type": "Var[str]",
+      "description": "Associates the textarea with a form (by id)"
     },
     {
       "name": "max_length",
-      "type": "int",
-      "docstring": "Maximum number of characters allowed in the textarea"
+      "type": "Var[int]",
+      "description": "Maximum number of characters allowed in the textarea"
     },
     {
       "name": "min_length",
-      "type": "int",
-      "docstring": "Minimum number of characters required in the textarea"
+      "type": "Var[int]",
+      "description": "Minimum number of characters required in the textarea"
     },
     {
       "name": "name",
-      "type": "str",
-      "docstring": "Name of the textarea, used when submitting the form"
+      "type": "Var[str]",
+      "description": "Name of the textarea, used when submitting the form"
     },
     {
       "name": "placeholder",
-      "type": "str",
-      "docstring": "Placeholder text in the textarea"
+      "type": "Var[str]",
+      "description": "Placeholder text in the textarea"
     },
     {
       "name": "read_only",
-      "type": "bool",
-      "docstring": "Indicates whether the textarea is read-only"
+      "type": "Var[bool]",
+      "description": "Indicates whether the textarea is read-only"
     },
     {
       "name": "required",
-      "type": "bool",
-      "docstring": "Indicates that the textarea is required"
+      "type": "Var[bool]",
+      "description": "Indicates that the textarea is required"
     },
     {
       "name": "rows",
-      "type": "str",
-      "docstring": "Visible number of lines in the text control"
+      "type": "Var[str]",
+      "description": "Create an Input component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Returns:\n            The component."
     },
     {
       "name": "value",
-      "type": "str",
-      "docstring": "The controlled value of the textarea, read only unless used with on_change"
+      "type": "Var[str]",
+      "description": "Create an Input component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Returns:\n            The component."
     },
     {
       "name": "wrap",
-      "type": "str",
-      "docstring": "How the text in the textarea is to be wrapped when submitting the form"
-    },
-    {
-      "name": "added_style",
-      "type": "dict[str, dict",
-      "docstring": ""
+      "type": "Var[str]",
+      "description": "Create an Input component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Returns:\n            The component."
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [
     {
       "name": "size",
-      "type": "Responsive[LiteralTextAreaSize]",
-      "docstring": "The size of the text area: \"1\" | \"2\" | \"3\""
+      "type": "Var[Responsive[LiteralTextAreaSize]]",
+      "description": "The size of the text area: \"1\" | \"2\" | \"3\"",
+      "values": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "name": "variant",
-      "type": "Literal[\"classic\", \"surface\", \"soft\"]",
-      "docstring": "The variant of the text area"
+      "type": "Var[Literal[\"classic\", \"surface\", \"soft\"]]",
+      "description": "The variant of the text area"
     },
     {
       "name": "color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "The color of the text area"
+      "type": "Var[LiteralAccentColor]",
+      "description": "The color of the text area",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
     },
     {
       "name": "radius",
-      "type": "LiteralRadius",
-      "docstring": "The radius of the text area: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+      "type": "Var[LiteralRadius]",
+      "description": "The radius of the text area: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\"",
+      "values": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "full"
+      ]
     }
   ],
   "subcomponents": {}

@@ -8,74 +8,66 @@
   "bases": [
     "MemoizationLeaf"
   ],
+  "supports_common_props": false,
   "properties": [
     {
       "name": "accept",
-      "type": "dict[str, Sequence] | None",
-      "docstring": "supported MIME types: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types"
+      "type": "Var[dict[str, Sequence] | None]",
+      "description": "supported MIME types: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types"
     },
     {
       "name": "disabled",
-      "type": "bool",
-      "docstring": "Whether the dropzone is disabled."
+      "type": "Var[bool]",
+      "description": "Whether the dropzone is disabled."
     },
     {
       "name": "max_files",
-      "type": "int",
-      "docstring": "The maximum number of files that can be uploaded."
+      "type": "Var[int]",
+      "description": "The maximum number of files that can be uploaded."
     },
     {
       "name": "max_size",
-      "type": "int",
-      "docstring": "The maximum file size (bytes) that can be uploaded."
+      "type": "Var[int]",
+      "description": "The maximum file size (bytes) that can be uploaded."
     },
     {
       "name": "min_size",
-      "type": "int",
-      "docstring": "The minimum file size (bytes) that can be uploaded."
+      "type": "Var[int]",
+      "description": "The minimum file size (bytes) that can be uploaded."
     },
     {
       "name": "multiple",
-      "type": "bool",
-      "docstring": "Whether to allow multiple files to be uploaded."
+      "type": "Var[bool]",
+      "description": "Whether to allow multiple files to be uploaded."
     },
     {
       "name": "no_click",
-      "type": "bool",
-      "docstring": "Whether to disable click to upload."
+      "type": "Var[bool]",
+      "description": "Whether to disable click to upload."
     },
     {
       "name": "no_drag",
-      "type": "bool",
-      "docstring": "Whether to disable drag and drop."
+      "type": "Var[bool]",
+      "description": "Whether to disable drag and drop."
     },
     {
       "name": "no_keyboard",
-      "type": "bool",
-      "docstring": "Whether to disable using the space/enter keys to upload."
+      "type": "Var[bool]",
+      "description": "Create an upload component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Returns:\n            The upload component."
     },
     {
       "name": "is_used",
-      "type": "ClassVar[bool",
-      "docstring": "Marked True when any Upload component is created."
+      "type": "ClassVar[bool]",
+      "description": "Create an upload component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Returns:\n            The upload component."
     },
     {
-      "name": "key",
-      "type": "value for key, value in props.items() if key in supported_props",
-      "docstring": ""
-    },
-    {
-      "name": "callback_str",
-      "type": "None,",
-      "docstring": ""
+      "name": "library",
+      "type": "str",
+      "description": ""
     }
   ],
-  "events": [
-    {
-      "name": "on_drop",
-      "type": "EventHandler[_on_drop_spec",
-      "docstring": "Fired when files are dropped."
-    }
+  "event_names": [
+    "on_drop"
   ],
   "styling_props": [],
   "subcomponents": {}

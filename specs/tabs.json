@@ -8,8 +8,46 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "list",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "trigger",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "content",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "TabsRoot": {
@@ -18,44 +56,51 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "default_value",
-          "type": "str",
-          "docstring": "The value of the tab that should be active when initially rendered. Use when you do not need to control the state of the tabs."
+          "type": "Var[str]",
+          "description": "The value of the tab that should be active when initially rendered. Use when you do not need to control the state of the tabs."
         },
         {
           "name": "value",
-          "type": "str",
-          "docstring": "The controlled value of the tab that should be active. Use when you need to control the state of the tabs."
+          "type": "Var[str]",
+          "description": "The controlled value of the tab that should be active. Use when you need to control the state of the tabs."
         },
         {
           "name": "orientation",
-          "type": "Literal[\"horizontal\", \"vertical\"]",
-          "docstring": "The orientation of the tabs."
+          "type": "Var[Literal[\"horizontal\", \"vertical\"]]",
+          "description": "The orientation of the tabs."
         },
         {
           "name": "dir",
-          "type": "Literal[\"ltr\", \"rtl\"]",
-          "docstring": "Reading direction of the tabs."
+          "type": "Var[Literal[\"ltr\", \"rtl\"]]",
+          "description": "Reading direction of the tabs."
         },
         {
           "name": "activation_mode",
-          "type": "Literal[\"automatic\", \"manual\"]",
-          "docstring": "The mode of activation for the tabs. \"automatic\" will activate the tab when focused. \"manual\" will activate the tab when clicked."
-        },
-        {
-          "name": "vertical_orientation_css",
-          "type": "{",
-          "docstring": ""
+          "type": "Var[Literal[\"automatic\", \"manual\"]]",
+          "description": "Add style for the component.\n\n        Returns:\n            The style to add."
         }
       ],
-      "events": [
-        {
-          "name": "on_change",
-          "type": "EventHandler[passthrough_event_spec(str)",
-          "docstring": "Fired when the value of the tabs changes."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_change"
       ],
       "styling_props": []
     },
@@ -65,24 +110,36 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "loop",
-          "type": "bool",
-          "docstring": "When true, the tabs will loop when reaching the end."
-        },
-        {
-          "name": "vertical_orientation_css",
-          "type": "{",
-          "docstring": ""
+          "type": "Var[bool]",
+          "description": "Add style for the component.\n\n        Returns:\n            The style to add."
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": [
         {
           "name": "size",
-          "type": "Responsive[Literal[\"1\", \"2\"]]",
-          "docstring": "Tabs size \"1\" - \"2\""
+          "type": "Var[Responsive[Literal[\"1\", \"2\"]]]",
+          "description": "Add style for the component.\n\n        Returns:\n            The style to add."
         }
       ]
     },
@@ -92,24 +149,69 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "value",
-          "type": "str",
-          "docstring": "The value of the tab. Must be unique for each tab."
+          "type": "Var[str]",
+          "description": "The value of the tab. Must be unique for each tab."
         },
         {
           "name": "disabled",
-          "type": "bool",
-          "docstring": "Whether the tab is disabled"
+          "type": "Var[bool]",
+          "description": "Whether the tab is disabled"
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": [
         {
           "name": "color_scheme",
-          "type": "LiteralAccentColor",
-          "docstring": "The color of the line under the tab when active."
+          "type": "Var[LiteralAccentColor]",
+          "description": "Create a TabsTrigger component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Returns:\n            The TabsTrigger Component.",
+          "values": [
+            "gray",
+            "tomato",
+            "red",
+            "ruby",
+            "crimson",
+            "pink",
+            "plum",
+            "purple",
+            "violet",
+            "iris",
+            "indigo",
+            "blue",
+            "cyan",
+            "teal",
+            "jade",
+            "green",
+            "grass",
+            "brown",
+            "orange",
+            "sky",
+            "mint",
+            "lime",
+            "yellow",
+            "amber",
+            "gold",
+            "bronze"
+          ]
         }
       ]
     },
@@ -119,24 +221,36 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "value",
-          "type": "str",
-          "docstring": "The value of the tab. Must be unique for each tab."
+          "type": "Var[str]",
+          "description": "Add style for the component.\n\n        Returns:\n            The style to add."
         },
         {
           "name": "force_mount",
-          "type": "bool",
-          "docstring": "Used to force mounting when more control is needed. Useful when controlling animation with React animation libraries."
-        },
-        {
-          "name": "vertical_orientation_css",
-          "type": "{\"width\": \"100%\", \"margin\": None},",
-          "docstring": ""
+          "type": "Var[bool]",
+          "description": "Add style for the component.\n\n        Returns:\n            The style to add."
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     }
   }

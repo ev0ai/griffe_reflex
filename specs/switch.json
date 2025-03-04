@@ -8,75 +8,125 @@
   "bases": [
     "RadixThemesComponent"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "as_child",
-      "type": "bool",
-      "docstring": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+      "type": "Var[bool]",
+      "description": "Change the default rendered element for the one passed as a child, merging their props and behavior."
     },
     {
       "name": "default_checked",
-      "type": "bool",
-      "docstring": "Whether the switch is checked by default"
+      "type": "Var[bool]",
+      "description": "Whether the switch is checked by default"
     },
     {
       "name": "checked",
-      "type": "bool",
-      "docstring": "Whether the switch is checked"
+      "type": "Var[bool]",
+      "description": "Whether the switch is checked"
     },
     {
       "name": "disabled",
-      "type": "bool",
-      "docstring": "If true, prevent the user from interacting with the switch"
+      "type": "Var[bool]",
+      "description": "If true, prevent the user from interacting with the switch"
     },
     {
       "name": "required",
-      "type": "bool",
-      "docstring": "If true, the user must interact with the switch to submit the form"
+      "type": "Var[bool]",
+      "description": "If true, the user must interact with the switch to submit the form"
     },
     {
       "name": "name",
-      "type": "str",
-      "docstring": "The name of the switch (when submitting a form)"
+      "type": "Var[str]",
+      "description": "The name of the switch (when submitting a form)"
     },
     {
       "name": "value",
-      "type": "str",
-      "docstring": "The value associated with the \"on\" position"
+      "type": "Var[str]",
+      "description": "The value associated with the \"on\" position"
     },
     {
       "name": "high_contrast",
-      "type": "bool",
-      "docstring": "Whether to render the switch with higher contrast color against background"
+      "type": "Var[bool]",
+      "description": "Whether to render the switch with higher contrast color against background"
     }
   ],
-  "events": [
-    {
-      "name": "on_change",
-      "type": "EventHandler[passthrough_event_spec(bool)",
-      "docstring": "Fired when the value of the switch changes"
-    }
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount",
+    "on_change"
   ],
   "styling_props": [
     {
       "name": "size",
-      "type": "Responsive[LiteralSwitchSize]",
-      "docstring": "Switch size \"1\" - \"4\""
+      "type": "Var[Responsive[LiteralSwitchSize]]",
+      "description": "Switch size \"1\" - \"4\""
     },
     {
       "name": "variant",
-      "type": "Literal[\"classic\", \"surface\", \"soft\"]",
-      "docstring": "Variant of switch: \"classic\" | \"surface\" | \"soft\""
+      "type": "Var[Literal[\"classic\", \"surface\", \"soft\"]]",
+      "description": "Variant of switch: \"classic\" | \"surface\" | \"soft\"",
+      "values": [
+        "classic",
+        "surface",
+        "soft"
+      ]
     },
     {
       "name": "color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "Override theme color for switch"
+      "type": "Var[LiteralAccentColor]",
+      "description": "Override theme color for switch",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
     },
     {
       "name": "radius",
-      "type": "Literal[\"none\", \"small\", \"full\"]",
-      "docstring": "Override theme radius for switch: \"none\" | \"small\" | \"full\""
+      "type": "Var[Literal[\"none\", \"small\", \"full\"]]",
+      "description": "Override theme radius for switch: \"none\" | \"small\" | \"full\"",
+      "values": [
+        "none",
+        "small",
+        "full"
+      ]
     }
   ],
   "subcomponents": {}

@@ -8,8 +8,31 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "slot",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "TextFieldSlot": {
@@ -18,13 +41,58 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": [
         {
           "name": "color_scheme",
-          "type": "LiteralAccentColor",
-          "docstring": "Override theme color for text field slot"
+          "type": "Var[LiteralAccentColor]",
+          "description": "Override theme color for text field slot",
+          "values": [
+            "gray",
+            "tomato",
+            "red",
+            "ruby",
+            "crimson",
+            "pink",
+            "plum",
+            "purple",
+            "violet",
+            "iris",
+            "indigo",
+            "blue",
+            "cyan",
+            "teal",
+            "jade",
+            "green",
+            "grass",
+            "brown",
+            "orange",
+            "sky",
+            "mint",
+            "lime",
+            "yellow",
+            "amber",
+            "gold",
+            "bronze"
+          ]
         }
       ]
     },
@@ -35,115 +103,149 @@
         "elements.Input",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "auto_complete",
-          "type": "bool",
-          "docstring": "Whether the input should have autocomplete enabled"
+          "type": "Var[bool]",
+          "description": "Whether the input should have autocomplete enabled"
         },
         {
           "name": "default_value",
-          "type": "str",
-          "docstring": "The value of the input when initially rendered."
+          "type": "Var[str]",
+          "description": "The value of the input when initially rendered."
         },
         {
           "name": "disabled",
-          "type": "bool",
-          "docstring": "Disables the input"
+          "type": "Var[bool]",
+          "description": "Disables the input"
         },
         {
           "name": "max_length",
-          "type": "int",
-          "docstring": "Specifies the maximum number of characters allowed in the input"
+          "type": "Var[int]",
+          "description": "Specifies the maximum number of characters allowed in the input"
         },
         {
           "name": "min_length",
-          "type": "int",
-          "docstring": "Specifies the minimum number of characters required in the input"
+          "type": "Var[int]",
+          "description": "Specifies the minimum number of characters required in the input"
         },
         {
           "name": "name",
-          "type": "str",
-          "docstring": "Name of the input, used when sending form data"
+          "type": "Var[str]",
+          "description": "Name of the input, used when sending form data"
         },
         {
           "name": "placeholder",
-          "type": "str",
-          "docstring": "Placeholder text in the input"
+          "type": "Var[str]",
+          "description": "Placeholder text in the input"
         },
         {
           "name": "read_only",
-          "type": "bool",
-          "docstring": "Indicates whether the input is read-only"
+          "type": "Var[bool]",
+          "description": "Indicates whether the input is read-only"
         },
         {
           "name": "required",
-          "type": "bool",
-          "docstring": "Indicates that the input is required"
+          "type": "Var[bool]",
+          "description": "Indicates that the input is required"
         },
         {
           "name": "type",
-          "type": "str",
-          "docstring": "Specifies the type of input"
+          "type": "Var[str]",
+          "description": "Specifies the type of input"
         },
         {
           "name": "value",
-          "type": "str | int | float",
-          "docstring": "Value of the input"
+          "type": "Var[str | int | float]",
+          "description": "Value of the input"
         },
         {
           "name": "list",
-          "type": "str",
-          "docstring": "References a datalist for suggested options"
+          "type": "Var[str]",
+          "description": "References a datalist for suggested options"
         }
       ],
-      "events": [
-        {
-          "name": "on_change",
-          "type": "EventHandler[input_event",
-          "docstring": "Fired when the value of the textarea changes."
-        },
-        {
-          "name": "on_focus",
-          "type": "EventHandler[input_event",
-          "docstring": "Fired when the textarea is focused."
-        },
-        {
-          "name": "on_blur",
-          "type": "EventHandler[input_event",
-          "docstring": "Fired when the textarea is blurred."
-        },
-        {
-          "name": "on_key_down",
-          "type": "EventHandler[key_event",
-          "docstring": "Fired when a key is pressed down."
-        },
-        {
-          "name": "on_key_up",
-          "type": "EventHandler[key_event",
-          "docstring": "Fired when a key is released."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_change",
+        "on_key_down",
+        "on_key_up"
       ],
       "styling_props": [
         {
           "name": "size",
-          "type": "Responsive[LiteralTextFieldSize]",
-          "docstring": "Text field size \"1\" - \"3\""
+          "type": "Var[Responsive[LiteralTextFieldSize]]",
+          "description": "Text field size \"1\" - \"3\""
         },
         {
           "name": "variant",
-          "type": "LiteralTextFieldVariant",
-          "docstring": "Variant of text field: \"classic\" | \"surface\" | \"soft\""
+          "type": "Var[LiteralTextFieldVariant]",
+          "description": "Variant of text field: \"classic\" | \"surface\" | \"soft\"",
+          "values": [
+            "classic",
+            "surface",
+            "soft"
+          ]
         },
         {
           "name": "color_scheme",
-          "type": "LiteralAccentColor",
-          "docstring": "Override theme color for text field"
+          "type": "Var[LiteralAccentColor]",
+          "description": "Override theme color for text field",
+          "values": [
+            "gray",
+            "tomato",
+            "red",
+            "ruby",
+            "crimson",
+            "pink",
+            "plum",
+            "purple",
+            "violet",
+            "iris",
+            "indigo",
+            "blue",
+            "cyan",
+            "teal",
+            "jade",
+            "green",
+            "grass",
+            "brown",
+            "orange",
+            "sky",
+            "mint",
+            "lime",
+            "yellow",
+            "amber",
+            "gold",
+            "bronze"
+          ]
         },
         {
           "name": "radius",
-          "type": "LiteralRadius",
-          "docstring": "Override theme radius for text field: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\""
+          "type": "Var[LiteralRadius]",
+          "description": "Override theme radius for text field: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\"",
+          "values": [
+            "none",
+            "small",
+            "medium",
+            "large",
+            "full"
+          ]
         }
       ]
     }

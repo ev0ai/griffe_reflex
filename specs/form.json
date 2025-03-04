@@ -8,8 +8,9 @@
   "bases": [
     "FormRoot"
   ],
+  "supports_common_props": false,
   "properties": [],
-  "events": [],
+  "event_names": [],
   "styling_props": [],
   "subcomponents": {}
 }

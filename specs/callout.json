@@ -8,19 +8,20 @@
   "bases": [
     "CalloutRoot"
   ],
+  "supports_common_props": false,
   "properties": [
     {
       "name": "text",
-      "type": "str",
-      "docstring": "The text of the callout."
+      "type": "Var[str]",
+      "description": "Create a callout component.\n\n        Args:\n            text: The text of the callout.\n            **props: The properties of the component.\n\n        Returns:\n            The callout component."
     },
     {
       "name": "icon",
-      "type": "str",
-      "docstring": "The icon of the callout."
+      "type": "Var[str]",
+      "description": "Create a callout component.\n\n        Args:\n            text: The text of the callout.\n            **props: The properties of the component.\n\n        Returns:\n            The callout component."
     }
   ],
-  "events": [],
+  "event_names": [],
   "styling_props": [],
   "subcomponents": {}
 }

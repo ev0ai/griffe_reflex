@@ -9,24 +9,46 @@
     "elements.Div",
     "RadixThemesComponent"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "as_child",
-      "type": "bool",
-      "docstring": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+      "type": "Var[bool]",
+      "description": "Change the default rendered element for the one passed as a child, merging their props and behavior."
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [
     {
       "name": "size",
-      "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\", \"5\"],]",
-      "docstring": "Card size: \"1\" - \"5\""
+      "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\", \"4\", \"5\"],]]",
+      "description": "Card size: \"1\" - \"5\""
     },
     {
       "name": "variant",
-      "type": "Literal[\"surface\", \"classic\", \"ghost\"]",
-      "docstring": "Variant of Card: \"surface\" | \"classic\" | \"ghost\""
+      "type": "Var[Literal[\"surface\", \"classic\", \"ghost\"]]",
+      "description": "Variant of Card: \"surface\" | \"classic\" | \"ghost\"",
+      "values": [
+        "surface",
+        "classic",
+        "ghost"
+      ]
     }
   ],
   "subcomponents": {}

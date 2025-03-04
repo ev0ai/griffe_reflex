@@ -8,24 +8,47 @@
   "bases": [
     "RadixThemesComponent"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "scrollbars",
-      "type": "Literal[\"vertical\", \"horizontal\", \"both\"]",
-      "docstring": "The alignment of the scroll area"
+      "type": "Var[Literal[\"vertical\", \"horizontal\", \"both\"]]",
+      "description": "The alignment of the scroll area"
     },
     {
       "name": "type",
-      "type": "Literal[\"auto\", \"always\", \"scroll\", \"hover\"]",
-      "docstring": "Describes the nature of scrollbar visibility, similar to how the scrollbar preferences in MacOS control visibility of native scrollbars. \"auto\" | \"always\" | \"scroll\" | \"hover\""
+      "type": "Var[Literal[\"auto\", \"always\", \"scroll\", \"hover\"]]",
+      "description": "Describes the nature of scrollbar visibility, similar to how the scrollbar preferences in MacOS control visibility of native scrollbars. \"auto\" | \"always\" | \"scroll\" | \"hover\"",
+      "values": [
+        "auto",
+        "always",
+        "scroll",
+        "hover"
+      ]
     },
     {
       "name": "scroll_hide_delay",
-      "type": "int",
-      "docstring": "If type is set to either \"scroll\" or \"hover\", this prop determines the length of time, in milliseconds, before the scrollbars are hidden after the user stops interacting with scrollbars."
+      "type": "Var[int]",
+      "description": "If type is set to either \"scroll\" or \"hover\", this prop determines the length of time, in milliseconds, before the scrollbars are hidden after the user stops interacting with scrollbars."
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {}
 }

@@ -8,29 +8,80 @@
   "bases": [
     "RadixThemesComponent"
   ],
+  "supports_common_props": true,
   "properties": [
     {
       "name": "orientation",
-      "type": "Responsive[Literal[\"horizontal\", \"vertical\"]]",
-      "docstring": "The orientation of the separator."
+      "type": "Var[Responsive[Literal[\"horizontal\", \"vertical\"]]]",
+      "description": "The orientation of the separator."
     },
     {
       "name": "decorative",
-      "type": "bool",
-      "docstring": "When true, signifies that it is purely visual, carries no semantic meaning, and ensures it is not present in the accessibility tree."
+      "type": "Var[bool]",
+      "description": "When true, signifies that it is purely visual, carries no semantic meaning, and ensures it is not present in the accessibility tree."
     }
   ],
-  "events": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [
     {
       "name": "size",
-      "type": "Responsive[LiteralSeperatorSize]",
-      "docstring": "The size of the select: \"1\" | \"2\" | \"3\" | \"4\""
+      "type": "Var[Responsive[LiteralSeperatorSize]]",
+      "description": "The size of the select: \"1\" | \"2\" | \"3\" | \"4\"",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
     },
     {
       "name": "color_scheme",
-      "type": "LiteralAccentColor",
-      "docstring": "The color of the select"
+      "type": "Var[LiteralAccentColor]",
+      "description": "The color of the select",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
     }
   ],
   "subcomponents": {}

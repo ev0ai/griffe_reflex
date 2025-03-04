@@ -8,8 +8,41 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "trigger",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "content",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "HoverCardRoot": {
@@ -18,34 +51,46 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "default_open",
-          "type": "bool",
-          "docstring": "The open state of the hover card when it is initially rendered. Use when you do not need to control its open state."
+          "type": "Var[bool]",
+          "description": "The open state of the hover card when it is initially rendered. Use when you do not need to control its open state."
         },
         {
           "name": "open",
-          "type": "bool",
-          "docstring": "The controlled open state of the hover card. Must be used in conjunction with onOpenChange."
+          "type": "Var[bool]",
+          "description": "The controlled open state of the hover card. Must be used in conjunction with onOpenChange."
         },
         {
           "name": "open_delay",
-          "type": "int",
-          "docstring": "The duration from when the mouse enters the trigger until the hover card opens."
+          "type": "Var[int]",
+          "description": "The duration from when the mouse enters the trigger until the hover card opens."
         },
         {
           "name": "close_delay",
-          "type": "int",
-          "docstring": "The duration from when the mouse leaves the trigger until the hover card closes."
+          "type": "Var[int]",
+          "description": "The duration from when the mouse leaves the trigger until the hover card closes."
         }
       ],
-      "events": [
-        {
-          "name": "on_open_change",
-          "type": "EventHandler[passthrough_event_spec(bool)",
-          "docstring": "Fired when the open state changes."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_open_change"
       ],
       "styling_props": []
     },
@@ -55,8 +100,25 @@
       "bases": [
         "RadixThemesTriggerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "HoverCardContent": {
@@ -66,54 +128,71 @@
         "elements.Div",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "side",
-          "type": "Responsive[Literal[\"top\", \"right\", \"bottom\", \"left\"]]",
-          "docstring": "The preferred side of the trigger to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled."
+          "type": "Var[Responsive[Literal[\"top\", \"right\", \"bottom\", \"left\"]]]",
+          "description": "The preferred side of the trigger to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled."
         },
         {
           "name": "side_offset",
-          "type": "int",
-          "docstring": "The distance in pixels from the trigger."
+          "type": "Var[int]",
+          "description": "The distance in pixels from the trigger."
         },
         {
           "name": "align",
-          "type": "Literal[\"start\", \"center\", \"end\"]",
-          "docstring": "The preferred alignment against the trigger. May change when collisions occur."
+          "type": "Var[Literal[\"start\", \"center\", \"end\"]]",
+          "description": "The preferred alignment against the trigger. May change when collisions occur."
         },
         {
           "name": "align_offset",
-          "type": "int",
-          "docstring": "An offset in pixels from the \"start\" or \"end\" alignment options."
+          "type": "Var[int]",
+          "description": "An offset in pixels from the \"start\" or \"end\" alignment options."
         },
         {
           "name": "avoid_collisions",
-          "type": "bool",
-          "docstring": "Whether or not the hover card should avoid collisions with its trigger."
+          "type": "Var[bool]",
+          "description": "Whether or not the hover card should avoid collisions with its trigger."
         },
         {
           "name": "collision_padding",
-          "type": "float | int | dict[str, float | int]",
-          "docstring": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for all sides), or a partial padding object, for example: { top: 20, left: 20 }."
+          "type": "Var[float | int | dict[str, float | int]]",
+          "description": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for all sides), or a partial padding object, for example: { top: 20, left: 20 }."
         },
         {
           "name": "sticky",
-          "type": "Literal[\"partial\", \"always\"]",
-          "docstring": "The sticky behavior on the align axis. \"partial\" will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst \"always\" will keep the content in the boundary regardless"
+          "type": "Var[Literal[\"partial\", \"always\"]]",
+          "description": "The sticky behavior on the align axis. \"partial\" will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst \"always\" will keep the content in the boundary regardless"
         },
         {
           "name": "hide_when_detached",
-          "type": "bool",
-          "docstring": "Whether to hide the content when the trigger becomes fully occluded."
+          "type": "Var[bool]",
+          "description": "Whether to hide the content when the trigger becomes fully occluded."
         }
       ],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": [
         {
           "name": "size",
-          "type": "Responsive[Literal[\"1\", \"2\", \"3\"]]",
-          "docstring": "Hovercard size \"1\" - \"3\""
+          "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
+          "description": "Hovercard size \"1\" - \"3\""
         }
       ]
     }

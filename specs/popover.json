@@ -8,8 +8,46 @@
   "bases": [
     "ComponentNamespace"
   ],
-  "properties": [],
-  "events": [],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "trigger",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "content",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "close",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
   "styling_props": [],
   "subcomponents": {
     "PopoverRoot": {
@@ -18,29 +56,41 @@
       "bases": [
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "open",
-          "type": "bool",
-          "docstring": "The controlled open state of the popover."
+          "type": "Var[bool]",
+          "description": "The controlled open state of the popover."
         },
         {
           "name": "modal",
-          "type": "bool",
-          "docstring": "The modality of the popover. When set to true, interaction with outside elements will be disabled and only popover content will be visible to screen readers."
+          "type": "Var[bool]",
+          "description": "The modality of the popover. When set to true, interaction with outside elements will be disabled and only popover content will be visible to screen readers."
         },
         {
           "name": "default_open",
-          "type": "bool",
-          "docstring": "The open state of the popover when it is initially rendered. Use when you do not need to control its open state."
+          "type": "Var[bool]",
+          "description": "The open state of the popover when it is initially rendered. Use when you do not need to control its open state."
         }
       ],
-      "events": [
-        {
-          "name": "on_open_change",
-          "type": "EventHandler[passthrough_event_spec(bool)",
-          "docstring": "Fired when the open state changes."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_open_change"
       ],
       "styling_props": []
     },
@@ -50,8 +100,25 @@
       "bases": [
         "RadixThemesTriggerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     },
     "PopoverContent": {
@@ -61,85 +128,83 @@
         "elements.Div",
         "RadixThemesComponent"
       ],
+      "supports_common_props": true,
       "properties": [
         {
           "name": "side",
-          "type": "Literal[\"top\", \"right\", \"bottom\", \"left\"]",
-          "docstring": "The preferred side of the anchor to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled."
+          "type": "Var[Literal[\"top\", \"right\", \"bottom\", \"left\"]]",
+          "description": "The preferred side of the anchor to render against when open. Will be reversed when collisions occur and avoidCollisions is enabled."
         },
         {
           "name": "side_offset",
-          "type": "int",
-          "docstring": "The distance in pixels from the anchor."
+          "type": "Var[int]",
+          "description": "The distance in pixels from the anchor."
         },
         {
           "name": "align",
-          "type": "Literal[\"start\", \"center\", \"end\"]",
-          "docstring": "The preferred alignment against the anchor. May change when collisions occur."
+          "type": "Var[Literal[\"start\", \"center\", \"end\"]]",
+          "description": "The preferred alignment against the anchor. May change when collisions occur."
         },
         {
           "name": "align_offset",
-          "type": "int",
-          "docstring": "The vertical distance in pixels from the anchor."
+          "type": "Var[int]",
+          "description": "The vertical distance in pixels from the anchor."
         },
         {
           "name": "avoid_collisions",
-          "type": "bool",
-          "docstring": "When true, overrides the side andalign preferences to prevent collisions with boundary edges."
+          "type": "Var[bool]",
+          "description": "When true, overrides the side andalign preferences to prevent collisions with boundary edges."
         },
         {
           "name": "collision_padding",
-          "type": "float | int | dict[str, float | int]",
-          "docstring": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for all sides), or a partial padding object, for example: { \"top\": 20, \"left\": 20 }. Defaults to 0."
+          "type": "Var[float | int | dict[str, float | int]]",
+          "description": "The distance in pixels from the boundary edges where collision detection should occur. Accepts a number (same for all sides), or a partial padding object, for example: { \"top\": 20, \"left\": 20 }. Defaults to 0."
         },
         {
           "name": "sticky",
-          "type": "Literal[\"partial\", \"always\"]",
-          "docstring": "The sticky behavior on the align axis. \"partial\" will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst \"always\" will keep the content in the boundary regardless. Defaults to \"partial\"."
+          "type": "Var[Literal[\"partial\", \"always\"]]",
+          "description": "The sticky behavior on the align axis. \"partial\" will keep the content in the boundary as long as the trigger is at least partially in the boundary whilst \"always\" will keep the content in the boundary regardless. Defaults to \"partial\"."
         },
         {
           "name": "hide_when_detached",
-          "type": "bool",
-          "docstring": "Whether to hide the content when the trigger becomes fully occluded. Defaults to False."
+          "type": "Var[bool]",
+          "description": "Whether to hide the content when the trigger becomes fully occluded. Defaults to False."
         }
       ],
-      "events": [
-        {
-          "name": "on_open_auto_focus",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the dialog is opened."
-        },
-        {
-          "name": "on_close_auto_focus",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the dialog is closed."
-        },
-        {
-          "name": "on_escape_key_down",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the escape key is pressed."
-        },
-        {
-          "name": "on_pointer_down_outside",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the pointer is down outside the dialog."
-        },
-        {
-          "name": "on_focus_outside",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when focus moves outside the dialog."
-        },
-        {
-          "name": "on_interact_outside",
-          "type": "EventHandler[no_args_event_spec",
-          "docstring": "Fired when the pointer interacts outside the dialog."
-        }
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_open_auto_focus",
+        "on_close_auto_focus",
+        "on_escape_key_down",
+        "on_pointer_down_outside",
+        "on_focus_outside",
+        "on_interact_outside"
       ],
       "styling_props": [
         {
           "name": "size",
-          "type": "Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]",
-          "docstring": "Size of the button: \"1\" | \"2\" | \"3\" | \"4\""
+          "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]]",
+          "description": "Size of the button: \"1\" | \"2\" | \"3\" | \"4\"",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
         }
       ]
     },
@@ -149,8 +214,25 @@
       "bases": [
         "RadixThemesTriggerComponent"
       ],
+      "supports_common_props": true,
       "properties": [],
-      "events": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
       "styling_props": []
     }
   }
