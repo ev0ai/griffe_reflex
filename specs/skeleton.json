@@ -1,0 +1,64 @@
+{
+  "name": "skeleton",
+  "module_path": "components.radix.themes.components.skeleton",
+  "module_name": "skeleton",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/skeleton.py",
+  "doc_path": null,
+  "docstring": "Skeleton component.",
+  "bases": [
+    "RadixLoadingProp",
+    "RadixThemesComponent"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "width",
+      "type": "Var[Responsive[str]]",
+      "description": "The width of the skeleton"
+    },
+    {
+      "name": "min_width",
+      "type": "Var[Responsive[str]]",
+      "description": "The minimum width of the skeleton"
+    },
+    {
+      "name": "max_width",
+      "type": "Var[Responsive[str]]",
+      "description": "The maximum width of the skeleton"
+    },
+    {
+      "name": "height",
+      "type": "Var[Responsive[str]]",
+      "description": "The height of the skeleton"
+    },
+    {
+      "name": "min_height",
+      "type": "Var[Responsive[str]]",
+      "description": "The minimum height of the skeleton"
+    },
+    {
+      "name": "max_height",
+      "type": "Var[Responsive[str]]",
+      "description": "The maximum height of the skeleton"
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

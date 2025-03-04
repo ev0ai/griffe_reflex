@@ -1,0 +1,38 @@
+{
+  "name": "fragment",
+  "module_path": "components.base.fragment",
+  "module_name": "fragment",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/base/fragment.py",
+  "doc_path": null,
+  "docstring": "A React fragment to return multiple components from a function without wrapping it in a container.",
+  "bases": [
+    "Component"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "library",
+      "type": "str",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

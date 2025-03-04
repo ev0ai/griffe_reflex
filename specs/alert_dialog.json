@@ -1,0 +1,286 @@
+{
+  "name": "alert_dialog",
+  "module_path": "components.radix.themes.components.alert_dialog",
+  "module_name": "alert_dialog",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/alert_dialog.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/overlay/alert_dialog.md",
+  "docstring": "AlertDialog components namespace.",
+  "bases": [
+    "ComponentNamespace"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "trigger",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "content",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "title",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "description",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "action",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "cancel",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {
+    "AlertDialogRoot": {
+      "name": "AlertDialogRoot",
+      "docstring": "Contains all the parts of the dialog.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [
+        {
+          "name": "open",
+          "type": "Var[bool]",
+          "description": "The controlled open state of the dialog."
+        },
+        {
+          "name": "default_open",
+          "type": "Var[bool]",
+          "description": "The open state of the dialog when it is initially rendered. Use when you do not need to control its open state."
+        }
+      ],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_open_change"
+      ],
+      "styling_props": []
+    },
+    "AlertDialogTrigger": {
+      "name": "AlertDialogTrigger",
+      "docstring": "Wraps the control that will open the dialog.",
+      "bases": [
+        "RadixThemesTriggerComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
+      "styling_props": []
+    },
+    "AlertDialogContent": {
+      "name": "AlertDialogContent",
+      "docstring": "Contains the content of the dialog. This component is based on the div element.",
+      "bases": [
+        "elements.Div",
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [
+        {
+          "name": "force_mount",
+          "type": "Var[bool]",
+          "description": "Whether to force mount the content on open."
+        }
+      ],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_open_auto_focus",
+        "on_close_auto_focus",
+        "on_escape_key_down"
+      ],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Var[Responsive[LiteralContentSize]]",
+          "description": "The size of the content."
+        }
+      ]
+    },
+    "AlertDialogTitle": {
+      "name": "AlertDialogTitle",
+      "docstring": "An accessible title that is announced when the dialog is opened.\n    This part is based on the Heading component with a pre-defined font size and\n    leading trim on top.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
+      "styling_props": []
+    },
+    "AlertDialogDescription": {
+      "name": "AlertDialogDescription",
+      "docstring": "An optional accessible description that is announced when the dialog is opened.\n    This part is based on the Text component with a pre-defined font size.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
+      "styling_props": []
+    },
+    "AlertDialogAction": {
+      "name": "AlertDialogAction",
+      "docstring": "Wraps the control that will close the dialog. This should be distinguished\n    visually from the Cancel control.",
+      "bases": [
+        "RadixThemesTriggerComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
+      "styling_props": []
+    },
+    "AlertDialogCancel": {
+      "name": "AlertDialogCancel",
+      "docstring": "Wraps the control that will close the dialog. This should be distinguished\n    visually from the Action control.",
+      "bases": [
+        "RadixThemesTriggerComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
+      "styling_props": []
+    }
+  }
+}

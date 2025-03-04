@@ -1,0 +1,32 @@
+{
+  "name": "match",
+  "module_path": "components.core.match",
+  "module_name": "match",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/core/match.py",
+  "doc_path": null,
+  "docstring": "Match cases based on a condition.",
+  "bases": [
+    "MemoizationLeaf"
+  ],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "cond",
+      "type": "Var[Any]",
+      "description": "The condition to determine which case to match."
+    },
+    {
+      "name": "match_cases",
+      "type": "list[Any]",
+      "description": "Create a Match Component.\n\n        Args:\n            cond: The condition to determine which case to match.\n            cases: This list of cases to match.\n\n        Returns:\n            The match component.\n\n        Raises:\n            ValueError: When a default case is not provided for cases with Var return types."
+    },
+    {
+      "name": "default",
+      "type": "Any",
+      "description": "Create a Match Component.\n\n        Args:\n            cond: The condition to determine which case to match.\n            cases: This list of cases to match.\n\n        Returns:\n            The match component.\n\n        Raises:\n            ValueError: When a default case is not provided for cases with Var return types."
+    }
+  ],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

@@ -1,0 +1,74 @@
+{
+  "name": "debounce_input",
+  "module_path": "components.core.debounce",
+  "module_name": "debounce",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/core/debounce.py",
+  "doc_path": null,
+  "docstring": "The DebounceInput component is used to buffer input events on the client side.\n\n    It is intended to wrap various form controls and should be used whenever a\n    fully-controlled input is needed to prevent lost input data when the backend\n    is experiencing high latency.",
+  "bases": [
+    "Component"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "min_length",
+      "type": "Var[int]",
+      "description": "Minimum input characters before triggering the on_change event"
+    },
+    {
+      "name": "debounce_timeout",
+      "type": "Var[int]",
+      "description": "Time to wait between end of input and triggering on_change"
+    },
+    {
+      "name": "force_notify_by_enter",
+      "type": "Var[bool]",
+      "description": "If true, notify when Enter key is pressed"
+    },
+    {
+      "name": "force_notify_on_blur",
+      "type": "Var[bool]",
+      "description": "If true, notify when form control loses focus"
+    },
+    {
+      "name": "value",
+      "type": "Var[str | int | float]",
+      "description": "If provided, create a fully-controlled input"
+    },
+    {
+      "name": "input_ref",
+      "type": "Var[str]",
+      "description": "The ref to attach to the created input"
+    },
+    {
+      "name": "element",
+      "type": "Var[Type[Component]]",
+      "description": "The element to wrap"
+    },
+    {
+      "name": "library",
+      "type": "str",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount",
+    "on_change"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

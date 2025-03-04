@@ -1,0 +1,27 @@
+{
+  "name": "segmented_control",
+  "module_path": "components.radix.themes.components.segmented_control",
+  "module_name": "segmented_control",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/segmented_control.py",
+  "doc_path": "/Users/dave/code/griffe_reflex/reflex/docs/library/disclosure/segmented_control.md",
+  "docstring": "SegmentedControl components namespace.",
+  "bases": [
+    "SimpleNamespace"
+  ],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "item",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

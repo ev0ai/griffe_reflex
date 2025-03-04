@@ -1,0 +1,15 @@
+{
+  "name": "label",
+  "module_path": "components.dynamic",
+  "module_name": "dynamic",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/dynamic.py",
+  "doc_path": null,
+  "docstring": "",
+  "bases": [],
+  "supports_common_props": false,
+  "properties": [],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {},
+  "error": "No suitable class found"
+}

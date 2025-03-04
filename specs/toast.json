@@ -1,0 +1,24 @@
+{
+  "name": "toast",
+  "module_path": "components.sonner.toast",
+  "module_name": "toast",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/sonner/toast.py",
+  "doc_path": null,
+  "docstring": "A toast action that render a button in the toast.",
+  "bases": [
+    "Base"
+  ],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "label",
+      "type": "str",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_click"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "section",
+  "module_path": "components.radix.themes.layout.section",
+  "module_name": "section",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/section.py",
+  "doc_path": null,
+  "docstring": "Denotes a section of page content.",
+  "bases": [
+    "elements.Section",
+    "RadixThemesComponent"
+  ],
+  "supports_common_props": true,
+  "properties": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Var[Responsive[LiteralSectionSize]]",
+      "description": "The size of the section: \"1\" - \"3\" (default \"2\")"
+    }
+  ],
+  "subcomponents": {}
+}

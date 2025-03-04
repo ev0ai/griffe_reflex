@@ -1,0 +1,25 @@
+{
+  "name": "clipboard",
+  "module_path": "components.core.clipboard",
+  "module_name": "clipboard",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/core/clipboard.py",
+  "doc_path": null,
+  "docstring": "Clipboard component.",
+  "bases": [
+    "Fragment"
+  ],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "targets",
+      "type": "Var[Sequence[str]]",
+      "description": "The element ids to attach the event listener to. Defaults to all child components or the document."
+    }
+  ],
+  "event_names": [
+    "on_paste",
+    "on_paste_event_actions"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

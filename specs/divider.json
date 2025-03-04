@@ -1,0 +1,88 @@
+{
+  "name": "divider",
+  "module_path": "components.radix.themes.components.separator",
+  "module_name": "separator",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/separator.py",
+  "doc_path": null,
+  "docstring": "Visually or semantically separates content.",
+  "bases": [
+    "RadixThemesComponent"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "orientation",
+      "type": "Var[Responsive[Literal[\"horizontal\", \"vertical\"]]]",
+      "description": "The orientation of the separator."
+    },
+    {
+      "name": "decorative",
+      "type": "Var[bool]",
+      "description": "When true, signifies that it is purely visual, carries no semantic meaning, and ensures it is not present in the accessibility tree."
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Var[Responsive[LiteralSeperatorSize]]",
+      "description": "The size of the select: \"1\" | \"2\" | \"3\" | \"4\"",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "color_scheme",
+      "type": "Var[LiteralAccentColor]",
+      "description": "The color of the select",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
+    }
+  ],
+  "subcomponents": {}
+}

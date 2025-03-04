@@ -1,0 +1,88 @@
+{
+  "name": "flex",
+  "module_path": "components.radix.themes.layout.flex",
+  "module_name": "flex",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/flex.py",
+  "doc_path": null,
+  "docstring": "Component for creating flex layouts.",
+  "bases": [
+    "elements.Div",
+    "RadixThemesComponent"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "as_child",
+      "type": "Var[bool]",
+      "description": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+    },
+    {
+      "name": "direction",
+      "type": "Var[Responsive[LiteralFlexDirection]]",
+      "description": "How child items are laid out: \"row\" | \"column\" | \"row-reverse\" | \"column-reverse\"",
+      "values": [
+        "row",
+        "column",
+        "row-reverse",
+        "column-reverse"
+      ]
+    },
+    {
+      "name": "align",
+      "type": "Var[Responsive[LiteralAlign]]",
+      "description": "Alignment of children along the main axis: \"start\" | \"center\" | \"end\" | \"baseline\" | \"stretch\"",
+      "values": [
+        "start",
+        "center",
+        "end",
+        "baseline",
+        "stretch"
+      ]
+    },
+    {
+      "name": "justify",
+      "type": "Var[Responsive[LiteralJustify]]",
+      "description": "Alignment of children along the cross axis: \"start\" | \"center\" | \"end\" | \"between\"",
+      "values": [
+        "start",
+        "center",
+        "end",
+        "between"
+      ]
+    },
+    {
+      "name": "wrap",
+      "type": "Var[Responsive[LiteralFlexWrap]]",
+      "description": "Whether children should wrap when they reach the end of their container: \"nowrap\" | \"wrap\" | \"wrap-reverse\"",
+      "values": [
+        "nowrap",
+        "wrap",
+        "wrap-reverse"
+      ]
+    },
+    {
+      "name": "spacing",
+      "type": "Var[Responsive[LiteralSpacing]]",
+      "description": "Gap between children: \"0\" - \"9\""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

@@ -1,0 +1,67 @@
+{
+  "name": "image",
+  "module_path": "components.el.elements.media",
+  "module_name": "media",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/el/elements/media.py",
+  "doc_path": null,
+  "docstring": "Display the area element.",
+  "bases": [
+    "BaseHTML"
+  ],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "alt",
+      "type": "Var[str]",
+      "description": "Alternate text for the area, used for accessibility"
+    },
+    {
+      "name": "coords",
+      "type": "Var[str]",
+      "description": "Coordinates to define the shape of the area"
+    },
+    {
+      "name": "download",
+      "type": "Var[str | bool]",
+      "description": "Specifies that the target will be downloaded when clicked"
+    },
+    {
+      "name": "href",
+      "type": "Var[str]",
+      "description": "Hyperlink reference for the area"
+    },
+    {
+      "name": "href_lang",
+      "type": "Var[str]",
+      "description": "Language of the linked resource"
+    },
+    {
+      "name": "media",
+      "type": "Var[str]",
+      "description": "Specifies what media/device the linked resource is optimized for"
+    },
+    {
+      "name": "referrer_policy",
+      "type": "Var[ReferrerPolicy]",
+      "description": "Specifies which referrer information to send with the link"
+    },
+    {
+      "name": "rel",
+      "type": "Var[str]",
+      "description": "Specifies the relationship of the target object to the link object"
+    },
+    {
+      "name": "shape",
+      "type": "Var[str]",
+      "description": "Defines the shape of the area (rectangle, circle, polygon)"
+    },
+    {
+      "name": "target",
+      "type": "Var[str]",
+      "description": "Specifies where to open the linked document"
+    }
+  ],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

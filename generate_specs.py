@@ -626,6 +626,75 @@ def extract_properties_from_class_body(class_body, spec, class_prefix=None):
         else:
             spec["properties"].append(property_data)
 
+def find_all_components():
+    """
+    Recursively find all components in the codebase.
+    
+    Returns a dictionary of component names to their module paths and file paths.
+    """
+    component_to_paths = {}
+    components_dir = REFLEX_ROOT / 'reflex' / 'components'
+    
+    # Component modules to explicitly check
+    component_modules = [
+        'base', 'core', 'datadisplay', 'el', 'gridjs', 'lucide', 'markdown',
+        'moment', 'plotly', 'radix', 'react_player', 'recharts', 'sonner', 'suneditor'
+    ]
+    
+    # Additional component names mentioned by the user
+    additional_components = [
+        'code_block', 'icon', 'moment', 'spinner', 'segmented_control',
+        'cond', 'foreach', 'match', 'editor', 'box', 'center', 'container',
+        'flex', 'fragment', 'grid', 'section', 'spacer', 'audio', 'image',
+        'video', 'clipboard', 'html_embed', 'gtml', 'script', 'skeleton',
+        'alert_dialog', 'context_menu', 'dropdown_menu', 'toast', 'ag_grid',
+        'data_editor', 'data_table', 'blockquote', 'code', 'em', 'heading',
+        'kbd', 'link', 'markdown', 'quote', 'strong', 'areachart', 'barchart',
+        'composedchart', 'errorbar', 'funnelchart', 'linechart', 'piechart',
+        'radarchart', 'radialbarchart', 'scatterchart', 'axis', 'brush',
+        'cartesiangrid', 'label', 'legend', 'reference', 'tooltip'
+    ]
+    
+    # First, get component paths from the existing mapping function
+    component_to_paths = extract_component_mappings()
+    
+    # Now add modules where we couldn't automatically detect the path
+    for component_name in additional_components:
+        if component_name not in component_to_paths:
+            # Try to guess the module path based on the component name
+            module_name = component_name
+            
+            # Try a few common locations
+            possible_paths = [
+                # Try in core components
+                f"components.core.{module_name}",
+                # Try in radix components
+                f"components.radix.themes.components.{module_name}",
+                f"components.radix.primitives.{module_name}",
+                # Try in recharts for graphing components
+                f"components.recharts.{module_name}",
+                # Try in dynamic components
+                f"components.dynamic",
+                # Try in base components
+                f"components.base.{module_name}",
+                # Try in el components
+                f"components.el.{module_name}",
+            ]
+            
+            for module_path in possible_paths:
+                file_path = module_path.replace('.', '/') + '.py'
+                full_path = str(REFLEX_ROOT / 'reflex' / file_path)
+                
+                if os.path.exists(full_path):
+                    component_to_paths[component_name] = {
+                        'module_path': module_path,
+                        'module_name': module_name,
+                        'file_path': full_path
+                    }
+                    break
+    
+    return component_to_paths
+
 def generate_spec_files():
     """
     Generate spec files for all documented components.
@@ -636,19 +705,25 @@ def generate_spec_files():
     # Generate common props spec
     generate_common_props_spec()
     
-    # Extract component mappings
-    component_mappings = extract_component_mappings()
+    # Get component paths from both methods
+    component_mappings = find_all_components()
     
     # Scan library docs
     component_to_doc_path = scan_library_docs()
+    
+    # Combine components from both sources
+    all_components = set(list(component_mappings.keys()) + list(component_to_doc_path.keys()))
     
     # Track processed components and failures
     processed = 0
     failures = 0
     
     # Process each component
-    for component_name, doc_path in component_to_doc_path.items():
+    for component_name in sorted(all_components):
         print(f"Processing component: {component_name}")
+        
+        # Get documentation path if available
+        doc_path = component_to_doc_path.get(component_name)
         
         # Resolve the component path
         if component_name in component_mappings:

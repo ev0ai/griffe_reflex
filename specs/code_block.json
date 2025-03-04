@@ -1,0 +1,240 @@
+{
+  "name": "code_block",
+  "module_path": "components.datadisplay.code",
+  "module_name": "code",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/datadisplay/code.py",
+  "doc_path": null,
+  "docstring": "Themes for the CodeBlock component.",
+  "bases": [],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "a11y_dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "atom_dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "cb",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "coldark_cold",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "coldark_dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "coy",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "coy_without_shadows",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "darcula",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "dracula",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "duotone_dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "duotone_earth",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "duotone_forest",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "duotone_light",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "duotone_sea",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "duotone_space",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "funky",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "ghcolors",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "gruvbox_dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "gruvbox_light",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "holi_theme",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "hopscotch",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "light",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "lucario",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "material_dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "material_light",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "material_oceanic",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "night_owl",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "nord",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "okaidia",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "one_dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "one_light",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "pojoaque",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "prism",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "shades_of_purple",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "solarized_dark_atom",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "solarizedlight",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "synthwave84",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "tomorrow",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "twilight",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "vs",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "vs_dark",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "vsc_dark_plus",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "xonokai",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    },
+    {
+      "name": "z_touch",
+      "type": "ClassVar[Var[Theme]]",
+      "description": ""
+    }
+  ],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

@@ -1,0 +1,16 @@
+{
+  "name": "spacer",
+  "module_path": "components.radix.themes.layout.spacer",
+  "module_name": "spacer",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/spacer.py",
+  "doc_path": null,
+  "docstring": "A spacer component.",
+  "bases": [
+    "Flex"
+  ],
+  "supports_common_props": false,
+  "properties": [],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

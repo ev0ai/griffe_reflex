@@ -1,0 +1,16 @@
+{
+  "name": "center",
+  "module_path": "components.radix.themes.layout.center",
+  "module_name": "center",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/center.py",
+  "doc_path": null,
+  "docstring": "A center component.",
+  "bases": [
+    "Flex"
+  ],
+  "supports_common_props": false,
+  "properties": [],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "radio_cards",
+  "module_path": "components.radix.themes.components.radio_cards",
+  "module_name": "radio_cards",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/radio_cards.py",
+  "doc_path": null,
+  "docstring": "RadioCards components namespace.",
+  "bases": [
+    "SimpleNamespace"
+  ],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "item",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

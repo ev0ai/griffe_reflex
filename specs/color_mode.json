@@ -1,0 +1,16 @@
+{
+  "name": "color_mode",
+  "module_path": "components.radix.themes.color_mode",
+  "module_name": "color_mode",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/color_mode.py",
+  "doc_path": null,
+  "docstring": "Displays the current color mode as an icon.",
+  "bases": [
+    "Cond"
+  ],
+  "supports_common_props": false,
+  "properties": [],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

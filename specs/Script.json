@@ -1,0 +1,56 @@
+{
+  "name": "script",
+  "module_path": "components.base.script",
+  "module_name": "script",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/base/script.py",
+  "doc_path": null,
+  "docstring": "Next.js script component.\n\n    Note that this component differs from reflex.components.base.document.NextScript\n    in that it is intended for use with custom and user-defined scripts.\n\n    It also differs from reflex.components.base.link.ScriptTag, which is the plain\n    HTML <script> tag which does not work when rendering a component.",
+  "bases": [
+    "Component"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "src",
+      "type": "Var[str]",
+      "description": "Required unless inline script is used"
+    },
+    {
+      "name": "strategy",
+      "type": "Var[Literal[\"afterInteractive\", \"beforeInteractive\", \"lazyOnload\"]]",
+      "description": "When the script will execute: afterInteractive (defer-like behavior) | beforeInteractive | lazyOnload (async-like behavior)"
+    },
+    {
+      "name": "library",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "is_default",
+      "type": "bool",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount",
+    "on_load",
+    "on_ready",
+    "on_error"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

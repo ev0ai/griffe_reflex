@@ -1,0 +1,312 @@
+{
+  "name": "radio",
+  "module_path": "components.radix.themes.components.radio_group",
+  "module_name": "radio_group",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/radio_group.py",
+  "doc_path": null,
+  "docstring": "RadioGroup components namespace.",
+  "bases": [
+    "ComponentNamespace"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "root",
+      "type": "Any",
+      "description": ""
+    },
+    {
+      "name": "item",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {
+    "RadioGroupRoot": {
+      "name": "RadioGroupRoot",
+      "docstring": "A set of interactive radio buttons where only one can be selected at a time.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [
+        {
+          "name": "high_contrast",
+          "type": "Var[bool]",
+          "description": "Whether to render the radio group with higher contrast color against background"
+        },
+        {
+          "name": "value",
+          "type": "Var[str]",
+          "description": "The controlled value of the radio item to check. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "default_value",
+          "type": "Var[str]",
+          "description": "The initial value of checked radio item. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "disabled",
+          "type": "Var[bool]",
+          "description": "Whether the radio group is disabled"
+        },
+        {
+          "name": "name",
+          "type": "Var[str]",
+          "description": "The name of the group. Submitted with its owning form as part of a name/value pair."
+        },
+        {
+          "name": "required",
+          "type": "Var[bool]",
+          "description": "Whether the radio group is required"
+        }
+      ],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_change"
+      ],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
+          "description": "The size of the radio group: \"1\" | \"2\" | \"3\"",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "name": "variant",
+          "type": "Var[Literal[\"classic\", \"surface\", \"soft\"]]",
+          "description": "The variant of the radio group"
+        },
+        {
+          "name": "color_scheme",
+          "type": "Var[LiteralAccentColor]",
+          "description": "The color of the radio group",
+          "values": [
+            "gray",
+            "tomato",
+            "red",
+            "ruby",
+            "crimson",
+            "pink",
+            "plum",
+            "purple",
+            "violet",
+            "iris",
+            "indigo",
+            "blue",
+            "cyan",
+            "teal",
+            "jade",
+            "green",
+            "grass",
+            "brown",
+            "orange",
+            "sky",
+            "mint",
+            "lime",
+            "yellow",
+            "amber",
+            "gold",
+            "bronze"
+          ]
+        }
+      ]
+    },
+    "RadioGroupItem": {
+      "name": "RadioGroupItem",
+      "docstring": "An item in the group that can be checked.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [
+        {
+          "name": "value",
+          "type": "Var[str]",
+          "description": "The value of the radio item to check. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "disabled",
+          "type": "Var[bool]",
+          "description": "When true, prevents the user from interacting with the radio item."
+        },
+        {
+          "name": "required",
+          "type": "Var[bool]",
+          "description": "When true, indicates that the user must check the radio item before the owning form can be submitted."
+        }
+      ],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
+      "styling_props": []
+    },
+    "HighLevelRadioGroup": {
+      "name": "HighLevelRadioGroup",
+      "docstring": "High level wrapper for the RadioGroup component.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [
+        {
+          "name": "items",
+          "type": "Var[Sequence[str]]",
+          "description": "The items of the radio group."
+        },
+        {
+          "name": "direction",
+          "type": "Var[LiteralFlexDirection]",
+          "description": "The direction of the radio group."
+        },
+        {
+          "name": "spacing",
+          "type": "Var[LiteralSpacing]",
+          "description": "The gap between the items of the radio group."
+        },
+        {
+          "name": "high_contrast",
+          "type": "Var[bool]",
+          "description": "Whether to render the radio group with higher contrast color against background"
+        },
+        {
+          "name": "value",
+          "type": "Var[str]",
+          "description": "The controlled value of the radio item to check. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "default_value",
+          "type": "Var[str]",
+          "description": "The initial value of checked radio item. Should be used in conjunction with on_change."
+        },
+        {
+          "name": "disabled",
+          "type": "Var[bool]",
+          "description": "Whether the radio group is disabled"
+        },
+        {
+          "name": "name",
+          "type": "Var[str]",
+          "description": "The name of the group. Submitted with its owning form as part of a name/value pair."
+        },
+        {
+          "name": "required",
+          "type": "Var[bool]",
+          "description": "Whether the radio group is required"
+        }
+      ],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Var[Literal[\"1\", \"2\", \"3\"]]",
+          "description": "The size of the radio group."
+        },
+        {
+          "name": "variant",
+          "type": "Var[Literal[\"classic\", \"surface\", \"soft\"]]",
+          "description": "The variant of the radio group"
+        },
+        {
+          "name": "color_scheme",
+          "type": "Var[LiteralAccentColor]",
+          "description": "The color of the radio group",
+          "values": [
+            "gray",
+            "tomato",
+            "red",
+            "ruby",
+            "crimson",
+            "pink",
+            "plum",
+            "purple",
+            "violet",
+            "iris",
+            "indigo",
+            "blue",
+            "cyan",
+            "teal",
+            "jade",
+            "green",
+            "grass",
+            "brown",
+            "orange",
+            "sky",
+            "mint",
+            "lime",
+            "yellow",
+            "amber",
+            "gold",
+            "bronze"
+          ]
+        }
+      ]
+    }
+  }
+}

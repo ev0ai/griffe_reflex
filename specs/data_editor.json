@@ -1,0 +1,147 @@
+{
+  "name": "data_editor",
+  "module_path": "components.datadisplay.dataeditor",
+  "module_name": "dataeditor",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/datadisplay/dataeditor.py",
+  "doc_path": null,
+  "docstring": "An Enum for the available icons in DataEditor.",
+  "bases": [
+    "Enum"
+  ],
+  "supports_common_props": false,
+  "properties": [
+    {
+      "name": "Array",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "AudioUri",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Boolean",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "HeaderCode",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Date",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Email",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Emoji",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "GeoDistance",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "IfThenElse",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Image",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "JoinStrings",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Lookup",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Markdown",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Math",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Number",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Phone",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Reference",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Rollup",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "RowID",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "SingleValue",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "SplitString",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "String",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "TextTemplate",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Time",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "Uri",
+      "type": "str",
+      "description": ""
+    },
+    {
+      "name": "VideoUri",
+      "type": "str",
+      "description": ""
+    }
+  ],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

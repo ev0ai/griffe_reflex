@@ -1,0 +1,39 @@
+{
+  "name": "container",
+  "module_path": "components.radix.themes.layout.container",
+  "module_name": "container",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/layout/container.py",
+  "doc_path": null,
+  "docstring": "Constrains the maximum width of page content.\n\n    See https://www.radix-ui.com/themes/docs/components/container",
+  "bases": [
+    "elements.Div",
+    "RadixThemesComponent"
+  ],
+  "supports_common_props": true,
+  "properties": [],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Var[Responsive[LiteralContainerSize]]",
+      "description": "The size of the container: \"1\" - \"4\" (default \"3\")"
+    }
+  ],
+  "subcomponents": {}
+}

@@ -1,0 +1,113 @@
+{
+  "name": "icon_button",
+  "module_path": "components.radix.themes.components.icon_button",
+  "module_name": "icon_button",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/icon_button.py",
+  "doc_path": null,
+  "docstring": "A button designed specifically for usage with a single icon.",
+  "bases": [
+    "elements.Button",
+    "RadixLoadingProp",
+    "RadixThemesComponent"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "as_child",
+      "type": "Var[bool]",
+      "description": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+    },
+    {
+      "name": "high_contrast",
+      "type": "Var[bool]",
+      "description": "Create a IconButton component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Raises:\n            ValueError: If no children are passed.\n\n        Returns:\n            The IconButton component."
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Var[Responsive[LiteralButtonSize]]",
+      "description": "Button size \"1\" - \"4\"",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "variant",
+      "type": "Var[LiteralVariant]",
+      "description": "Variant of button: \"classic\" | \"solid\" | \"soft\" | \"surface\" | \"outline\" | \"ghost\"",
+      "values": [
+        "solid",
+        "soft",
+        "outline",
+        "ghost"
+      ]
+    },
+    {
+      "name": "color_scheme",
+      "type": "Var[LiteralAccentColor]",
+      "description": "Override theme color for button",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
+    },
+    {
+      "name": "radius",
+      "type": "Var[LiteralRadius]",
+      "description": "Create a IconButton component.\n\n        Args:\n            *children: The children of the component.\n            **props: The properties of the component.\n\n        Raises:\n            ValueError: If no children are passed.\n\n        Returns:\n            The IconButton component.",
+      "values": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "full"
+      ]
+    }
+  ],
+  "subcomponents": {}
+}

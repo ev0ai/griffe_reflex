@@ -1,0 +1,38 @@
+{
+  "name": "auto_scroll",
+  "module_path": "components.core.auto_scroll",
+  "module_name": "auto_scroll",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/core/auto_scroll.py",
+  "doc_path": null,
+  "docstring": "A div that automatically scrolls to the bottom when new content is added.",
+  "bases": [
+    "Div"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "disposition",
+      "type": "Any",
+      "description": "Create an AutoScroll component.\n\n        Args:\n            *children: The children of the component.\n            **props: The props of the component.\n\n        Returns:\n            An AutoScroll component."
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

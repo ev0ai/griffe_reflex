@@ -1,0 +1,117 @@
+{
+  "name": "link",
+  "module_path": "components.radix.themes.typography.link",
+  "module_name": "link",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/typography/link.py",
+  "doc_path": null,
+  "docstring": "A semantic element for navigation between pages.",
+  "bases": [
+    "RadixThemesComponent",
+    "A",
+    "MemoizationLeaf",
+    "MarkdownComponentMap"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "as_child",
+      "type": "Var[bool]",
+      "description": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+    },
+    {
+      "name": "weight",
+      "type": "Var[Responsive[LiteralTextWeight]]",
+      "description": "Thickness of text: \"light\" | \"regular\" | \"medium\" | \"bold\"",
+      "values": [
+        "light",
+        "regular",
+        "medium",
+        "bold"
+      ]
+    },
+    {
+      "name": "trim",
+      "type": "Var[Responsive[LiteralTextTrim]]",
+      "description": "Removes the leading trim space: \"normal\" | \"start\" | \"end\" | \"both\"",
+      "values": [
+        "normal",
+        "start",
+        "end",
+        "both"
+      ]
+    },
+    {
+      "name": "underline",
+      "type": "Var[LiteralLinkUnderline]",
+      "description": "Add imports for the Link component.\n\n        Returns:\n            The import dict."
+    },
+    {
+      "name": "high_contrast",
+      "type": "Var[bool]",
+      "description": "Add imports for the Link component.\n\n        Returns:\n            The import dict."
+    },
+    {
+      "name": "is_external",
+      "type": "Var[bool]",
+      "description": "Add imports for the Link component.\n\n        Returns:\n            The import dict."
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [
+    {
+      "name": "size",
+      "type": "Var[Responsive[LiteralTextSize]]",
+      "description": "Text size: \"1\" - \"9\""
+    },
+    {
+      "name": "color_scheme",
+      "type": "Var[LiteralAccentColor]",
+      "description": "Add imports for the Link component.\n\n        Returns:\n            The import dict.",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
+    }
+  ],
+  "subcomponents": {}
+}

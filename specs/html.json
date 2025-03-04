@@ -1,0 +1,38 @@
+{
+  "name": "html",
+  "module_path": "components.core.html",
+  "module_name": "html",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/core/html.py",
+  "doc_path": null,
+  "docstring": "Render the html.\n\n    Returns:\n        The code to render the html component.",
+  "bases": [
+    "Div"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "dangerouslySetInnerHTML",
+      "type": "Var[dict[str, str]]  # noqa: N815",
+      "description": "Create a html component.\n\n        Args:\n            *children: The children of the component.\n            **props: The props to pass to the component.\n\n        Returns:\n            The html component.\n\n        Raises:\n            ValueError: If children are not provided or more than one child is provided."
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

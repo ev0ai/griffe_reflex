@@ -1,0 +1,101 @@
+{
+  "name": "code",
+  "module_path": "components.radix.themes.typography.code",
+  "module_name": "code",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/typography/code.py",
+  "doc_path": null,
+  "docstring": "A block level extended quotation.",
+  "bases": [
+    "elements.Code",
+    "RadixThemesComponent",
+    "MarkdownComponentMap"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "weight",
+      "type": "Var[Responsive[LiteralTextWeight]]",
+      "description": "Thickness of text: \"light\" | \"regular\" | \"medium\" | \"bold\"",
+      "values": [
+        "light",
+        "regular",
+        "medium",
+        "bold"
+      ]
+    },
+    {
+      "name": "high_contrast",
+      "type": "Var[bool]",
+      "description": "Whether to render the text with higher contrast color"
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [
+    {
+      "name": "variant",
+      "type": "Var[LiteralVariant]",
+      "description": "The visual variant to apply: \"solid\" | \"soft\" | \"outline\" | \"ghost\"",
+      "values": [
+        "solid",
+        "soft",
+        "outline",
+        "ghost"
+      ]
+    },
+    {
+      "name": "size",
+      "type": "Var[Responsive[LiteralTextSize]]",
+      "description": "Text size: \"1\" - \"9\""
+    },
+    {
+      "name": "color_scheme",
+      "type": "Var[LiteralAccentColor]",
+      "description": "Overrides the accent color inherited from the Theme.",
+      "values": [
+        "gray",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "orange",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "gold",
+        "bronze"
+      ]
+    }
+  ],
+  "subcomponents": {}
+}

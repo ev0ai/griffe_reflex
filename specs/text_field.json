@@ -1,0 +1,253 @@
+{
+  "name": "text_field",
+  "module_path": "components.radix.themes.components.text_field",
+  "module_name": "text_field",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/radix/themes/components/text_field.py",
+  "doc_path": null,
+  "docstring": "TextField components namespace.",
+  "bases": [
+    "ComponentNamespace"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "slot",
+      "type": "Any",
+      "description": ""
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {
+    "TextFieldSlot": {
+      "name": "TextFieldSlot",
+      "docstring": "Contains icons or buttons associated with an Input.",
+      "bases": [
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount"
+      ],
+      "styling_props": [
+        {
+          "name": "color_scheme",
+          "type": "Var[LiteralAccentColor]",
+          "description": "Override theme color for text field slot",
+          "values": [
+            "gray",
+            "tomato",
+            "red",
+            "ruby",
+            "crimson",
+            "pink",
+            "plum",
+            "purple",
+            "violet",
+            "iris",
+            "indigo",
+            "blue",
+            "cyan",
+            "teal",
+            "jade",
+            "green",
+            "grass",
+            "brown",
+            "orange",
+            "sky",
+            "mint",
+            "lime",
+            "yellow",
+            "amber",
+            "gold",
+            "bronze"
+          ]
+        }
+      ]
+    },
+    "TextFieldRoot": {
+      "name": "TextFieldRoot",
+      "docstring": "Captures user input with an optional slot for buttons and icons.",
+      "bases": [
+        "elements.Input",
+        "RadixThemesComponent"
+      ],
+      "supports_common_props": true,
+      "properties": [
+        {
+          "name": "auto_complete",
+          "type": "Var[bool]",
+          "description": "Whether the input should have autocomplete enabled"
+        },
+        {
+          "name": "default_value",
+          "type": "Var[str]",
+          "description": "The value of the input when initially rendered."
+        },
+        {
+          "name": "disabled",
+          "type": "Var[bool]",
+          "description": "Disables the input"
+        },
+        {
+          "name": "max_length",
+          "type": "Var[int]",
+          "description": "Specifies the maximum number of characters allowed in the input"
+        },
+        {
+          "name": "min_length",
+          "type": "Var[int]",
+          "description": "Specifies the minimum number of characters required in the input"
+        },
+        {
+          "name": "name",
+          "type": "Var[str]",
+          "description": "Name of the input, used when sending form data"
+        },
+        {
+          "name": "placeholder",
+          "type": "Var[str]",
+          "description": "Placeholder text in the input"
+        },
+        {
+          "name": "read_only",
+          "type": "Var[bool]",
+          "description": "Indicates whether the input is read-only"
+        },
+        {
+          "name": "required",
+          "type": "Var[bool]",
+          "description": "Indicates that the input is required"
+        },
+        {
+          "name": "type",
+          "type": "Var[str]",
+          "description": "Specifies the type of input"
+        },
+        {
+          "name": "value",
+          "type": "Var[str | int | float]",
+          "description": "Value of the input"
+        },
+        {
+          "name": "list",
+          "type": "Var[str]",
+          "description": "References a datalist for suggested options"
+        }
+      ],
+      "event_names": [
+        "on_blur",
+        "on_click",
+        "on_context_menu",
+        "on_double_click",
+        "on_focus",
+        "on_mount",
+        "on_mouse_down",
+        "on_mouse_enter",
+        "on_mouse_leave",
+        "on_mouse_move",
+        "on_mouse_out",
+        "on_mouse_over",
+        "on_mouse_up",
+        "on_scroll",
+        "on_unmount",
+        "on_change",
+        "on_key_down",
+        "on_key_up"
+      ],
+      "styling_props": [
+        {
+          "name": "size",
+          "type": "Var[Responsive[LiteralTextFieldSize]]",
+          "description": "Text field size \"1\" - \"3\""
+        },
+        {
+          "name": "variant",
+          "type": "Var[LiteralTextFieldVariant]",
+          "description": "Variant of text field: \"classic\" | \"surface\" | \"soft\"",
+          "values": [
+            "classic",
+            "surface",
+            "soft"
+          ]
+        },
+        {
+          "name": "color_scheme",
+          "type": "Var[LiteralAccentColor]",
+          "description": "Override theme color for text field",
+          "values": [
+            "gray",
+            "tomato",
+            "red",
+            "ruby",
+            "crimson",
+            "pink",
+            "plum",
+            "purple",
+            "violet",
+            "iris",
+            "indigo",
+            "blue",
+            "cyan",
+            "teal",
+            "jade",
+            "green",
+            "grass",
+            "brown",
+            "orange",
+            "sky",
+            "mint",
+            "lime",
+            "yellow",
+            "amber",
+            "gold",
+            "bronze"
+          ]
+        },
+        {
+          "name": "radius",
+          "type": "Var[LiteralRadius]",
+          "description": "Override theme radius for text field: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\"",
+          "values": [
+            "none",
+            "small",
+            "medium",
+            "large",
+            "full"
+          ]
+        }
+      ]
+    }
+  }
+}

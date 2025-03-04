@@ -1,0 +1,16 @@
+{
+  "name": "connection_modal",
+  "module_path": "components.core.banner",
+  "module_name": "banner",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/core/banner.py",
+  "doc_path": null,
+  "docstring": "A component that renders the websocket target URL.",
+  "bases": [
+    "Var"
+  ],
+  "supports_common_props": false,
+  "properties": [],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {}
+}

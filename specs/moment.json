@@ -1,0 +1,15 @@
+{
+  "name": "moment",
+  "module_path": "components.moment",
+  "module_name": "moment",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/moment.py",
+  "doc_path": null,
+  "docstring": "",
+  "bases": [],
+  "supports_common_props": false,
+  "properties": [],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {},
+  "error": "File not found: /Users/dave/code/griffe_reflex/reflex/reflex/components/moment.py"
+}
