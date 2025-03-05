@@ -10,6 +10,10 @@ This tool extracts component specifications from the Reflex codebase and generat
 - **Clean Output**: Generates clean, well-formatted JSON specs
 - **Error Handling**: Gracefully handles components with missing files
 
+## Documentation
+
+For detailed documentation about the architecture and how to extend the system, see the [documentation directory](docs/).
+
 ## Usage
 
 There are several ways to use the specification generator:
