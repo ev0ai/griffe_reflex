@@ -38,12 +38,19 @@
     {
       "name": "size",
       "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\", \"4\", \"5\"],]]",
-      "description": "Card size: \"1\" - \"5\""
+      "description": "Card size",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
     },
     {
       "name": "variant",
       "type": "Var[Literal[\"surface\", \"classic\", \"ghost\"]]",
-      "description": "Variant of Card: \"surface\" | \"classic\" | \"ghost\"",
+      "description": "Variant of Card | \"ghost\"",
       "values": [
         "surface",
         "classic",

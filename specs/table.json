@@ -95,7 +95,7 @@
         {
           "name": "size",
           "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
-          "description": "The size of the table: \"1\" | \"2\" | \"3\"",
+          "description": "The size of the table | \"3\"",
           "values": [
             "1",
             "2",

@@ -42,7 +42,7 @@
     {
       "name": "size",
       "type": "Var[Responsive[LiteralSeperatorSize]]",
-      "description": "The size of the select: \"1\" | \"2\" | \"3\" | \"4\"",
+      "description": "The size of the select",
       "values": [
         "1",
         "2",

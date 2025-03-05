@@ -19,7 +19,7 @@
     {
       "name": "direction",
       "type": "Var[Responsive[LiteralFlexDirection]]",
-      "description": "How child items are laid out: \"row\" | \"column\" | \"row-reverse\" | \"column-reverse\"",
+      "description": "How child items are laid out",
       "values": [
         "row",
         "column",
@@ -30,7 +30,7 @@
     {
       "name": "align",
       "type": "Var[Responsive[LiteralAlign]]",
-      "description": "Alignment of children along the main axis: \"start\" | \"center\" | \"end\" | \"baseline\" | \"stretch\"",
+      "description": "Alignment of children along the main axis |  | \"stretch\"",
       "values": [
         "start",
         "center",
@@ -42,7 +42,7 @@
     {
       "name": "justify",
       "type": "Var[Responsive[LiteralJustify]]",
-      "description": "Alignment of children along the cross axis: \"start\" | \"center\" | \"end\" | \"between\"",
+      "description": "Alignment of children along the cross axis",
       "values": [
         "start",
         "center",
@@ -53,7 +53,7 @@
     {
       "name": "wrap",
       "type": "Var[Responsive[LiteralFlexWrap]]",
-      "description": "Whether children should wrap when they reach the end of their container: \"nowrap\" | \"wrap\" | \"wrap-reverse\"",
+      "description": "Whether children should wrap when they reach the end of their container | \"wrap-reverse\"",
       "values": [
         "nowrap",
         "wrap",
@@ -63,7 +63,19 @@
     {
       "name": "spacing",
       "type": "Var[Responsive[LiteralSpacing]]",
-      "description": "Gap between children: \"0\" - \"9\""
+      "description": "Gap between children",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     }
   ],
   "event_names": [

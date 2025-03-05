@@ -78,7 +78,15 @@ def save_spec_file(spec: Dict[str, Any], component_name: str, specs_dir: str) ->
     Returns:
         The path to the saved spec file
     """
-    spec_path = os.path.join(specs_dir, f"{component_name}.json")
+    # Skip invalid component names
+    invalid_components = ["component", "next_link", "nextlink", "nossrcomponent"]
+    if component_name.lower() in invalid_components:
+        print(f"Skipping invalid component: {component_name}")
+        return ""
+    
+    # Sanitize component name for the filename
+    sanitized_name = component_name.replace(" ", "_")
+    spec_path = os.path.join(specs_dir, f"{sanitized_name}.json")
     os.makedirs(os.path.dirname(spec_path), exist_ok=True)
     
     with open(spec_path, "w") as f:

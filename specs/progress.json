@@ -57,7 +57,7 @@
     {
       "name": "size",
       "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
-      "description": "The size of the progress bar: \"1\" | \"2\" | \"3\"",
+      "description": "The size of the progress bar | \"3\"",
       "values": [
         "1",
         "2",
@@ -67,7 +67,7 @@
     {
       "name": "variant",
       "type": "Var[Literal[\"classic\", \"surface\", \"soft\"]]",
-      "description": "The variant of the progress bar: \"classic\" | \"surface\" | \"soft\"",
+      "description": "The variant of the progress bar | \"soft\"",
       "values": [
         "classic",
         "surface",
@@ -110,7 +110,7 @@
     {
       "name": "radius",
       "type": "Var[Literal[\"none\", \"small\", \"medium\", \"large\", \"full\"]]",
-      "description": "Override theme radius for progress bar: \"none\" | \"small\" | \"medium\" | \"large\" | \"full\"",
+      "description": "Override theme radius for progress bar |  | \"full\"",
       "values": [
         "none",
         "small",

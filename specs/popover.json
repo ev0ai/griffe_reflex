@@ -198,7 +198,7 @@
         {
           "name": "size",
           "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]]",
-          "description": "Size of the button: \"1\" | \"2\" | \"3\" | \"4\"",
+          "description": "Size of the button",
           "values": [
             "1",
             "2",

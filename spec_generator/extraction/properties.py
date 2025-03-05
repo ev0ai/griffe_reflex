@@ -127,6 +127,10 @@ def extract_properties_from_class_body(class_body: str, spec: Dict[str, Any], cl
             "description": docstring
         }
         
+        # Fix property name for "as_" to "_as"
+        if name == "as_":
+            property_data["name"] = "_as"
+        
         # Try to extract enum values from type or description
         enum_type = None
         
@@ -143,6 +147,21 @@ def extract_properties_from_class_body(class_body: str, spec: Dict[str, Any], cl
             enum_values = extract_enum_values_from_description(docstring)
             if enum_values:
                 property_data["values"] = enum_values
+                
+                # Clean up the description to remove the enum format text
+                # Remove patterns like: "value1" | "value2" | "value3"
+                cleaned_desc = re.sub(r'(?::\s*)?"[^"]+"\s*(?:\|\s*"[^"]+")+', '', docstring).strip()
+                # Remove patterns like: "1" - "9"
+                cleaned_desc = re.sub(r'(?::\s*)?"[^"]+"\s*-\s*"[^"]+"', '', cleaned_desc).strip()
+                
+                # If we end up with trailing colon, remove it
+                if cleaned_desc.endswith(':'):
+                    cleaned_desc = cleaned_desc[:-1].strip()
+                
+                # Remove trailing pipe characters that might be left
+                cleaned_desc = re.sub(r'\|\s*$', '', cleaned_desc).strip()
+                
+                property_data["description"] = cleaned_desc
         
         # Add to the appropriate list, but for events just track the name
         if is_event:

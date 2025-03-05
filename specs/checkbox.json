@@ -73,12 +73,17 @@
     {
       "name": "size",
       "type": "Var[Responsive[LiteralCheckboxSize]]",
-      "description": "Checkbox size \"1\" - \"3\""
+      "description": "Checkbox size",
+      "values": [
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "name": "variant",
       "type": "Var[LiteralCheckboxVariant]",
-      "description": "Variant of checkbox: \"classic\" | \"surface\" | \"soft\"",
+      "description": "Variant of checkbox | \"soft\"",
       "values": [
         "classic",
         "surface",

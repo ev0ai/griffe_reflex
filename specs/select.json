@@ -132,7 +132,7 @@
         {
           "name": "size",
           "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
-          "description": "The size of the select: \"1\" | \"2\" | \"3\"",
+          "description": "The size of the select | \"3\"",
           "values": [
             "1",
             "2",

@@ -2,6 +2,14 @@
 
 This tool extracts component specifications from the Reflex codebase and generates JSON files that can be used for documentation, code generation, and IDE integrations.
 
+## Features
+
+- **Comprehensive**: Generates specs for 86+ Reflex components
+- **Modular**: Well-organized codebase with dedicated modules for mapping, extraction, and output
+- **Enum Support**: Properly extracts enum values from property descriptions
+- **Clean Output**: Generates clean, well-formatted JSON specs
+- **Error Handling**: Gracefully handles components with missing files
+
 ## Usage
 
 There are several ways to use the specification generator:
@@ -41,6 +49,21 @@ generate_spec_files(base_dir="/path/to/reflex", specs_dir="specs")
 from spec_generator import generate_common_props_spec
 generate_common_props_spec(specs_dir="specs")
 ```
+
+## Features & Improvements
+
+The generator includes several specific enhancements:
+
+1. **Property Name Standardization**: Properly handles special property names like `_as` instead of `as_`
+2. **Enum Value Extraction**: Converts descriptions like `"1" - "9"` to proper enum values arrays
+3. **Component Filtering**: Filters out invalid or test components
+4. **Description Cleaning**: Removes enum formats from descriptions for cleaner output
+5. **Organized Mapping**: Components are organized into logical mapping modules:
+   - Base components (base.py)
+   - Specialized components (specialized.py)
+   - AG Grid components (ag_grid.py)
+   - Radix UI components (radix.py)
+   - Core and other components (core.py)
 
 ## Package Structure
 

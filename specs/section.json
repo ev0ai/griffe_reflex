@@ -32,7 +32,12 @@
     {
       "name": "size",
       "type": "Var[Responsive[LiteralSectionSize]]",
-      "description": "The size of the section: \"1\" - \"3\" (default \"2\")"
+      "description": "The size of the section (default \"2\")",
+      "values": [
+        "1",
+        "2",
+        "3"
+      ]
     }
   ],
   "subcomponents": {}

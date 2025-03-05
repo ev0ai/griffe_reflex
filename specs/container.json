@@ -32,7 +32,13 @@
     {
       "name": "size",
       "type": "Var[Responsive[LiteralContainerSize]]",
-      "description": "The size of the container: \"1\" - \"4\" (default \"3\")"
+      "description": "The size of the container (default \"3\")",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
     }
   ],
   "subcomponents": {}

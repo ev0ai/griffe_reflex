@@ -188,7 +188,13 @@
         {
           "name": "size",
           "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\", \"4\"]]]",
-          "description": "DialogContent size \"1\" - \"4\""
+          "description": "DialogContent size",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
         }
       ]
     },

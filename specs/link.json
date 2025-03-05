@@ -21,7 +21,7 @@
     {
       "name": "weight",
       "type": "Var[Responsive[LiteralTextWeight]]",
-      "description": "Thickness of text: \"light\" | \"regular\" | \"medium\" | \"bold\"",
+      "description": "Thickness of text",
       "values": [
         "light",
         "regular",
@@ -32,7 +32,7 @@
     {
       "name": "trim",
       "type": "Var[Responsive[LiteralTextTrim]]",
-      "description": "Removes the leading trim space: \"normal\" | \"start\" | \"end\" | \"both\"",
+      "description": "Removes the leading trim space",
       "values": [
         "normal",
         "start",
@@ -77,7 +77,18 @@
     {
       "name": "size",
       "type": "Var[Responsive[LiteralTextSize]]",
-      "description": "Text size: \"1\" - \"9\""
+      "description": "Text size",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "color_scheme",

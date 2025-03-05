@@ -19,7 +19,7 @@
     {
       "name": "clip",
       "type": "Var[Responsive[Literal[\"border-box\", \"padding-box\"]]]",
-      "description": "How to clip the element's content: \"border-box\" | \"padding-box\"",
+      "description": "How to clip the element's content",
       "values": [
         "border-box",
         "padding-box"

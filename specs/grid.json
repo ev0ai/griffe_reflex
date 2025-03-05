@@ -29,7 +29,7 @@
     {
       "name": "flow",
       "type": "Var[Responsive[LiteralGridFlow]]",
-      "description": "How the grid items are laid out: \"row\" | \"column\" | \"dense\" | \"row-dense\" | \"column-dense\"",
+      "description": "How the grid items are laid out |  | \"column-dense\"",
       "values": [
         "row",
         "column",
@@ -41,7 +41,7 @@
     {
       "name": "align",
       "type": "Var[Responsive[LiteralAlign]]",
-      "description": "Alignment of children along the main axis: \"start\" | \"center\" | \"end\" | \"baseline\" | \"stretch\"",
+      "description": "Alignment of children along the main axis |  | \"stretch\"",
       "values": [
         "start",
         "center",
@@ -53,7 +53,7 @@
     {
       "name": "justify",
       "type": "Var[Responsive[LiteralJustify]]",
-      "description": "Alignment of children along the cross axis: \"start\" | \"center\" | \"end\" | \"between\"",
+      "description": "Alignment of children along the cross axis",
       "values": [
         "start",
         "center",
@@ -64,17 +64,53 @@
     {
       "name": "spacing",
       "type": "Var[Responsive[LiteralSpacing]]",
-      "description": "Gap between children: \"0\" - \"9\""
+      "description": "Gap between children",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "spacing_x",
       "type": "Var[Responsive[LiteralSpacing]]",
-      "description": "Gap between children horizontal: \"0\" - \"9\""
+      "description": "Gap between children horizontal",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "spacing_y",
       "type": "Var[Responsive[LiteralSpacing]]",
-      "description": "Gap between children vertical: \"0\" - \"9\""
+      "description": "Gap between children vertical",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     }
   ],
   "event_names": [

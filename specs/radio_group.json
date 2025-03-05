@@ -101,7 +101,7 @@
         {
           "name": "size",
           "type": "Var[Responsive[Literal[\"1\", \"2\", \"3\"]]]",
-          "description": "The size of the radio group: \"1\" | \"2\" | \"3\"",
+          "description": "The size of the radio group | \"3\"",
           "values": [
             "1",
             "2",

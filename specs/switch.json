@@ -73,12 +73,18 @@
     {
       "name": "size",
       "type": "Var[Responsive[LiteralSwitchSize]]",
-      "description": "Switch size \"1\" - \"4\""
+      "description": "Switch size",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
     },
     {
       "name": "variant",
       "type": "Var[Literal[\"classic\", \"surface\", \"soft\"]]",
-      "description": "Variant of switch: \"classic\" | \"surface\" | \"soft\"",
+      "description": "Variant of switch | \"soft\"",
       "values": [
         "classic",
         "surface",
@@ -121,7 +127,7 @@
     {
       "name": "radius",
       "type": "Var[Literal[\"none\", \"small\", \"full\"]]",
-      "description": "Override theme radius for switch: \"none\" | \"small\" | \"full\"",
+      "description": "Override theme radius for switch | \"full\"",
       "values": [
         "none",
         "small",

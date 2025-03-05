@@ -18,14 +18,14 @@
       "description": "Change the default rendered element for the one passed as a child, merging their props and behavior."
     },
     {
-      "name": "as_",
+      "name": "_as",
       "type": "Var[LiteralType]",
       "description": "Change the default rendered element into a semantically appropriate alternative (cannot be used with asChild)"
     },
     {
       "name": "weight",
       "type": "Var[Responsive[LiteralTextWeight]]",
-      "description": "Thickness of text: \"light\" | \"regular\" | \"medium\" | \"bold\"",
+      "description": "Thickness of text",
       "values": [
         "light",
         "regular",
@@ -36,7 +36,7 @@
     {
       "name": "align",
       "type": "Var[Responsive[LiteralTextAlign]]",
-      "description": "Alignment of text in element: \"left\" | \"center\" | \"right\"",
+      "description": "Alignment of text in element | \"right\"",
       "values": [
         "left",
         "center",
@@ -46,7 +46,7 @@
     {
       "name": "trim",
       "type": "Var[Responsive[LiteralTextTrim]]",
-      "description": "Removes the leading trim space: \"normal\" | \"start\" | \"end\" | \"both\"",
+      "description": "Removes the leading trim space",
       "values": [
         "normal",
         "start",
@@ -81,7 +81,18 @@
     {
       "name": "size",
       "type": "Var[Responsive[LiteralTextSize]]",
-      "description": "Text size: \"1\" - \"9\""
+      "description": "Text size",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "color_scheme",

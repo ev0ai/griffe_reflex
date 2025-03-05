@@ -13,37 +13,121 @@
     {
       "name": "m",
       "type": "Var[LiteralSpacing]",
-      "description": "Margin: \"0\" - \"9\" # noqa: ERA001"
+      "description": "Margin # noqa: ERA001",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "mx",
       "type": "Var[LiteralSpacing]",
-      "description": "Margin horizontal: \"0\" - \"9\""
+      "description": "Margin horizontal",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "my",
       "type": "Var[LiteralSpacing]",
-      "description": "Margin vertical: \"0\" - \"9\""
+      "description": "Margin vertical",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "mt",
       "type": "Var[LiteralSpacing]",
-      "description": "Margin top: \"0\" - \"9\""
+      "description": "Margin top",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "mr",
       "type": "Var[LiteralSpacing]",
-      "description": "Margin right: \"0\" - \"9\""
+      "description": "Margin right",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "mb",
       "type": "Var[LiteralSpacing]",
-      "description": "Margin bottom: \"0\" - \"9\""
+      "description": "Margin bottom",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "name": "ml",
       "type": "Var[LiteralSpacing]",
-      "description": "Margin left: \"0\" - \"9\""
+      "description": "Margin left",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     }
   ],
   "event_names": [

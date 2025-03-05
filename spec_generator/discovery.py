@@ -33,6 +33,16 @@ def find_all_components(base_dir: str) -> Dict[str, Dict[str, str]]:
     # Add Core and other mappings
     components.update(get_core_mappings(base_dir))
     
+    # Filter out invalid components
+    invalid_components = ["component", "next_link", "nextlink", "nossrcomponent"]
+    for invalid_comp in invalid_components:
+        if invalid_comp in components:
+            del components[invalid_comp]
+    
+    # Filter out components with spaces in their names
+    # Filter them by creating a new dict without those components
+    components = {k: v for k, v in components.items() if ' as ' not in k}
+    
     print(f"Found {len(components)} components")
     
     return components 
