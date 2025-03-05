@@ -1,0 +1,84 @@
+{
+  "name": "nossrcomponent as nossrcomponent",
+  "module_path": "components.component",
+  "module_name": "component",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/component.py",
+  "doc_path": null,
+  "docstring": "A component with style, event trigger and other props.",
+  "bases": [
+    "BaseComponent",
+    "ABC"
+  ],
+  "supports_common_props": true,
+  "properties": [
+    {
+      "name": "style",
+      "type": "Style",
+      "description": "The style of the component."
+    },
+    {
+      "name": "event_triggers",
+      "type": "dict[str, EventChain | Var]",
+      "description": "A mapping from event triggers to event chains."
+    },
+    {
+      "name": "is_default",
+      "type": "bool | None",
+      "description": "Whether the import is default or named."
+    },
+    {
+      "name": "key",
+      "type": "Any",
+      "description": "A unique key for the component."
+    },
+    {
+      "name": "id",
+      "type": "Any",
+      "description": "The id for the component."
+    },
+    {
+      "name": "class_name",
+      "type": "Any",
+      "description": "The class name for the component."
+    },
+    {
+      "name": "special_props",
+      "type": "list[Var]",
+      "description": "Special component props."
+    },
+    {
+      "name": "autofocus",
+      "type": "bool",
+      "description": "Whether the component should take the focus once the page is loaded"
+    },
+    {
+      "name": "custom_attrs",
+      "type": "dict[str, Var | Any]",
+      "description": "custom attribute"
+    },
+    {
+      "name": "State",
+      "type": "Type[reflex.state.State] | None",
+      "description": "State class associated with this component instance"
+    }
+  ],
+  "event_names": [
+    "on_blur",
+    "on_click",
+    "on_context_menu",
+    "on_double_click",
+    "on_focus",
+    "on_mount",
+    "on_mouse_down",
+    "on_mouse_enter",
+    "on_mouse_leave",
+    "on_mouse_move",
+    "on_mouse_out",
+    "on_mouse_over",
+    "on_mouse_up",
+    "on_scroll",
+    "on_unmount"
+  ],
+  "styling_props": [],
+  "subcomponents": {}
+}

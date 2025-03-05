@@ -1,0 +1,371 @@
+{
+  "name": "rx.text",
+  "type": "rx.text",
+  "description": "Create a new component instance.",
+  "category": "typography",
+  "properties": {
+    "as_child": {
+      "type": "boolean",
+      "description": "Change the default rendered element for the one passed as a child, merging their props and behavior."
+    },
+    "high_contrast": {
+      "type": "boolean",
+      "description": "Whether to render the text with higher contrast color"
+    },
+    "access_key": {
+      "type": "string",
+      "description": "Provides a hint for generating a keyboard shortcut for the current element."
+    },
+    "dir": {
+      "type": "string",
+      "description": "Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)"
+    },
+    "draggable": {
+      "type": "string",
+      "description": "Defines whether the element can be dragged."
+    },
+    "hidden": {
+      "type": "string",
+      "description": "Defines whether the element is hidden."
+    },
+    "input_mode": {
+      "type": "string",
+      "description": "Defines the type of the element."
+    },
+    "item_prop": {
+      "type": "string",
+      "description": "Defines the name of the element for metadata purposes."
+    },
+    "lang": {
+      "type": "string",
+      "description": "Defines the language used in the element."
+    },
+    "role": {
+      "type": "string",
+      "description": "Defines the role of the element."
+    },
+    "slot": {
+      "type": "string",
+      "description": "Assigns a slot in a shadow DOM shadow tree to an element."
+    },
+    "spell_check": {
+      "type": "string",
+      "description": "Defines whether the element may be checked for spelling errors."
+    },
+    "tab_index": {
+      "type": "string",
+      "description": "Defines the position of the current element in the tabbing order."
+    },
+    "title": {
+      "type": "string",
+      "description": "Defines a tooltip for the element."
+    },
+    "children": {
+      "type": "string",
+      "description": "The content of the component",
+      "required": true
+    },
+    "align": {
+      "type": "string",
+      "description": "Controls alignment of items on the cross axis in flex layouts",
+      "enum": [
+        "stretch",
+        "center",
+        "start",
+        "end",
+        "flex-start",
+        "baseline"
+      ]
+    },
+    "backdrop_filter": {
+      "type": "string",
+      "description": "Lets you apply graphical effects such as blurring or color shifting to the area behind an element"
+    },
+    "background": {
+      "type": "string",
+      "description": "Sets all background style properties at once, such as color, image, origin and size, or repeat method (equivalent to bg)"
+    },
+    "background_color": {
+      "type": "string",
+      "description": "Sets the background color of an element"
+    },
+    "background_image": {
+      "type": "string",
+      "description": "Sets one or more background images on an element"
+    },
+    "border": {
+      "type": "string",
+      "description": "Sets an element's border, which sets the values of border_width, border_style, and border_color."
+    },
+    "border_color": {
+      "type": "string",
+      "description": "Sets the color of an element's border"
+    },
+    "border_radius": {
+      "type": "string",
+      "description": "Rounds the corners of an element's outer border edge"
+    },
+    "border_width": {
+      "type": "string",
+      "description": "Sets the width of an element's border"
+    },
+    "box_shadow": {
+      "type": "string",
+      "description": "Adds shadow effects around an element's frame"
+    },
+    "color": {
+      "type": "string",
+      "description": "Sets the foreground color value of an element's text"
+    },
+    "display": {
+      "type": "string",
+      "description": "Sets whether an element is treated as a block or inline box and the layout used for its children",
+      "enum": [
+        "block",
+        "inline",
+        "inline-block",
+        "flex",
+        "inline-flex",
+        "grid",
+        "inline-grid",
+        "flow-root"
+      ]
+    },
+    "flex_grow": {
+      "type": "string",
+      "description": "Sets the flex grow factor, which specifies how much of the flex container's remaining space should be assigned to the flex item's main size"
+    },
+    "height": {
+      "type": "string",
+      "description": "Sets an element's height"
+    },
+    "justify": {
+      "type": "string",
+      "description": "Defines how the browser distributes space between and around content items along the main-axis of a flex container",
+      "enum": [
+        "start",
+        "center",
+        "flex-start",
+        "space-between",
+        "space-around",
+        "space-evenly",
+        "stretch"
+      ]
+    },
+    "margin": {
+      "type": "string",
+      "description": "Sets the margin area on all four sides of an element"
+    },
+    "margin_x": {
+      "type": "string",
+      "description": "Sets the margin area along the x-axis"
+    },
+    "margin_y": {
+      "type": "string",
+      "description": "Sets the margin area along the y-axis"
+    },
+    "margin_top": {
+      "type": "string",
+      "description": "Sets the margin area on the top of an element"
+    },
+    "margin_right": {
+      "type": "string",
+      "description": "Sets the margin area on the right of an element"
+    },
+    "margin_bottom": {
+      "type": "string",
+      "description": "Sets the margin area on the bottom of an element"
+    },
+    "margin_left": {
+      "type": "string",
+      "description": "Sets the margin area on the left of an element"
+    },
+    "max_height": {
+      "type": "string",
+      "description": "Sets the maximum height of an element"
+    },
+    "min_height": {
+      "type": "string",
+      "description": "Sets the minimum height of an element"
+    },
+    "max_width": {
+      "type": "string",
+      "description": "Sets the maximum width of an element"
+    },
+    "min_width": {
+      "type": "string",
+      "description": "Sets the minimum width of an element"
+    },
+    "padding": {
+      "type": "string",
+      "description": "Sets the padding area on all four sides of an element at once"
+    },
+    "padding_x": {
+      "type": "string",
+      "description": "Creates extra space within an element along the x-axis"
+    },
+    "padding_y": {
+      "type": "string",
+      "description": "Creates extra space within an element along the y-axis"
+    },
+    "padding_top": {
+      "type": "string",
+      "description": "Sets the height of the padding area on the top of an element"
+    },
+    "padding_right": {
+      "type": "string",
+      "description": "Sets the width of the padding area on the right of an element"
+    },
+    "padding_bottom": {
+      "type": "string",
+      "description": "Sets the height of the padding area on the bottom of an element"
+    },
+    "padding_left": {
+      "type": "string",
+      "description": "Sets the width of the padding area on the left of an element"
+    },
+    "position": {
+      "type": "string",
+      "description": "Sets how an element is positioned in a document",
+      "enum": [
+        "static",
+        "relative",
+        "absolute",
+        "fixed",
+        "sticky"
+      ]
+    },
+    "text_align": {
+      "type": "string",
+      "description": "Sets the horizontal alignment of the inline-level content inside a block element or table-cell box",
+      "enum": [
+        "start",
+        "end",
+        "center",
+        "justify",
+        "left",
+        "right"
+      ]
+    },
+    "text_wrap": {
+      "type": "string",
+      "description": "Controls how text inside an element is wrapped",
+      "enum": [
+        "wrap",
+        "nowrap",
+        "balance",
+        "pretty"
+      ]
+    },
+    "top": {
+      "type": "string",
+      "description": "Sets the vertical position of a positioned element"
+    },
+    "bottom": {
+      "type": "string",
+      "description": "Sets the vertical position of a positioned element"
+    },
+    "right": {
+      "type": "string",
+      "description": "Sets the horizontal position of a positioned element"
+    },
+    "left": {
+      "type": "string",
+      "description": "Sets the horizontal position of a positioned element"
+    },
+    "width": {
+      "type": "string",
+      "description": "Sets an element's width"
+    },
+    "white_space": {
+      "type": "string",
+      "description": "Sets how white space inside an element is handled",
+      "enum": [
+        "normal",
+        "nowrap",
+        "pre",
+        "break-spaces"
+      ]
+    },
+    "word_break": {
+      "type": "string",
+      "description": "Sets whether line breaks appear wherever the text would otherwise overflow its content box",
+      "enum": [
+        "normal",
+        "break-all",
+        "keep-all",
+        "break-word"
+      ]
+    },
+    "z_index": {
+      "type": "string",
+      "description": "Sets the z-order of a positioned element and its descendants or flex and grid items"
+    }
+  },
+  "required_props": [],
+  "positional_props": [
+    "children"
+  ],
+  "events": [
+    {
+      "name": "on_blur",
+      "description": "Event handler for on_blur"
+    },
+    {
+      "name": "on_click",
+      "description": "Event handler for on_click"
+    },
+    {
+      "name": "on_context_menu",
+      "description": "Event handler for on_context_menu"
+    },
+    {
+      "name": "on_double_click",
+      "description": "Event handler for on_double_click"
+    },
+    {
+      "name": "on_focus",
+      "description": "Event handler for on_focus"
+    },
+    {
+      "name": "on_mount",
+      "description": "Event handler for on_mount"
+    },
+    {
+      "name": "on_mouse_down",
+      "description": "Event handler for on_mouse_down"
+    },
+    {
+      "name": "on_mouse_enter",
+      "description": "Event handler for on_mouse_enter"
+    },
+    {
+      "name": "on_mouse_leave",
+      "description": "Event handler for on_mouse_leave"
+    },
+    {
+      "name": "on_mouse_move",
+      "description": "Event handler for on_mouse_move"
+    },
+    {
+      "name": "on_mouse_out",
+      "description": "Event handler for on_mouse_out"
+    },
+    {
+      "name": "on_mouse_over",
+      "description": "Event handler for on_mouse_over"
+    },
+    {
+      "name": "on_mouse_up",
+      "description": "Event handler for on_mouse_up"
+    },
+    {
+      "name": "on_scroll",
+      "description": "Event handler for on_scroll"
+    },
+    {
+      "name": "on_unmount",
+      "description": "Event handler for on_unmount"
+    }
+  ]
+}

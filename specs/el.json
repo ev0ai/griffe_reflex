@@ -1,0 +1,15 @@
+{
+  "name": "el",
+  "module_path": "components.el",
+  "module_name": "el",
+  "file_path": "/Users/dave/code/griffe_reflex/reflex/reflex/components/el/__init__.py",
+  "doc_path": null,
+  "docstring": "",
+  "bases": [],
+  "supports_common_props": false,
+  "properties": [],
+  "event_names": [],
+  "styling_props": [],
+  "subcomponents": {},
+  "error": "No suitable class found"
+}
